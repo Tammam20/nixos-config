@@ -1,4 +1,4 @@
-# file: configuration.nix
+# file: sb.nix
 { pkgs, lib, ... }:
 let
     sources = import ./nix/sources.nix;
