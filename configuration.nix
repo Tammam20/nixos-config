@@ -16,10 +16,6 @@
   # Enable NTFS support
   boot.supportedFilesystems = [ "ntfs" ];
 
-  # Bootloader.
-  boot.loader.systemd-boot.enable = true;
-  boot.loader.efi.canTouchEfiVariables = true;
-
   # Show plymoth splash screen when booting:
   boot.plymouth.enable = true;
   
@@ -175,6 +171,8 @@
   virtiofsd
   tor-browser-bundle-bin
   niv
+  libreoffice-fresh
+  apfs-fuse
   ];
 
   # Some programs need SUID wrappers, can be configured further or are
