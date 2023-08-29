@@ -151,7 +151,7 @@
   OVMFFull
   auto-cpufreq
   python3Full
-  vscodium
+  vscode
   fish
   chromium
   gnome.gnome-tweaks
@@ -173,6 +173,9 @@
   niv
   libreoffice-fresh
   apfs-fuse
+  vim
+  wget
+  neovim
   ];
 
   # Some programs need SUID wrappers, can be configured further or are
