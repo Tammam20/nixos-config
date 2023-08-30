@@ -2,7 +2,7 @@
 # your system.  Help is available in the configuration.nix(5) man page
 # and in the NixOS manual (accessible by running ‘nixos-help’).
 
-{ config, pkgs, ... }:
+{ config, pkgs, lib, ... }:
 
 {
   imports =
@@ -12,6 +12,8 @@
     ];
   # Kernel Parameters
   boot.kernelParams = [ "intel_pstate=disable" "intel_iommu=on" "iommu=pt" "nosgx" ];
+
+  boot.loader.systemd-boot.enable = lib.mkForce false;
 
   # Enable NTFS support
   boot.supportedFilesystems = [ "ntfs" ];
@@ -176,6 +178,7 @@
   vim
   wget
   neovim
+  gnomeExtensions.caffeine
   ];
 
   # Some programs need SUID wrappers, can be configured further or are
@@ -204,7 +207,7 @@
   # Enable Flatpak support
   services.flatpak.enable = true;  
 
-  # Optimising the store
+  # Optimising the Nix store
   nix.settings.auto-optimise-store = true;  
 
   # Open ports in the firewall.
