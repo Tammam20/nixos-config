@@ -11,8 +11,12 @@
       ./sb.nix
     ];
   # Kernel Parameters
-  boot.kernelParams = [ "intel_pstate=disable" "intel_iommu=on" "iommu=pt" "nosgx" ];
+  boot.kernelParams = [ "intel_pstate=disable" "intel_iommu=on" "iommu=pt" "nosgx" "nomodeset" ];
 
+  #Use nvidia proprietary driver
+  boot.blacklistedKernelModules = [ "nouveau" ];
+  
+  # Bootloader
   boot.loader.systemd-boot.enable = lib.mkForce false;
 
   # Enable NTFS support
@@ -29,6 +33,7 @@
   };
 
   # Tell Xorg to use the nvidia driver (also valid for Wayland)
+  
   services.xserver.videoDrivers = ["nvidia"];
 
   hardware.nvidia = {
@@ -135,7 +140,7 @@
   users.users.tammam = {
     isNormalUser = true;
     description = "Tammam Faris";
-    extraGroups = [ "networkmanager" "wheel" "libvirtd" ];
+    extraGroups = [ "networkmanager" "wheel" "libvirtd" "vboxusers" ];
     packages = with pkgs; [
       firefox
       thunderbird
@@ -179,6 +184,7 @@
   wget
   neovim
   gnomeExtensions.caffeine
+  skypeforlinux
   ];
 
   # Some programs need SUID wrappers, can be configured further or are
