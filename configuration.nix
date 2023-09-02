@@ -11,10 +11,7 @@
       ./sb.nix
     ];
   # Kernel Parameters
-  boot.kernelParams = [ "intel_pstate=disable" "intel_iommu=on" "iommu=pt" "nosgx" "nomodeset" ];
-
-  #Use nvidia proprietary driver
-  boot.blacklistedKernelModules = [ "nouveau" ];
+  boot.kernelParams = [ "intel_pstate=disable" "intel_iommu=on" "iommu=pt" "nosgx" ];
   
   # Bootloader
   boot.loader.systemd-boot.enable = lib.mkForce false;
@@ -185,6 +182,7 @@
   neovim
   gnomeExtensions.caffeine
   skypeforlinux
+  gnome-firmware
   ];
 
   # Some programs need SUID wrappers, can be configured further or are
@@ -209,6 +207,9 @@
   # Enable libvirt and fix spice-gtk error
   virtualisation.libvirtd.enable = true;
   virtualisation.spiceUSBRedirection.enable = true;
+
+  # Device Security
+  services.fwupd.enable = true;
 
   # Enable Flatpak support
   services.flatpak.enable = true;  
