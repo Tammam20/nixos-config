@@ -1,2 +1,2 @@
 # Nix-Conf
-My NixOS configuration.
+My NixOS configuration for my laptop.
