@@ -19,6 +19,4 @@
       ./sb.nix
     ];
 
-  system.autoUpgrade.channel = "https://channels.nixos.org/nixos-unstable/";
-
 }
