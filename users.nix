@@ -5,7 +5,7 @@
   users.users.tammam = {
     isNormalUser = true;
     description = "Tammam Faris";
-    extraGroups = [ "networkmanager" "wheel" "libvirtd" "vboxusers" ];
+    extraGroups = [ "networkmanager" "wheel" "libvirtd" ];
     packages = with pkgs; [
       firefox
       thunderbird
