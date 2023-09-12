@@ -15,7 +15,6 @@
   # List packages installed in system profile.
   environment.systemPackages = with pkgs; [
   qemu
-  libvirt
   virt-manager
   OVMFFull
   auto-cpufreq
@@ -48,5 +47,7 @@
   skypeforlinux
   gnome-firmware
   kitty
+  gnome.dconf-editor
+  tpm2-tools
   ];
 }
