@@ -6,18 +6,26 @@
   # Enable the OpenSSH daemon
   services.openssh.enable = true;
   
-  # Enable auto-cpufreq service
-  services.auto-cpufreq.enable = true;
+  # Power management:
+  services.auto-cpufreq.enable = true; # Enable auto-cpufreq service
  
-  # Disable Power Profiles
-  services.power-profiles-daemon.enable = false;
-  
+  services.thermald.enable = true; # Enable thermald for improved efficiency 
+
+  services.power-profiles-daemon.enable = false; # Disable Power Profiles
+
   # Enable libvirt and fix spice-gtk error
   virtualisation.libvirtd.enable = true;
   virtualisation.spiceUSBRedirection.enable = true;
 
-  # Device Security
+  # VMWARE VIRTUALISATION
+  virtualisation.vmware.host.enable = true;
+
+  # Firmware
   services.fwupd.enable = true;
+
+  # Enable Trusted Platform Module 2 support.
+  security.tpm2.enable = true;
+  security.tpm2.abrmd.enable = true;
 
   # Enable Flatpak support
   services.flatpak.enable = true;
@@ -48,7 +56,7 @@
     alsa.support32Bit = true;
     pulse.enable = true;
     # If you want to use JACK applications, uncomment this
-    #jack.enable = true;
+    jack.enable = true;
 
     # use the example session manager (no others are packaged yet so this is enabled by default,
     # no need to redefine it in your config for now)

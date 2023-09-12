@@ -6,8 +6,7 @@
 
 {
   imports =
-    [ # Include the results of the hardware scan.
-      ./hardware-configuration.nix
+    [ ./hardware-configuration.nix # Include the results of the hardware scan.
       ./nvidia.nix
       ./avp.nix
       ./services.nix
@@ -17,6 +16,9 @@
       ./locale.nix
       ./boot.nix
       ./users.nix
-      #./sb.nix
+      ./sb.nix
     ];
+
+  system.autoUpgrade.channel = "https://channels.nixos.org/nixos-unstable/";
+
 }
