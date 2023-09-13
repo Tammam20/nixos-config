@@ -17,9 +17,6 @@
   virtualisation.libvirtd.enable = true;
   virtualisation.spiceUSBRedirection.enable = true;
 
-  # VMWARE VIRTUALISATION
-  virtualisation.vmware.host.enable = true;
-
   # Firmware
   services.fwupd.enable = true;
 
