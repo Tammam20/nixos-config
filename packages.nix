@@ -22,16 +22,12 @@
   vscode
   fish
   chromium
-  gnome.gnome-tweaks
-  gnomeExtensions.pano
-  gnomeExtensions.appindicator
   appimage-run
   git
   pciutils
   usbutils
   lshw
   gcc
-  gnome.gnome-software
   cpufetch
   neofetch
   libnotify
@@ -43,11 +39,8 @@
   vim
   wget
   neovim
-  gnomeExtensions.caffeine
-  skypeforlinux
-  gnome-firmware
   kitty
-  gnome.dconf-editor
   tpm2-tools
+  cron
   ];
 }

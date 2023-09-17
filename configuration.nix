@@ -16,7 +16,7 @@
       ./locale.nix
       ./boot.nix
       ./users.nix
+      ./gnome.nix
       ./sb.nix
     ];
-
 }
