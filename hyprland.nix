@@ -37,6 +37,7 @@
    udiskie
    grim
    slurp
+   playerctl
   ];  
 
   # THUNAR
