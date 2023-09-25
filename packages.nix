@@ -19,7 +19,6 @@
   OVMFFull
   auto-cpufreq
   python3Full
-  vscode
   fish
   chromium
   appimage-run
@@ -38,7 +37,7 @@
   apfs-fuse
   vim
   wget
-  neovim
+  #neovim # I will use that later
   kitty
   tpm2-tools
   cron

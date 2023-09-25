@@ -11,5 +11,5 @@
   boot.supportedFilesystems = [ "ntfs" ];
 
   # Show plymoth splash screen when booting:
-  boot.plymouth.enable = true;
+  #boot.plymouth.enable = true;
 }
