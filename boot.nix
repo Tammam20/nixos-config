@@ -7,6 +7,12 @@
   # Bootloader
   boot.loader.efi.canTouchEfiVariables = true;
 
+  # To enable systemd-boot without secure-boot support
+  boot.loader.systemd-boot.enable = true;
+
+  # To enable systemd with secure-boot support
+  #boot.loader.systemd-boot.enable = lib.mkForce false;
+
   # Enable NTFS support
   boot.supportedFilesystems = [ "ntfs" ];
 
