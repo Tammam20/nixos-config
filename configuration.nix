@@ -18,6 +18,6 @@
       ./users.nix
       #./gnome.nix # Enable gnome desktop environment
       ./hyprland.nix # Enable hyprland
-      ./sb.nix
+      #./sb.nix
     ];
 }
