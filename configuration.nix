@@ -16,8 +16,8 @@
       ./locale.nix
       ./boot.nix
       ./users.nix
-      #./gnome.nix # Enable gnome desktop environment
-      ./hyprland.nix # Enable hyprland
+      ./gnome.nix # Enable gnome desktop environment
+      #./hyprland.nix # Enable hyprland
       #./sb.nix
     ];
 }
