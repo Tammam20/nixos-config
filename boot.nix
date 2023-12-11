@@ -2,7 +2,7 @@
 
 {
   # Kernel Parameters
-  boot.kernelParams = [ "intel_pstate=disable" "intel_iommu=on" "iommu=pt" "nosgx" ];
+  boot.kernelParams = [ "intel_iommu=on" "iommu=pt" "nosgx" ];
   
   # Bootloader
   boot.loader.efi.canTouchEfiVariables = true;
