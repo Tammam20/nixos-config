@@ -14,10 +14,10 @@
 
   # List packages installed in system profile.
   environment.systemPackages = with pkgs; [
+  (floorp.override  { nativeMessagingHosts = [plasma-browser-integration];})
+  thunderbird
   qemu
-  virt-manager
   OVMFFull
-  auto-cpufreq
   python3Full
   fish
   chromium
@@ -37,9 +37,18 @@
   apfs-fuse
   vim
   wget
-  #neovim # I will use that later
-  kitty
+  neovim
   tpm2-tools
   cron
+  gimp
+  rawtherapee
+  clinfo
+  glxinfo
+  vulkan-tools
+  wayland-utils
+  distrobox
   ];
+
+  # Packages with options
+  programs.virt-manager.enable = true;
 }

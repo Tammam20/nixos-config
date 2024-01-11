@@ -1,7 +1,5 @@
 { config, pkgs, lib, ... }:
-{
-
-  services.xserver.enable = true;  
+{  
   services.xserver.displayManager.sddm.enable = true;
   services.xserver.displayManager.sddm.theme = "where_is_my_sddm_theme";
 
@@ -72,6 +70,7 @@
    where-is-my-sddm-theme
    networkmanagerapplet
    htop
+   kitty
   ];  
 
   # THUNAR

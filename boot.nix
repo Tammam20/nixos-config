@@ -1,8 +1,11 @@
 { config, pkgs, lib, ... }:
 
 {
+  #Kernel
+  boot.kernelPackages = pkgs.linuxPackages_latest;
+
   # Kernel Parameters
-  boot.kernelParams = [ "intel_iommu=on" "iommu=pt" "nosgx" ];
+  boot.kernelParams = [ /*"acpi=strict"*/ /*"intel_iommu=on"*/ /*"intel_iommu=igfx_off"*/ /*"iommu=pt"*/ /*iomem=relaxed"*/ "intel_pstate=disable" "nosgx" ];
   
   # Bootloader
   boot.loader.efi.canTouchEfiVariables = true;
