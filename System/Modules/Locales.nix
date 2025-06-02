@@ -1,27 +1,6 @@
 { config, pkgs, lib, ... }:
 
 {
- 
-   # Fonts 
-    fonts.packages = with pkgs; [
-    noto-fonts
-    nerdfonts
-    noto-fonts-cjk
-    noto-fonts-emoji
-    source-han-sans
-    source-han-sans-japanese
-    source-han-serif-japanese
-    corefonts
-    vistafonts
-    vistafonts-cht
-    vistafonts-chs
-    ];
-    
-   # Default fonts
-    fonts.fontconfig.defaultFonts = {
-    serif = [ "Noto Serif" "Source Han Serif" ];
-    sansSerif = [ "Noto Sans" "Source Han Sans" ];
-    }; 
 
   # Set your time zone.
   time.timeZone = "Asia/Baghdad";
