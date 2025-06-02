@@ -7,20 +7,12 @@
 {     
   imports =
     [ ./hardware-configuration.nix # Include the results of the hardware scan.
-      #<home-manager/nixos> # Import Home Manager options
-      
-      # Options only apply to specific device:
-      ./Devices/DellPrecision5510/system.nix
-      #./Devices/DellPrecision5510/sb.nix # Secure Boot Support
       
       # Universal Options:
       ./Modules/services.nix # Services
       ./Modules/packages.nix # NixPkgs
       ./Modules/users.nix # Users
       ./Modules/FontsLocales.nix # Fonts & Locales
-      ./Modules/nixvim.nix # nixvim
-      #./Modules/DesktopEnvironments/hyprland.nix # Hyprland
-      #./Modules/DesktopEnvironments/kde.nix # KDE Desktop Environment
       ./Modules/DesktopEnvironments/gnome.nix # gnome desktop environment
     ];
       
@@ -41,6 +33,6 @@
   # this value at the release version of the first install of this system.
   # Before changing this value read the documentation for this option
   # (e.g. man configuration.nix or on https://nixos.org/nixos/options.html).
-  system.stateVersion = "24.05"; # Did you read the comment?
+  system.stateVersion = "25.05"; # Did you read the comment?
       
 }     
