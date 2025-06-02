@@ -6,12 +6,6 @@
   services.xserver.desktopManager.gnome.enable = true;
 
   environment.systemPackages = with pkgs; [
-  gnomeExtensions.pano
-  gnomeExtensions.night-theme-switcher
-  gnomeExtensions.appindicator
-  gnomeExtensions.caffeine
-  gnomeExtensions.window-gestures
-  gnomeExtensions.gesture-improvements
   gnome-firmware
   gnome.dconf-editor 
   gnome.gnome-software
