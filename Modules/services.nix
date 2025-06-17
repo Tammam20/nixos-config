@@ -31,8 +31,8 @@
 
   # Configure keymap in X11
   services.xserver.xkb = {
-    layout = "de(nodeadkeys),ara";
-    variant = "";
+    layout = "de,ara";
+    variant = "nodeadkeys";
   };
 
   # Change systemd timeout
@@ -42,15 +42,14 @@
 
   # Enable CUPS to print documents.
   services.printing.enable = true;
-  services.printing.drivers = with pkgs; [ canon-capt ]
+  services.printing.drivers = with pkgs; [ canon-capt ];
 
   # enable xone
   hardware.xone.enable = true;
 
-  # Enable sound with pipewire.
-  sound.enable = true;
+  # sound
   services.pipewire.enable = true;
-  hardware.pulseaudio.enable = false;
+  services.pulseaudio.enable = false;
   services.pipewire.pulse.enable = true; # Enable PulseAudio server emulation.
   services.pipewire.wireplumber.enable = true; # Enable Wireplumber, a modular session / policy manager for PipeWire 
   services.pipewire.alsa.enable = true; # Enable ALSA support.

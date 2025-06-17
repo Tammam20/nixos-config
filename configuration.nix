@@ -15,7 +15,15 @@
       ./Modules/Locales.nix # Fonts & Locales
       ./Modules/DesktopEnvironments/gnome.nix # gnome desktop environment
     ];
-      
+  # bootable system
+  boot.loader.efi.canTouchEfiVariables = true;
+  boot.loader.systemd-boot.enable = true;
+  # system stuff
+  services.thermald.enable = true;
+  services.power-profiles-daemon.enable = true;
+  networking.hostName = "t480"; 
+  services.fwupd.enable = true;
+    
   # Optimising the Nix store
   /*nix.settings.auto-optimise-store = true;  
       

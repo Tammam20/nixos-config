@@ -7,8 +7,8 @@
 
   environment.systemPackages = with pkgs; [
   gnome-firmware
-  gnome.dconf-editor 
-  gnome.gnome-software
-  gnome.gnome-tweaks
+  dconf-editor 
+  gnome-software
+  gnome-tweaks
   ];
 }
