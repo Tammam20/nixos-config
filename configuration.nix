@@ -25,7 +25,7 @@
   services.fwupd.enable = true;
     
   # Optimising the Nix store
-  /*nix.settings.auto-optimise-store = true;  
+  nix.settings.auto-optimise-store = true;  
       
   # Enable nix-command and flakes
   nix.settings.experimental-features = ["nix-command" "flakes"];
