@@ -17,8 +17,6 @@
   (floorp.override  { nativeMessagingHosts = [ gnome-browser-connector /*plasma-browser-integration*/ ];})
   thunderbird
   telegram-desktop
-  qemu
-  OVMFFull
   python3Full
   fish
   chromium
@@ -27,31 +25,18 @@
   pciutils
   usbutils
   lshw
-  gcc
   cpufetch
   neofetch
-  libnotify
-  virtiofsd
-  tor-browser-bundle-bin
-  niv
   libreoffice
-  apfs-fuse
   vim
   wget
-  tpm2-tools
   cron
-  gimp
-  rawtherapee
-  clinfo
-  glxinfo
-  vulkan-tools
-  wayland-utils
   distrobox
-  ripgrep-all
-  ripgrep
   ];
 
   # Packages with options
-  programs.virt-manager.enable = true;
+  programs.git.enable = true;
+
+  # 
 
 }
