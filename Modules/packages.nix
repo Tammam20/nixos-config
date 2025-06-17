@@ -22,15 +22,25 @@
   usbutils
   lshw
   cpufetch
-  neofetch
+  fastfetch
   libreoffice
   vim
+  gh
+  chezmoi
   wget
   distrobox
   ];
 
   # Packages with options
-  programs.git.enable = true;
+  programs.git = {
+  enable = true;
+  config = {
+  user = {
+	email = "whymewhyalwaysme@protonmail.com";
+	name = "Tammam20"; };
+};
+  };
+  
   programs.chromium.enable = true;
   programs.thunderbird.enable = true;
   programs.firefox.enable = true;
