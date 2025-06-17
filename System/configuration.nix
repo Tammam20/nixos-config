@@ -12,7 +12,7 @@
       ./Modules/services.nix # Services
       ./Modules/packages.nix # NixPkgs
       ./Modules/users.nix # Users
-      ./Modules/FontsLocales.nix # Fonts & Locales
+      ./Modules/Locales.nix # Fonts & Locales
       ./Modules/DesktopEnvironments/gnome.nix # gnome desktop environment
     ];
       
