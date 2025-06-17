@@ -46,6 +46,9 @@
   # Enable CUPS to print documents.
   services.printing.enable = true;
 
+  # enable xone
+  hardware.xone.enable = true;
+
   # Enable sound with pipewire.
   sound.enable = true;
   services.pipewire.enable = true;
