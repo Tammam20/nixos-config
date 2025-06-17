@@ -14,14 +14,10 @@
 
   # List packages installed in system profile.
   environment.systemPackages = with pkgs; [
-  (floorp.override  { nativeMessagingHosts = [ gnome-browser-connector /*plasma-browser-integration*/ ];})
-  thunderbird
   telegram-desktop
   python3Full
   fish
-  chromium
   appimage-run
-  git
   pciutils
   usbutils
   lshw
@@ -30,13 +26,13 @@
   libreoffice
   vim
   wget
-  cron
   distrobox
   ];
 
   # Packages with options
   programs.git.enable = true;
-
-  # 
+  programs.chromium.enable = true;
+  programs.thunderbird.enable = true;
+  programs.firefox.enable = true;
 
 }
