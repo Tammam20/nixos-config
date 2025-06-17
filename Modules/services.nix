@@ -26,11 +26,8 @@
   # Enable the X11 windowing system
   services.xserver.enable = true;
 
-  # Enable the headless Transmission BitTorrent daemon.
-  services.transmission = {
-  enable = true;
-  #home = "/home/tammam/";
-  };
+  # power
+  services.power-profiles-daemon.enable = true;
 
   # Configure keymap in X11
   services.xserver.xkb = {
