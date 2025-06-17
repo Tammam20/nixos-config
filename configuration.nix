@@ -17,7 +17,7 @@
     ];
   # bootable system
   boot.loader.efi.canTouchEfiVariables = true;
-  boot.loader.systemd-boot.enable = true;
+  #boot.loader.systemd-boot.enable = true;
   # system stuff
   services.thermald.enable = true;
   services.power-profiles-daemon.enable = true;
