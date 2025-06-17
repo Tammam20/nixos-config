@@ -8,10 +8,10 @@
       url = "github:nix-community/lanzaboote/v0.4.2";
       };
       # Optional but recommended to limit the size of your system closure.
-      inputs.nixpkgs.follows = "nixpkgs";
+     # inputs.nixpkgs.follows = "nixpkgs";
   };
 
-  outputs = { self, nixpkgs, ... }@inputs: {
+  outputs = { self, nixpkgs, lanzaboote, ... }@inputs: {
     # system stuff
     nixosConfigurations.t480 = nixpkgs.lib.nixosSystem {
       system = "x86_64-linux";
@@ -39,7 +39,7 @@
               enable = true;
               pkiBundle = "/var/lib/sbctl";
               };
-              };
+          })   
       ];
     };
   };
