@@ -12,6 +12,10 @@
             # generated at installation time. So we force it to false
             # for now.
             boot.loader.systemd-boot.enable = lib.mkForce false;
+            # bootable system
+  	    boot.loader.efi.canTouchEfiVariables = true;
+  	    boot.kernelParams = ["nowatchdog"];
+  	    #boot.loader.systemd-boot.enable = true;
 
             boot.lanzaboote = {
               enable = true;
@@ -22,6 +26,7 @@
   	    enable = true;                                                            
   	    backend = "python-validity";                                              
 	};
-    
+    	networking.hostName = "t480";
+    	
    }
     
