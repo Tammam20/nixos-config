@@ -32,6 +32,7 @@
   distrobox
   vscode-fhs
   nixfmt-rfc-style
+  nil
   ];
 
   # Packages with options
