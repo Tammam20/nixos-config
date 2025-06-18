@@ -1,9 +1,6 @@
 { config, pkgs, lib, inputs, ... }:
       
 {     
-  imports = [lanzaboote.nixosModules.lanzaboote 
-  nixos-06cb-009a-fingerprint-sensor.nixosModules."06cb-009a-fingerprint-sensor"
-  ];
 
             environment.systemPackages = [
               # For debugging and troubleshooting Secure Boot.
