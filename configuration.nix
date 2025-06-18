@@ -9,11 +9,11 @@
     [ ./hardware-configuration.nix # Include the results of the hardware scan.
       
       # Universal Options:
-      ./Modules/services.nix # Services
-      ./Modules/packages.nix # NixPkgs
-      ./Modules/users.nix # Users
-      ./Modules/Locales.nix # Fonts & Locales
-      ./Modules/DesktopEnvironments/gnome.nix # gnome desktop environment
+      ./modules/services.nix # Services
+      ./modules/packages.nix # NixPkgs
+      ./modules/users.nix # Users
+      ./modules/Locales.nix # Fonts & Locales
+      ./modules/denv/gnome.nix # gnome desktop environment
     ];
   # bootable system
   boot.loader.efi.canTouchEfiVariables = true;
