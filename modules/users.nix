@@ -6,9 +6,18 @@
     isNormalUser = true;
     description = "Tammam Faris";
     extraGroups = [ "networkmanager" "wheel" "libvirtd" "input" /*"docker"*/ ];
+    
     /*packages = with pkgs; [
       home-manager
     ];*/
+  };
+  programs.git = {
+  enable = true;
+  config = {
+  user = {
+	email = "whymewhyalwaysme@protonmail.com";
+	name = "Tammam20"; };
+};
   };
 
   # Enable Home-Manager for user tammam

@@ -29,18 +29,10 @@
   chezmoi
   wget
   distrobox
+  vscode-fhs
   ];
 
   # Packages with options
-  programs.git = {
-  enable = true;
-  config = {
-  user = {
-	email = "whymewhyalwaysme@protonmail.com";
-	name = "Tammam20"; };
-};
-  };
-  
   programs.chromium.enable = true;
   programs.thunderbird.enable = true;
   programs.firefox.enable = true;
