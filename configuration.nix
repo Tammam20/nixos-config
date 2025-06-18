@@ -24,13 +24,6 @@
   services.power-profiles-daemon.enable = true;
   networking.hostName = "t480"; 
   services.fwupd.enable = true;
-    
-  # python3 validity
-#  services."06cb-009a-fingerprint-sensor" = {                                 
-#  enable = true;                                                            
-#  backend = "libfprint-tod";                                                
-#  calib-data-file = ./calib-data.bin;                
-#};
 
   # Optimising the Nix store
   nix.settings.auto-optimise-store = true;  
