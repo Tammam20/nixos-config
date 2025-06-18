@@ -4,7 +4,6 @@
   imports = [lanzaboote.nixosModules.lanzaboote 
   nixos-06cb-009a-fingerprint-sensor.nixosModules."06cb-009a-fingerprint-sensor"
   ];
-	 ({ pkgs, lib, ... }: {
 
             environment.systemPackages = [
               # For debugging and troubleshooting Secure Boot.
@@ -25,8 +24,7 @@
 	    services."06cb-009a-fingerprint-sensor" = {                                 
   	    enable = true;                                                            
   	    backend = "python-validity";                                              
-	};   
-          })   
+	};
       ];
     };
     
