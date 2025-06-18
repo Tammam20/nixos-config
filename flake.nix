@@ -5,7 +5,7 @@
     # NixOS official package source, using the nixos-25.05 branch here
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-25.05";
     lanzaboote = {
-      url = "github:nix-community/lanzaboote/v0.4.2";
+      url = "github:nix-community/lanzaboote/v0.4.2"
       
       # Optional but recommended to limit the size of your system closure.
      inputs.nixpkgs.follows = "nixpkgs";
