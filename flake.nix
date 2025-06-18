@@ -26,5 +26,7 @@
         ./modules/machines/t480/hardware-configuration.nix # Include the results of the hardware scan.
         ./modules/shared.nix
         ./modules/machines/t480/t480.nix
-  };
+ ];
+};
+}; 
 }
