@@ -25,8 +25,6 @@
   	    enable = true;                                                            
   	    backend = "python-validity";                                              
 	};
-      ];
-    };
     
    }
     
