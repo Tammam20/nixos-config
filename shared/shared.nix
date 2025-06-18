@@ -10,17 +10,17 @@
       ./services.nix # Services
       ./packages.nix # NixPkgs
       ./users.nix # Users
-      ./Locales.nix # Fonts & Locales
+      ./locales.nix # Fonts & Locales
       ./denv/gnome.nix # gnome desktop environment
     ];
   # bootable system
   boot.loader.efi.canTouchEfiVariables = true;
   boot.kernelParams = ["nowatchdog"];
   #boot.loader.systemd-boot.enable = true;
+  
   # system stuff
   services.thermald.enable = true;
   services.power-profiles-daemon.enable = true;
-  networking.hostName = "t480"; 
   services.fwupd.enable = true;
 
   # Optimising the Nix store

@@ -25,9 +25,9 @@
         # so the old configuration file still takes effect
 	nixos-06cb-009a-fingerprint-sensor.nixosModules."06cb-009a-fingerprint-sensor"
 	lanzaboote.nixosModules.lanzaboote
-        ./modules/machines/t480/hardware-configuration.nix # Include the results of the hardware scan.
-        ./modules/shared.nix
-        ./modules/machines/t480/t480.nix
+        ./machines/t480/hardware-configuration.nix # Include the results of the hardware scan.
+        ./shared/shared.nix
+        ./machines/t480/t480.nix
  ];
 };
 }; 
