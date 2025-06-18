@@ -31,6 +31,7 @@
   wget
   distrobox
   vscode-fhs
+  nixfmt-rfc-style
   ];
 
   # Packages with options
