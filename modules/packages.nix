@@ -37,5 +37,5 @@
   programs.chromium.enable = true;
   programs.thunderbird.enable = true;
   programs.firefox.enable = true;
-
+  programs.steam.enable = true;
 }
