@@ -15,6 +15,7 @@
   # List packages installed in system profile.
   environment.systemPackages = with pkgs; [
   telegram-desktop
+  chromium
   python3Full
   fish
   appimage-run
