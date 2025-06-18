@@ -10,7 +10,7 @@
       ./services.nix # Services
       ./packages.nix # NixPkgs
       ./users.nix # Users
-      ./Locales.nix # Fonts & Locales
+      ./locales.nix # Fonts & Locales
       ./denv/gnome.nix # gnome desktop environment
     ];
   # bootable system
