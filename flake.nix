@@ -23,35 +23,8 @@
       modules = [
         # Import the previous configuration.nix we used,
         # so the old configuration file still takes effect
-        ./configuration.nix
-        
-        lanzaboote.nixosModules.lanzaboote
-	nixos-06cb-009a-fingerprint-sensor.nixosModules."06cb-009a-fingerprint-sensor"
-
-          ({ pkgs, lib, ... }: {
-
-            environment.systemPackages = [
-              # For debugging and troubleshooting Secure Boot.
-              pkgs.sbctl
-            ];
-
-            # Lanzaboote currently replaces the systemd-boot module.
-            # This setting is usually set to true in configuration.nix
-            # generated at installation time. So we force it to false
-            # for now.
-            boot.loader.systemd-boot.enable = lib.mkForce false;
-
-            boot.lanzaboote = {
-              enable = true;
-              pkiBundle = "/var/lib/sbctl";
-              };
-
-	    services."06cb-009a-fingerprint-sensor" = {                                 
-  	    enable = true;                                                            
-  	    backend = "python-validity";                                              
-	};   
-          })   
-      ];
-    };
+        ./modules/machines/t480/hardware-configuration.nix # Include the results of the hardware scan.
+        ./modules/shared.nix
+        ./modules/machines/t480/t480.nix
   };
 }
