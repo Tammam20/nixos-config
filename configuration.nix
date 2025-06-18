@@ -17,6 +17,7 @@
     ];
   # bootable system
   boot.loader.efi.canTouchEfiVariables = true;
+  boot.kernelParams = ["nowatchdog"];
   #boot.loader.systemd-boot.enable = true;
   # system stuff
   services.thermald.enable = true;
