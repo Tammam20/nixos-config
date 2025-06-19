@@ -32,7 +32,7 @@
     dates = "daily"; 
     options = "--delete-older-than 2d";
   };
-}
+};
       
   # Enable nix-command and flakes
   nix.settings.experimental-features = ["nix-command" "flakes"];
