@@ -30,7 +30,7 @@
   chezmoi
   wget
   distrobox
-  vscode-fhs
+  vscode
   nixfmt-rfc-style
   nil
   ];
@@ -43,5 +43,11 @@
   programs.virt-manager.enable = true;
   virtualisation.libvirtd.enable = true;
   virtualisation.podman.enable = true;
-
+  virtualisation.spiceUSBRedirection.enable = true;
+  #virtualisation.sharedDirectories = {
+  #  my-share = {
+  #  source = "/path/to/be/shared";
+  #  target = "//shared";
+ # };
+ # };
 }
