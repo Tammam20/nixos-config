@@ -40,4 +40,8 @@
   programs.thunderbird.enable = true;
   programs.firefox.enable = true;
   programs.steam.enable = true;
+  programs.virt-manager.enable = true;
+  virtualisation.libvirtd.enable = true;
+  virtualisation.podman.enable = true;
+
 }
