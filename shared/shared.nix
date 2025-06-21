@@ -11,7 +11,7 @@
       ./packages.nix # NixPkgs
       ./users.nix # Users
       ./locales.nix # Fonts & Locales
-      ./denv/gnome.nix # gnome desktop environment
+      ./gnome.nix # gnome desktop environment
     ];
   # bootable system
   boot.loader.efi.canTouchEfiVariables = true;

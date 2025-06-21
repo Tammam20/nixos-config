@@ -11,5 +11,5 @@
   gnome-software
   gnome-tweaks
   ];
- # programs.steam.gamescopeSession.enable = true;
+  programs.steam.gamescopeSession.enable = true;
 }
