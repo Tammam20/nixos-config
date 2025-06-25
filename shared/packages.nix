@@ -33,6 +33,7 @@
   vscode
   nixfmt-rfc-style
   nil
+  lm_sensors
   ];
 
   # Packages with options
