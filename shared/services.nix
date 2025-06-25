@@ -46,6 +46,7 @@
 
   # enable xone
   hardware.xone.enable = true;
+  hardware.xpad-noone.enable = true;
 
   # sound
   services.pipewire.enable = true;
