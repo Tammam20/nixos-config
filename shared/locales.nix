@@ -19,5 +19,14 @@
     LC_TELEPHONE = "ar_IQ.UTF-8";
     LC_TIME = "ar_IQ.UTF-8";
   };
-  i18n.extraLocales = "all"; 
+  i18n.extraLocales = "all";
+  
+  # Configure keymap in X11
+  services.xserver.xkb = {
+    layout = "de,ara";
+    variant = "nodeadkeys";
+  };
+  
+  # configure tty keymap
+  console.useXkbConfig = true;
 }

@@ -29,12 +29,6 @@
   # power
   services.power-profiles-daemon.enable = true;
 
-  # Configure keymap in X11
-  services.xserver.xkb = {
-    layout = "de,ara";
-    variant = "nodeadkeys";
-  };
-
   # Change systemd timeout
   systemd.extraConfig = ''
   DefaultTimeoutStopSec=10s
