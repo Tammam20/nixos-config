@@ -36,7 +36,7 @@
 
   # Enable CUPS to print documents.
   services.printing.enable = true;
-  services.printing.drivers = with pkgs; [ canon-capt ];
+  services.printing.drivers = with pkgs; [ canon-cups-ufr2 gutenprintBin gutenprint ];
 
   # enable xone
   hardware.xone.enable = true;
