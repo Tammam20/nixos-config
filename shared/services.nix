@@ -26,9 +26,6 @@
   # Enable the X11 windowing system
   services.xserver.enable = true;
 
-  # power
-  services.power-profiles-daemon.enable = true;
-
   # Change systemd timeout
   systemd.extraConfig = ''
   DefaultTimeoutStopSec=10s
