@@ -52,7 +52,7 @@
         CPU_BOOST_ON_AC = 1;
         CPU_BOOST_ON_BAT = 0;
         
-        #RUNTIME_PM_ON_AC = "auto";
+        RUNTIME_PM_ON_AC = "auto";
         RUNTIME_PM_ON_BAT = "auto";
 
         CPU_HWP_DYN_BOOST_ON_AC = 1;
@@ -70,7 +70,7 @@
         INTEL_GPU_MIN_FREQ_ON_BAT = "350";
         INTEL_GPU_MAX_FREQ_ON_AC = "650";
         INTEL_GPU_MAX_FREQ_ON_BAT = "450";
-        INTEL_GPU_BOOST_FREQ_ON_AC = "1050";
+        INTEL_GPU_BOOST_FREQ_ON_AC = "1100";
         INTEL_GPU_BOOST_FREQ_ON_BAT = "550";
         
         SOUND_POWER_SAVE_ON_AC = 1;
