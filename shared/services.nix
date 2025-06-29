@@ -1,4 +1,4 @@
-{ config, pkgs, lib, inputs, ... }:
+{ /*config,*/ pkgs, /*lib, inputs,*/ ... }:
 
 {
   # List services that you want to change:
