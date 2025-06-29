@@ -18,7 +18,16 @@
               enable = true;
               pkiBundle = "/var/lib/sbctl";
               };
-
+      # bootable system
+  boot.loader.efi.canTouchEfiVariables = true;
+  boot.kernelParams = ["nowatchdog" "mitigations=off"];
+  boot.blacklistedKernelModules = ["intel_pmc_bxt" /*"xpad"*/  "iTCO_wdt" /*"iTCO_vendor_support"*/];
+  #boot.loader.systemd-boot.enable = true;
+  
+  # system stuff
+  services.thermald.enable = true;
+  services.fwupd.enable = true;
+  
 	    services."06cb-009a-fingerprint-sensor" = {
   	    enable = true;                                                            
   	    backend = "libfprint-tod";
