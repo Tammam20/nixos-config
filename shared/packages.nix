@@ -45,6 +45,11 @@
   virtualisation.libvirtd.enable = true;
   virtualisation.podman.enable = true;
   virtualisation.spiceUSBRedirection.enable = true;
+  programs.kdeconnect = {
+  enable = true;
+  package = pkgs.gnomeExtensions.gsconnect;
+};
+
   #virtualisation.sharedDirectories = {
   #  my-share = {
   #  source = "/path/to/be/shared";
