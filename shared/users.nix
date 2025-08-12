@@ -5,12 +5,13 @@
   /*users.users.tammam = {
     isNormalUser = true;
     description = "Tammam Faris";
-    extraGroups = [ "networkmanager" "wheel" "libvirtd" "input" /*"docker"*/ ];
+    extraGroups = [ "networkmanager" "wheel" "libvirtd" "input" ];
     
-    /*packages = with pkgs; [
+    packages = with pkgs; [
       home-manager
-    ];*/
+    ];
   };*/
+  
   users.users.ellie = {
     isNormalUser = true;
     description = "Nerjis Faris";
