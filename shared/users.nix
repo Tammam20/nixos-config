@@ -10,7 +10,7 @@
     /*packages = with pkgs; [
       home-manager
     ];*/
-  };
+  };*/
   users.users.ellie = {
     isNormalUser = true;
     description = "Nerjis Faris";
