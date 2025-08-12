@@ -22,7 +22,6 @@
   pciutils
   usbutils
   lshw
-  cpufetch
   fastfetch
   libreoffice
   vim
