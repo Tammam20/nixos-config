@@ -2,7 +2,7 @@
 
 {
   # Define a user account. Don't forget to set a password with ‘passwd’.
-  users.users.tammam = {
+  /*users.users.tammam = {
     isNormalUser = true;
     description = "Tammam Faris";
     extraGroups = [ "networkmanager" "wheel" "libvirtd" "input" /*"docker"*/ ];
