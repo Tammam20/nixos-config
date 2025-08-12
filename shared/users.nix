@@ -11,6 +11,15 @@
       home-manager
     ];*/
   };
+  users.users.ellie = {
+    isNormalUser = true;
+    description = "Nerjis Faris";
+    extraGroups = [ "networkmanager" "wheel" "libvirtd" "input" /*"docker"*/ ];
+    
+    /*packages = with pkgs; [
+      home-manager
+    ];*/
+  };
   programs.git = {
   enable = true;
   config = {
