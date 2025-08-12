@@ -33,6 +33,7 @@
   nixfmt-rfc-style
   nil
   lm_sensors
+  spicetify-cli
   ];
 
   # Packages with options
