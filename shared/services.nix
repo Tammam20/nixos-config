@@ -35,10 +35,6 @@
   services.printing.enable = true;
   services.printing.drivers = with pkgs; [ canon-capt ];
 
-  # enable xone
-  hardware.xone.enable = true;
-  hardware.xpad-noone.enable = true;
-
   # sound
   services.pipewire.enable = true;
   services.pulseaudio.enable = false;

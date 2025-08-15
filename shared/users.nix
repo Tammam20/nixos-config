@@ -21,14 +21,14 @@
       home-manager
     ];*/
   };
-  programs.git = {
+  /*programs.git = {
   enable = true;
   config = {
   user = {
 	email = "whymewhyalwaysme@protonmail.com";
 	name = "Tammam20"; };
 };
-  };
+  };*/
 
   # Enable Home-Manager for user tammam
   /*home-manager.users.tammam = { pkgs, ... }: {
