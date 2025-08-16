@@ -34,6 +34,8 @@
   nil
   lm_sensors
   spicetify-cli
+  cmatrix
+  tldr
   ];
 
   # Packages with options
@@ -49,6 +51,7 @@
   enable = true;
   package = pkgs.gnomeExtensions.gsconnect;
 };
+ programs.git.enable = true;
 
   #virtualisation.sharedDirectories = {
   #  my-share = {
