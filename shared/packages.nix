@@ -36,6 +36,7 @@
   spicetify-cli
   cmatrix
   tldr
+  pkgsi686Linux.gperftools
   ];
 
   # Packages with options
