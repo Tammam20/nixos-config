@@ -36,7 +36,7 @@
   spicetify-cli
   cmatrix
   tldr
-  pkgsi686Linux.gperftools
+ # pkgsi686Linux.gperftools
   ];
 
   # Packages with options
@@ -53,7 +53,7 @@
   package = pkgs.gnomeExtensions.gsconnect;
 };
  programs.git.enable = true;
- programs.nix-ld.enable = true; 
+# programs.nix-ld.enable = true; 
 
   #virtualisation.sharedDirectories = {
   #  my-share = {
