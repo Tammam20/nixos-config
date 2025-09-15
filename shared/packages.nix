@@ -52,6 +52,7 @@
   package = pkgs.gnomeExtensions.gsconnect;
 };
  programs.git.enable = true;
+ programs.nix-ld.enable = true; 
 
   #virtualisation.sharedDirectories = {
   #  my-share = {
