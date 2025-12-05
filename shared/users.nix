@@ -2,7 +2,7 @@
 
 {
   # Define a user account. Don't forget to set a password with ‘passwd’.
-  /*users.users.tammam = {
+  users.users.tammam = {
     isNormalUser = true;
     description = "Tammam Faris";
     extraGroups = [ "networkmanager" "wheel" "libvirtd" "input" ];
@@ -10,25 +10,16 @@
     packages = with pkgs; [
       home-manager
     ];
-  };*/
-  
-  users.users.ellie = {
-    isNormalUser = true;
-    description = "Nerjis Faris";
-    extraGroups = [ "networkmanager" "wheel" "libvirtd" "input" /*"docker"*/ ];
-    
-    /*packages = with pkgs; [
-      home-manager
-    ];*/
   };
-  /*programs.git = {
+
+  programs.git = {
   enable = true;
   config = {
   user = {
 	email = "whymewhyalwaysme@protonmail.com";
 	name = "Tammam20"; };
 };
-  };*/
+  };
 
   # Enable Home-Manager for user tammam
   /*home-manager.users.tammam = { pkgs, ... }: {
