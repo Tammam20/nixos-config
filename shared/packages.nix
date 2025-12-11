@@ -16,7 +16,7 @@
   environment.systemPackages = with pkgs; [
   telegram-desktop
   chromium
-  python3Full
+  python3
   fish
   appimage-run
   pciutils
