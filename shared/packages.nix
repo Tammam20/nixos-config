@@ -35,7 +35,7 @@
   lm_sensors
   cmatrix
   tldr
-  cloudflare-warp
+ # cloudflare-warp
  # pkgsi686Linux.gperftools
   ];
 
@@ -48,7 +48,7 @@
   virtualisation.libvirtd.enable = true;
   virtualisation.podman.enable = true;
   virtualisation.spiceUSBRedirection.enable = true;
-  systemd.packages = [ pkgs.cloudflare-warp ]; # for warp-cli
+#  systemd.packages = [ pkgs.cloudflare-warp ]; # for warp-cli
   systemd.targets.multi-user.wants = [ "warp-svc.service" ]; # causes warp-svc to be started automatically
 #  programs.kdeconnect = {
 #  enable = true;
