@@ -23,6 +23,7 @@
   boot.kernelParams = ["nowatchdog" "mitigations=off"];
   boot.blacklistedKernelModules = ["intel_pmc_bxt" /*"xpad"*/  "iTCO_wdt" /*"iTCO_vendor_support"*/];
   #boot.loader.systemd-boot.enable = true;
+  boot.kernelPackages = pkgs.linuxPackages_latest;
   
   # system stuff
   services.thermald.enable = true;
