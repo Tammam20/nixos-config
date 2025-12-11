@@ -47,6 +47,10 @@
   virtualisation.libvirtd.enable = true;
   virtualisation.podman.enable = true;
   virtualisation.spiceUSBRedirection.enable = true;
+  virtualisation.waydroid = {
+    enable = true;
+    package = pkgs.waydroid-nftables;
+  };
 #  programs.kdeconnect = {
 #  enable = true;
 #  package = pkgs.gnomeExtensions.gsconnect;
