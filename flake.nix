@@ -2,22 +2,22 @@
   description = "A simple NixOS flake";
 
   inputs = {
-    # NixOS official package source, using the nixos-25.05 branch here
-    nixpkgs.url = "github:NixOS/nixpkgs/nixos-25.05";
+    # NixOS official package source, using the nixos-25.11 branch here
+    nixpkgs.url = "github:NixOS/nixpkgs/nixos-25.11";
     
     lanzaboote = {
-      url = "github:nix-community/lanzaboote/v0.4.2";      
+      url = "github:nix-community/lanzaboote/v1.0.0";      
       # Optional but recommended to limit the size of your system closure.
      inputs.nixpkgs.follows = "nixpkgs";
      };
 
     nixos-06cb-009a-fingerprint-sensor = {
-    url = "github:ahbnr/nixos-06cb-009a-fingerprint-sensor?ref=25.05";
+    url = "github:iedame/nixos-06cb-009a-fingerprint-sensor?ref=25.11";
     inputs.nixpkgs.follows = "nixpkgs";
    };
   };
 
-  outputs = { /*self,*/ nixpkgs, lanzaboote, nixos-06cb-009a-fingerprint-sensor, ... } /*@ inputs*/: {
+  outputs = { nixpkgs, lanzaboote, nixos-06cb-009a-fingerprint-sensor, ... }:  {
     # system stuff
     nixosConfigurations.t480 = nixpkgs.lib.nixosSystem {
       system = "x86_64-linux";

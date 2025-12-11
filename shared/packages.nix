@@ -33,7 +33,6 @@
   nixfmt-rfc-style
   nil
   lm_sensors
-  spicetify-cli
   cmatrix
   tldr
  # pkgsi686Linux.gperftools
@@ -48,10 +47,10 @@
   virtualisation.libvirtd.enable = true;
   virtualisation.podman.enable = true;
   virtualisation.spiceUSBRedirection.enable = true;
-  programs.kdeconnect = {
-  enable = true;
-  package = pkgs.gnomeExtensions.gsconnect;
-};
+#  programs.kdeconnect = {
+#  enable = true;
+#  package = pkgs.gnomeExtensions.gsconnect;
+#};
  programs.git.enable = true;
 # programs.nix-ld.enable = true; 
 
