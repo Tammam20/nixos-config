@@ -27,7 +27,7 @@
   services.xserver.enable = true;
 
   # Change systemd timeout
-  systemd.extraConfig = ''
+  systemd.settings.Manager = ''
   DefaultTimeoutStopSec=10s
   '';
 
