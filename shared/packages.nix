@@ -52,7 +52,7 @@
 #  package = pkgs.gnomeExtensions.gsconnect;
 #};
  programs.git.enable = true;
- programs.ladybird.enable = true;
+# programs.ladybird.enable = true;
 # programs.nix-ld.enable = true; 
 
   #virtualisation.sharedDirectories = {
