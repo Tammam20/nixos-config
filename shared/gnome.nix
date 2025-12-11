@@ -6,8 +6,8 @@
   services.desktopManager.gnome.enable = true;
 
   # Cosmic de
-  services.desktopManager.cosmic.enable = true;
-  services.desktopManager.cosmic.xwayland.enable = true;  
+#  services.desktopManager.cosmic.enable = true;
+ # services.desktopManager.cosmic.xwayland.enable = true;  
 
   environment.systemPackages = with pkgs; [
   gnome-firmware
