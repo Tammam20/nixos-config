@@ -35,6 +35,7 @@
   lm_sensors
   cmatrix
   tldr
+  waydroid-helper
  # pkgsi686Linux.gperftools
   ];
 
