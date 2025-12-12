@@ -21,7 +21,7 @@
       # bootable system
   boot.loader.efi.canTouchEfiVariables = true;
   boot.kernelParams = ["nowatchdog" "mitigations=off"];
-  boot.blacklistedKernelModules = ["intel_pmc_bxt" /*"xpad"*/  "iTCO_wdt" /*"iTCO_vendor_support"*/];
+  boot.blacklistedKernelModules = [ /*"intel_pmc_bxt"*/ /*"xpad"*/  "iTCO_wdt" "intel_oc_wdt"  /*"iTCO_vendor_support"*/ ];
   #boot.loader.systemd-boot.enable = true;
   boot.kernelPackages = pkgs.linuxPackages_latest;
   
