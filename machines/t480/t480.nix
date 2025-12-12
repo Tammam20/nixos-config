@@ -53,7 +53,7 @@
         CPU_DRIVER_OPMODE_ON_AC = "active";
         CPU_DRIVER_OPMODE_ON_BAT = "active";
         
-        CPU_ENERGY_PERF_POLICY_ON_AC = "balance_performance";
+        CPU_ENERGY_PERF_POLICY_ON_AC = "performance";
         CPU_ENERGY_PERF_POLICY_ON_BAT = "power";
 
         CPU_BOOST_ON_AC = 1;
@@ -65,22 +65,22 @@
         CPU_HWP_DYN_BOOST_ON_AC = 1;
         CPU_HWP_DYN_BOOST_ON_BAT = 0;
         
-        PCIE_ASPM_ON_AC = "powersave";
-        PCIE_ASPM_ON_BAT = "powersave";
+        #PCIE_ASPM_ON_AC = "powersave";
+        #PCIE_ASPM_ON_BAT = "powersave";
         
         CPU_MIN_PERF_ON_AC = 0;
         CPU_MAX_PERF_ON_AC = 100;
         CPU_MIN_PERF_ON_BAT = 0;
         CPU_MAX_PERF_ON_BAT = 30;
 
-        INTEL_GPU_MIN_FREQ_ON_AC = "350";
+        #INTEL_GPU_MIN_FREQ_ON_AC = "350";
         INTEL_GPU_MIN_FREQ_ON_BAT = "350";
-        INTEL_GPU_MAX_FREQ_ON_AC = "1050";
+        #INTEL_GPU_MAX_FREQ_ON_AC = "1050";
         INTEL_GPU_MAX_FREQ_ON_BAT = "450";
-        INTEL_GPU_BOOST_FREQ_ON_AC = "1100";
+        #INTEL_GPU_BOOST_FREQ_ON_AC = "1100";
         INTEL_GPU_BOOST_FREQ_ON_BAT = "550";
         
-        SOUND_POWER_SAVE_ON_AC = 1;
+        SOUND_POWER_SAVE_ON_AC = 0;
         SOUND_POWER_SAVE_ON_BAT = 1;
 
        #Optional helps save long term battery health
