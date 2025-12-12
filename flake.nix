@@ -4,6 +4,7 @@
   inputs = {
     # NixOS official package source, using the nixos-25.11 branch here
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-25.11";
+    nixpkgs-unstable.url = "github:NixOS/nixpkgs/nixos-unstable";
     
     lanzaboote = {
       url = "github:nix-community/lanzaboote/v1.0.0";      
@@ -17,19 +18,20 @@
    };
   };
 
-  outputs = { nixpkgs, lanzaboote, nixos-06cb-009a-fingerprint-sensor, ... }:  {
+  outputs = { nixpkgs, lanzaboote, nixos-06cb-009a-fingerprint-sensor, ... }@inputs:  {
     # system stuff
-    nixosConfigurations.t480 = nixpkgs.lib.nixosSystem {
+    nixosConfigurations = { 
+    t480 = nixpkgs.lib.nixosSystem {
       system = "x86_64-linux";
+      specialArgs = { inherit inputs; };
       modules = [
-        # Import the previous configuration.nix we used,
-        # so the old configuration file still takes effect
 	      nixos-06cb-009a-fingerprint-sensor.nixosModules."06cb-009a-fingerprint-sensor"
 	      lanzaboote.nixosModules.lanzaboote
         ./machines/t480/hardware-configuration.nix # Include the results of the hardware scan.
         ./shared/shared.nix
         ./machines/t480/t480.nix
  ];
+ };
 };
 }; 
 }

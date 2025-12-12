@@ -1,10 +1,11 @@
-{ /*config,*/ pkgs, lib, /*inputs,*/ ... }:
+{ config, pkgs, lib, pkgsUnstable, inputs, ... }:
       
 {     
 
             environment.systemPackages = [
               # For debugging and troubleshooting Secure Boot.
               pkgs.sbctl
+              pkgsUnstable.waydroid-helper
             ];
 
             # Lanzaboote currently replaces the systemd-boot module.
