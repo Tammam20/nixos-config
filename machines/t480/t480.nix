@@ -21,7 +21,7 @@
       # bootable system
   boot.loader.efi.canTouchEfiVariables = true;
   boot.kernelParams = ["nowatchdog" "mitigations=off"];
-  boot.blacklistedKernelModules = [ /*"intel_pmc_bxt"*/ /*"xpad"*/  "iTCO_wdt" "intel_oc_wdt"  /*"iTCO_vendor_support"*/ ];
+  boot.blacklistedKernelModules = [ "iTCO_wdt" "intel_oc_wdt" ];
   #boot.loader.systemd-boot.enable = true;
   boot.kernelPackages = pkgs.linuxPackages_latest;
   
@@ -59,7 +59,7 @@
         CPU_BOOST_ON_AC = 1;
         CPU_BOOST_ON_BAT = 0;
         
-        RUNTIME_PM_ON_AC = "auto";
+        #RUNTIME_PM_ON_AC = "auto";
         RUNTIME_PM_ON_BAT = "auto";
 
         CPU_HWP_DYN_BOOST_ON_AC = 1;
@@ -73,14 +73,14 @@
         CPU_MIN_PERF_ON_BAT = 0;
         CPU_MAX_PERF_ON_BAT = 30;
 
-        INTEL_GPU_MIN_FREQ_ON_AC = "350";
+        #INTEL_GPU_MIN_FREQ_ON_AC = "350";
         INTEL_GPU_MIN_FREQ_ON_BAT = "350";
-        INTEL_GPU_MAX_FREQ_ON_AC = "1050";
+        #INTEL_GPU_MAX_FREQ_ON_AC = "1050";
         INTEL_GPU_MAX_FREQ_ON_BAT = "450";
-        INTEL_GPU_BOOST_FREQ_ON_AC = "1100";
+        #INTEL_GPU_BOOST_FREQ_ON_AC = "1100";
         INTEL_GPU_BOOST_FREQ_ON_BAT = "550";
         
-        SOUND_POWER_SAVE_ON_AC = 1;
+        #SOUND_POWER_SAVE_ON_AC = 1;
         SOUND_POWER_SAVE_ON_BAT = 1;
 
        #Optional helps save long term battery health
