@@ -11,19 +11,20 @@
       ./packages.nix # NixPkgs
       ./users.nix # Users
       ./locales.nix # Fonts & Locales
-      ./gnome.nix # gnome desktop environment
+     # ./gnome.nix # gnome desktop environment
+       ./dms.nix
     ];
 
   # Optimising the Nix store
   nix.settings.auto-optimise-store = true;
 
-  nix = {
-  gc = {
-    automatic = true; 
-    dates = "daily"; 
-    options = "--delete-older-than 2d";
-  };
-};
+ # nix = {
+ # gc = {
+ #   automatic = true; 
+ #   dates = "daily"; 
+ #   options = "--delete-older-than 2d";
+ # };
+#};
       
   # Enable nix-command and flakes
   nix.settings.experimental-features = ["nix-command" "flakes"];
