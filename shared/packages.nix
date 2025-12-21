@@ -36,7 +36,7 @@
   cmatrix
   tldr
   waydroid-helper
-  alacrity
+  kitty
  # pkgsi686Linux.gperftools
   ];
 
