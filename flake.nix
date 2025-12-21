@@ -22,7 +22,7 @@
     };
   };
 
-  outputs = { nixpkgs, lanzaboote, nixos-06cb-009a-fingerprint-sensor, DankMaterialShell, ... }:  {
+  outputs = { nixpkgs, lanzaboote, nixos-06cb-009a-fingerprint-sensor, ... }:  {
     # system stuff
     nixosConfigurations.t480 = nixpkgs.lib.nixosSystem {
       system = "x86_64-linux";
@@ -31,6 +31,7 @@
         # so the old configuration file still takes effect
 	      nixos-06cb-009a-fingerprint-sensor.nixosModules."06cb-009a-fingerprint-sensor"
 	      lanzaboote.nixosModules.lanzaboote
+	      dms.nixosModules.dankMaterialShell
         ./machines/t480/hardware-configuration.nix # Include the results of the hardware scan.
         ./shared/shared.nix
         ./machines/t480/t480.nix
