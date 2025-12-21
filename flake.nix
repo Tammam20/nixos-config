@@ -22,7 +22,7 @@
     };
   };
 
-  outputs = { nixpkgs, lanzaboote, nixos-06cb-009a-fingerprint-sensor, ... }:  {
+  outputs = { nixpkgs, lanzaboote, nixos-06cb-009a-fingerprint-sensor, DankMaterialShell, ... }:  {
     # system stuff
     nixosConfigurations.t480 = nixpkgs.lib.nixosSystem {
       system = "x86_64-linux";
