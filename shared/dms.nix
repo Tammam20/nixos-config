@@ -1,7 +1,7 @@
 { config, pkgs, lib, inputs, ... }:
 {
 
-programs.dankMaterialShell = {
+programs.dank-material-shell = {
   enable = true;
 
   systemd = {
@@ -16,7 +16,7 @@ programs.dankMaterialShell = {
   enableAudioWavelength = true;      # Audio visualizer (cava)
   enableCalendarEvents = true;       # Calendar integration (khal)
 };
-programs.dankMaterialShell.greeter = {
+programs.dank-material-shell.greeter = {
   enable = true;
   compositor.name = "niri";
   # Sync your user's DankMaterialShell theme with the greeter. You'll probably want this
