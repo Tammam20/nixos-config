@@ -10,6 +10,7 @@ programs.dms-shell = {
   };
   
   # Core features
+  enableClipboard = true;
   enableSystemMonitoring = true;     # System monitoring widgets (dgop)
   enableVPN = true;                  # VPN management widget
   enableDynamicTheming = true;       # Wallpaper-based theming (matugen)
