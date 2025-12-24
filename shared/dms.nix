@@ -8,4 +8,5 @@ programs.dankMaterialShell.greeter = {
   compositor.name = "niri";  # Or "hyprland" or "sway"
 };
 services.upower.enable = true;
+hardware.bluetooth.enable = true;
 }
