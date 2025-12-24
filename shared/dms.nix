@@ -17,7 +17,7 @@ programs.dankMaterialShell = {
   enableAudioWavelength = true;      # Audio visualizer (cava)
   enableCalendarEvents = true;       # Calendar integration (khal)
 };
-services.displayManager.dms-greeter = {
+programs.dankMaterialShell.greeter = {
   enable = true;
   compositor.name = "niri";
   # Sync your user's DankMaterialShell theme with the greeter. You'll probably want this
