@@ -33,6 +33,9 @@ hardware.bluetooth.enable = true;
 hardware.bluetooth.powerOnBoot = false;
 
 environment.systemPackages = with pkgs; [ 
-    xwayland-satellite # xwayland support
+    #xwayland-satellite # xwayland support
+    brightnessctl
+    playerctl
+    
 ];
 }
