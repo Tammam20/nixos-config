@@ -1,7 +1,7 @@
 { config, pkgs, lib, inputs, ... }:
 {
 
-programs.dank-material-shell = {
+programs.dms-shell = {
   enable = true;
 
   systemd = {
@@ -16,7 +16,7 @@ programs.dank-material-shell = {
   enableAudioWavelength = true;      # Audio visualizer (cava)
   enableCalendarEvents = true;       # Calendar integration (khal)
 };
-programs.dank-material-shell.greeter = {
+services.displayManager.dms-greeter = {
   enable = true;
   compositor.name = "niri";
   # Sync your user's DankMaterialShell theme with the greeter. You'll probably want this
@@ -33,7 +33,7 @@ hardware.bluetooth.enable = true;
 hardware.bluetooth.powerOnBoot = false;
 
 environment.systemPackages = with pkgs; [ 
-    #xwayland-satellite # xwayland support
+    xwayland-satellite # xwayland support
     brightnessctl
     playerctl
     
