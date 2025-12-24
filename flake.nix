@@ -3,7 +3,7 @@
 
   inputs = {
     # NixOS official package source, using the nixos-25.11 branch here
-    nixpkgs.url = "github:NixOS/nixpkgs/nixos-25.11";
+    nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
     
     lanzaboote = {
       url = "github:nix-community/lanzaboote/v1.0.0";      
@@ -27,7 +27,7 @@
     };
   };
 
-  outputs = { nixpkgs, lanzaboote, nixos-06cb-009a-fingerprint-sensor, dms, /*noctalia,*/ ... }:  {
+  outputs = { nixpkgs,  lanzaboote, nixos-06cb-009a-fingerprint-sensor, dms, /*noctalia,*/ ... }:  {
     # system stuff
     nixosConfigurations.t480 = nixpkgs.lib.nixosSystem {
       system = "x86_64-linux";

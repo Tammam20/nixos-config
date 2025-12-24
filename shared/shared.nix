@@ -12,7 +12,7 @@
       ./users.nix # Users
       ./locales.nix # Fonts & Locales
      # ./gnome.nix # gnome desktop environment
-       ./noctalia.nix
+       ./dms.nix
     ];
 
   # Optimising the Nix store
