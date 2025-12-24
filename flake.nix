@@ -37,7 +37,7 @@
 	 nixos-06cb-009a-fingerprint-sensor.nixosModules."06cb-009a-fingerprint-sensor"
 	 lanzaboote.nixosModules.lanzaboote
 	#noctalia.nixosModules.default
-	 dms.nixosModules.dankMaterialShell
+	 dms.nixosModules.dank-material-shell
 	 dms.nixosModules.greeter
         ./machines/t480/hardware-configuration.nix # Include the results of the hardware scan.
         ./shared/shared.nix
