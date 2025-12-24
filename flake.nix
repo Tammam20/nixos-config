@@ -24,8 +24,8 @@
 /*    dms = {
       url = "github:AvengeMedia/DankMaterialShell/stable";
       inputs.nixpkgs.follows = "nixpkgs";
-    };
-  };*/
+    };*/
+  };
 
   outputs = { nixpkgs, lanzaboote, nixos-06cb-009a-fingerprint-sensor, /*dms,*/ noctalia, ... }:  {
     # system stuff
