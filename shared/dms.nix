@@ -15,11 +15,6 @@ programs.dankMaterialShell = {
   enableDynamicTheming = true;       # Wallpaper-based theming (matugen)
   enableAudioWavelength = true;      # Audio visualizer (cava)
   enableCalendarEvents = true;       # Calendar integration (khal)
-
-niri = {
-    enableKeybinds = true;   # Sets static preset keybinds
-    enableSpawn = true;      # Auto-start DMS with niri and cliphist, if enabled
-  };
 };
 programs.niri.enable = true;
 programs.dankMaterialShell.greeter = {
@@ -29,4 +24,8 @@ programs.dankMaterialShell.greeter = {
 services.upower.enable = true;
 hardware.bluetooth.enable = true;
 hardware.bluetooth.powerOnBoot = false;
+
+environment.systemPackages = with pkgs; [ 
+    xwayland-satellite # xwayland support
+];
 }
