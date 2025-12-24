@@ -19,7 +19,14 @@ programs.dankMaterialShell = {
 };
 services.displayManager.dms-greeter = {
   enable = true;
-  compositor.name = "niri";  # Or "hyprland" or "sway"
+  compositor.name = "niri";
+  # Sync your user's DankMaterialShell theme with the greeter. You'll probably want this
+  configHome = "/home/tammam";
+
+  # Custom config files for non-standard config locations
+  configFiles = [
+    "/home/tammam/.config/DankMaterialShell/settings.json"
+  ];  # Or "hyprland" or "sway"
 };  
 programs.niri.enable = true;
 services.upower.enable = true;
