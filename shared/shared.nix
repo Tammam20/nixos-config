@@ -11,8 +11,9 @@
       ./packages.nix # NixPkgs
       ./users.nix # Users
       ./locales.nix # Fonts & Locales
+      ./kde.nix
      # ./gnome.nix # gnome desktop environment
-       ./dms.nix
+     #  ./dms.nix
     ];
 
   # Optimising the Nix store
