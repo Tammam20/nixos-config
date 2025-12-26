@@ -28,6 +28,7 @@
   # system stuff
   services.thermald.enable = true;
   services.fwupd.enable = true;
+  services.hardware.bolt.enable = true;
 
   /*services."06cb-009a-fingerprint-sensor" = {                                 
   enable = true;                                                            
