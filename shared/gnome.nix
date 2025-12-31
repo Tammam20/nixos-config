@@ -15,5 +15,9 @@
   gnome-software
   gnome-tweaks
   ];
+  #  programs.kdeconnect = {
+#  enable = true;
+#  package = pkgs.gnomeExtensions.gsconnect;
+#};
   #programs.steam.gamescopeSession.enable = true;
 }
