@@ -7,4 +7,9 @@
   programs.kdeconnect = {
   enable = true;
 };
+programs.kde-pim.enable = true;
+programs.partition-manager.enable = true;
+environment.systemPackages =  with pkgs; [
+kdePackages.kalk
+]
 }
