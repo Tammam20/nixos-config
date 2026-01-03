@@ -37,6 +37,7 @@
   tldr
   waydroid-helper
   kitty
+  qbittorrent
  # pkgsi686Linux.gperftools
   ];
 
