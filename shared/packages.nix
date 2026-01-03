@@ -37,7 +37,7 @@
   tldr
   waydroid-helper
   kitty
-  qbittorrent
+  lutris
  # pkgsi686Linux.gperftools
   ];
 
@@ -46,6 +46,8 @@
   programs.thunderbird.enable = true;
   programs.firefox.enable = true;
   programs.steam.enable = true;
+  services.qbittorrent.enable = true;
+  programs.steam.protontricks.enable = true;
   programs.virt-manager.enable = true;
   virtualisation.libvirtd.enable = true;
   virtualisation.podman.enable = true;
