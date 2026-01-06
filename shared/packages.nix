@@ -47,6 +47,17 @@
   programs.firefox.enable = true;
   programs.steam.enable = true;
   services.qbittorrent.enable = true;
+  services.qbittorrent.serverConfig = {
+  LegalNotice.Accepted = true;
+  Preferences = {
+    WebUI = {
+      Username = "tammam";
+      Password_PBKDF2 = "USER";
+    };
+    General.Locale = "en";
+  };
+
+};
   programs.steam.protontricks.enable = true;
   programs.virt-manager.enable = true;
   virtualisation.libvirtd.enable = true;
