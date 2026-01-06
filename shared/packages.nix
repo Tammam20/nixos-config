@@ -59,7 +59,7 @@
   };
 
 };*/
-  programs.steam.protontricks.enable = true;
+#  programs.steam.protontricks.enable = true;
   programs.virt-manager.enable = true;
   virtualisation.libvirtd.enable = true;
   virtualisation.podman.enable = true;
