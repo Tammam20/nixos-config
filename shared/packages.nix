@@ -52,7 +52,7 @@
   Preferences = {
     WebUI = {
       Username = "tammam";
-      Password_PBKDF2 = "USER";
+      Password_PBKDF2 = "@ByteArray(ARQ77eY1NUZaQsuDHbIMCA==:0WMRkYTUWVT9wVvdDtHAjU9b3b7uB8NR1Gur2hmQCvCDpm39Q+PsJRJPaCU51dEiz+dTzh8qbPsL8WkFljQYFQ==)";
     };
     General.Locale = "en";
   };
