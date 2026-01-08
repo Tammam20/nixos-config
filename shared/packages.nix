@@ -39,6 +39,7 @@
   kitty
   lutris
   qbittorrent
+  winetricks
  # pkgsi686Linux.gperftools
   ];
 
