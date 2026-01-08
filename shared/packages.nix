@@ -40,6 +40,7 @@
   lutris
   qbittorrent
   winetricks
+  wineWowPackages.stable
  # pkgsi686Linux.gperftools
   ];
 
