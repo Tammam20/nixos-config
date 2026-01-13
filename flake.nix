@@ -50,7 +50,6 @@
         ./config/pipewire.nix
         ./config/users.nix
         ./config/nixconfig.nix
-        ./config/cloudflare.nux
         ./devices/t480/t480.nix
  ];
 };
