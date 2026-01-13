@@ -39,9 +39,19 @@
 	#noctalia.nixosModules.default
 	 #dms.nixosModules.dank-material-shell
 	 #dms.nixosModules.greeter
-        ./machines/t480/hardware-configuration.nix # Include the results of the hardware scan.
-        ./shared/shared.nix
-        ./machines/t480/t480.nix
+        ./config/cloudflare.nix
+        ./config/cups.nix
+        ./config/flatpak.nix
+        ./config/gnome.nix
+        ./config/locales.nix
+        ./config/packages.nix
+        ./config/systemd.nix
+        ./config/netmgr.nix
+        ./config/pipewire.nix
+        ./config/users.nix
+        ./config/nixconfig.nix
+        ./config/cloudflare.nux
+        ./devices/t480/t480.nix
  ];
 };
 }; 
