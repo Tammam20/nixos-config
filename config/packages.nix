@@ -60,14 +60,7 @@
 
 };*/
 #  programs.steam.protontricks.enable = true;
-  programs.virt-manager.enable = true;
-  virtualisation.libvirtd.enable = true;
-  virtualisation.podman.enable = true;
-  virtualisation.spiceUSBRedirection.enable = true;
-  virtualisation.waydroid = {
-    enable = true;
-    package = pkgs.waydroid-nftables;
-  };
+
 #  programs.kdeconnect = {
 #  enable = true;
 #  package = pkgs.gnomeExtensions.gsconnect;
@@ -76,10 +69,5 @@
 # programs.ladybird.enable = true;
 # programs.nix-ld.enable = true; 
 
-  #virtualisation.sharedDirectories = {
-  #  my-share = {
-  #  source = "/path/to/be/shared";
-  #  target = "//shared";
- # };
- # };
+
 }

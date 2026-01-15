@@ -51,6 +51,7 @@
         ./config/users.nix
         ./config/nixconfig.nix
         ./devices/t480/t480.nix
+        ./config/virtualisation.nix
  ];
 };
 }; 
