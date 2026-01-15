@@ -30,7 +30,7 @@
   wget
   distrobox
   vscode
-  nixfmt-rfc-style
+  nixfmt
   nil
   lm_sensors
   cmatrix
