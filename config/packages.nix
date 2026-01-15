@@ -39,6 +39,7 @@
   kitty
   lutris
   qbittorrent
+  protonup-qt
  # pkgsi686Linux.gperftools
   ];
 
