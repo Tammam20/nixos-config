@@ -40,6 +40,8 @@
   lutris
   qbittorrent
   protonup-qt
+  powertop
+  s-tui
  # pkgsi686Linux.gperftools
   ];
 

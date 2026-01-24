@@ -7,9 +7,7 @@ imports = [
 
             environment.systemPackages = [
               # For debugging and troubleshooting Secure Boot.
-              pkgs.sbctl
-	      powertop
-	      s-tui
+              pkgs.sbctl 
             ];
 
             # Lanzaboote currently replaces the systemd-boot module.
