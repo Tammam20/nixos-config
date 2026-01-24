@@ -8,6 +8,8 @@ imports = [
             environment.systemPackages = [
               # For debugging and troubleshooting Secure Boot.
               pkgs.sbctl
+	      powertop
+	      s-tui
             ];
 
             # Lanzaboote currently replaces the systemd-boot module.
@@ -23,7 +25,7 @@ imports = [
               };
       # bootable system
   boot.loader.efi.canTouchEfiVariables = true;
-  boot.kernelParams = ["nowatchdog" "mitigations=off"];
+  boot.kernelParams = ["nowatchdog" "mitigations=off" /*"i915.enable_psr=0" "i915.enable_fbc=0"*/];
   boot.blacklistedKernelModules = [ "iTCO_wdt" "intel_oc_wdt" ];
   #boot.loader.systemd-boot.enable = true;
   boot.kernelPackages = pkgs.linuxPackages_latest;
@@ -45,6 +47,17 @@ imports = [
 	};
 
   services.power-profiles-daemon.enable = false;
+  services.undervolt = {
+    enable = true;
+    #useTimer = true;
+    coreOffset = -75;
+    uncoreOffset = -75;
+    gpuOffset = -75;
+    #p1.limit = 40;
+    #p1.window = 2;
+    #p2.limit = 45;
+    #p2.window = 0.001;
+  };
   services.tlp = {
       enable = true;
       settings = {
@@ -77,14 +90,14 @@ imports = [
         CPU_MIN_PERF_ON_BAT = 0;
         CPU_MAX_PERF_ON_BAT = 30;
 
-        #INTEL_GPU_MIN_FREQ_ON_AC = "350";
+        INTEL_GPU_MIN_FREQ_ON_AC = "350";
         INTEL_GPU_MIN_FREQ_ON_BAT = "350";
-        #INTEL_GPU_MAX_FREQ_ON_AC = "1050";
+        INTEL_GPU_MAX_FREQ_ON_AC = "1050";
         INTEL_GPU_MAX_FREQ_ON_BAT = "450";
-        #INTEL_GPU_BOOST_FREQ_ON_AC = "1100";
+        INTEL_GPU_BOOST_FREQ_ON_AC = "1100";
         INTEL_GPU_BOOST_FREQ_ON_BAT = "550";
         
-        #SOUND_POWER_SAVE_ON_AC = 1;
+        SOUND_POWER_SAVE_ON_AC = 1;
         SOUND_POWER_SAVE_ON_BAT = 1;
 
        #Optional helps save long term battery health
