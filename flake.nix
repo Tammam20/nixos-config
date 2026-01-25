@@ -41,7 +41,7 @@
         # so the old configuration file still takes effect
 	 nixos-06cb-009a-fingerprint-sensor.nixosModules."06cb-009a-fingerprint-sensor"
 	 lanzaboote.nixosModules.lanzaboote
-	 inputs.autoaspm.nixosModules.default
+	 autoaspm.nixosModules.default
 	#noctalia.nixosModules.default
 	 #dms.nixosModules.dank-material-shell
 	 #dms.nixosModules.greeter
