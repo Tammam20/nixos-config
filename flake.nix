@@ -17,7 +17,6 @@
    };
     autoaspm = {
     url = "git+https://git.notthebe.ee/notthebee/AutoASPM";
-    # NOTE: optionally your flake's `nixpkgs`
      inputs.nixpkgs.follows = "nixpkgs";
   };
    
@@ -32,13 +31,11 @@
     };*/
   };
 
-  outputs = { nixpkgs,  lanzaboote, nixos-06cb-009a-fingerprint-sensor, /*dms,*/ /*noctalia,*/ ... }:  {
+  outputs = { nixpkgs,  lanzaboote, nixos-06cb-009a-fingerprint-sensor, autoaspm, /*dms,*/ /*noctalia,*/ ... }:  {
     # system stuff
     nixosConfigurations.t480 = nixpkgs.lib.nixosSystem {
       system = "x86_64-linux";
       modules = [
-        # Import the previous configuration.nix we used,
-        # so the old configuration file still takes effect
 	 nixos-06cb-009a-fingerprint-sensor.nixosModules."06cb-009a-fingerprint-sensor"
 	 lanzaboote.nixosModules.lanzaboote
 	 autoaspm.nixosModules.default
