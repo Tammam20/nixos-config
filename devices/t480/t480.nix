@@ -45,14 +45,14 @@ imports = [
 	};
 
   services.power-profiles-daemon.enable = false;
-  services.autoaspm.enable = true;
+ # services.autoaspm.enable = true;
   services.undervolt = {
     enable = true;
     #useTimer = true;
     coreOffset = -100;
     uncoreOffset = -100;
     gpuOffset = -100;
-    #p1.limit = 40;
+    #p1.limit = 29;
     #p1.window = 2;
     #p2.limit = 45;
     #p2.window = 0.001;
