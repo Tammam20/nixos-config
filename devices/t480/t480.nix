@@ -45,12 +45,13 @@ imports = [
 	};
 
   services.power-profiles-daemon.enable = false;
+  services.autoaspm.enable = true;
   services.undervolt = {
     enable = true;
     #useTimer = true;
-    coreOffset = -75;
-    uncoreOffset = -75;
-    gpuOffset = -75;
+    coreOffset = -100;
+    uncoreOffset = -100;
+    gpuOffset = -100;
     #p1.limit = 40;
     #p1.window = 2;
     #p2.limit = 45;
@@ -74,7 +75,7 @@ imports = [
         CPU_BOOST_ON_AC = 1;
         CPU_BOOST_ON_BAT = 0;
         
-        #RUNTIME_PM_ON_AC = "auto";
+        RUNTIME_PM_ON_AC = "auto";
         RUNTIME_PM_ON_BAT = "auto";
 
         CPU_HWP_DYN_BOOST_ON_AC = 1;

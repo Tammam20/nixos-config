@@ -15,6 +15,11 @@
     url = "github:iedame/nixos-06cb-009a-fingerprint-sensor?ref=25.11";
     inputs.nixpkgs.follows = "nixpkgs";
    };
+    autoaspm = {
+    url = "git+https://git.notthebe.ee/notthebee/AutoASPM";
+    # NOTE: optionally your flake's `nixpkgs`
+     inputs.nixpkgs.follows = "nixpkgs";
+  };
    
 /*    noctalia = {
       url = "github:noctalia-dev/noctalia-shell";
@@ -36,6 +41,7 @@
         # so the old configuration file still takes effect
 	 nixos-06cb-009a-fingerprint-sensor.nixosModules."06cb-009a-fingerprint-sensor"
 	 lanzaboote.nixosModules.lanzaboote
+	 inputs.autoaspm.nixosModules.default
 	#noctalia.nixosModules.default
 	 #dms.nixosModules.dank-material-shell
 	 #dms.nixosModules.greeter
