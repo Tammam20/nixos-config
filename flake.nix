@@ -15,6 +15,10 @@
     url = "github:iedame/nixos-06cb-009a-fingerprint-sensor?ref=25.11";
     inputs.nixpkgs.follows = "nixpkgs";
    };
+   mangowc = {
+      url = "github:DreamMaoMao/mangowc";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
     /*autoaspm = {
     url = "git+https://git.notthebe.ee/notthebee/AutoASPM";
      inputs.nixpkgs.follows = "nixpkgs";
@@ -31,13 +35,14 @@
     };*/
   };
 
-  outputs = { nixpkgs,  lanzaboote, nixos-06cb-009a-fingerprint-sensor, /*autoaspm,*/ /*dms,*/ /*noctalia,*/ ... }:  {
+  outputs = { nixpkgs,  lanzaboote, nixos-06cb-009a-fingerprint-sensor, mangowc, /*autoaspm,*/ /*dms,*/ /*noctalia,*/ ... }:  {
     # system stuff
     nixosConfigurations.t480 = nixpkgs.lib.nixosSystem {
       system = "x86_64-linux";
       modules = [
 	 nixos-06cb-009a-fingerprint-sensor.nixosModules."06cb-009a-fingerprint-sensor"
 	 lanzaboote.nixosModules.lanzaboote
+	 mangowc.nixosModules.default
 	# autoaspm.nixosModules.default
 	#noctalia.nixosModules.default
 	 #dms.nixosModules.dank-material-shell
@@ -45,7 +50,8 @@
         ./config/cloudflare.nix
         ./config/cups.nix
         ./config/flatpak.nix
-        ./config/gnome.nix
+        #./config/gnome.nix
+	./config/mangowc.nix
         ./config/locales.nix
         ./config/packages.nix
         ./config/systemd.nix
