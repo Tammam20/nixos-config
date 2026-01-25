@@ -42,7 +42,7 @@
       modules = [
 	 nixos-06cb-009a-fingerprint-sensor.nixosModules."06cb-009a-fingerprint-sensor"
 	 lanzaboote.nixosModules.lanzaboote
-	 mangowc.nixosModules.default
+	 mangowc.nixosModules.mango
 	# autoaspm.nixosModules.default
 	#noctalia.nixosModules.default
 	 #dms.nixosModules.dank-material-shell
