@@ -33,16 +33,16 @@ imports = [
   services.fwupd.enable = true;
   services.hardware.bolt.enable = true;
 
-  /*services."06cb-009a-fingerprint-sensor" = {                                 
+  services."06cb-009a-fingerprint-sensor" = {                                 
   enable = true;                                                            
   backend = "python-validity";                                              
-};  */ 
+};   
   
-	    services."06cb-009a-fingerprint-sensor" = {
+/*	    services."06cb-009a-fingerprint-sensor" = {
   	    enable = true;                                                            
   	    backend = "libfprint-tod";
 	    calib-data-file = ./calib-data.bin;
-	};
+	};/*
 
   services.power-profiles-daemon.enable = false;
 #  services.autoaspm.enable = true;
