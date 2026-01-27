@@ -51,6 +51,7 @@ imports = [
     #useTimer = true;
     coreOffset = -75;
     gpuOffset = -75;
+    uncoreOffset = -75;
     #p1.limit = 29;
     #p1.window = 2;
     #p2.limit = 45;

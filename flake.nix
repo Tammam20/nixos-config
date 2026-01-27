@@ -50,8 +50,8 @@
         ./config/cloudflare.nix
         ./config/cups.nix
         ./config/flatpak.nix
-        #./config/gnome.nix
-	./config/mangowc.nix
+        ./config/gnome.nix
+	#./config/mangowc.nix
         ./config/locales.nix
         ./config/packages.nix
         ./config/systemd.nix
