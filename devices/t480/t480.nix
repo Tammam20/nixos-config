@@ -77,8 +77,10 @@ imports = [
         
         RUNTIME_PM_ON_AC = "auto";
         RUNTIME_PM_ON_BAT = "auto";
-
-	USB_DENYLIST = "06cb:009a";
+	
+	USB_AUTOSUSPEND = 1;
+	
+	#USB_DENYLIST = "06cb:009a";
 
         CPU_HWP_DYN_BOOST_ON_AC = 1;
         CPU_HWP_DYN_BOOST_ON_BAT = 0;
