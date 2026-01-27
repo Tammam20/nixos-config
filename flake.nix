@@ -19,10 +19,10 @@
    #   url = "github:DreamMaoMao/mangowc";
    #   inputs.nixpkgs.follows = "nixpkgs";
    # };
-    autoaspm = {
-    url = "git+https://git.notthebe.ee/notthebee/AutoASPM";
-     inputs.nixpkgs.follows = "nixpkgs";
-  };
+    #autoaspm = {
+  #  url = "git+https://git.notthebe.ee/notthebee/AutoASPM";
+   #  inputs.nixpkgs.follows = "nixpkgs";
+ # };
    
 /*    noctalia = {
       url = "github:noctalia-dev/noctalia-shell";
@@ -35,7 +35,7 @@
     };*/
   };
 
-  outputs = { nixpkgs,  lanzaboote, nixos-06cb-009a-fingerprint-sensor,/* mangowc,*/ autoaspm, /*dms,*/ /*noctalia,*/ ... }:  {
+  outputs = { nixpkgs,  lanzaboote, nixos-06cb-009a-fingerprint-sensor,/* mangowc,*/ /*autoaspm,*/ /*dms,*/ /*noctalia,*/ ... }:  {
     # system stuff
     nixosConfigurations.t480 = nixpkgs.lib.nixosSystem {
       system = "x86_64-linux";
@@ -43,7 +43,7 @@
 	 nixos-06cb-009a-fingerprint-sensor.nixosModules."06cb-009a-fingerprint-sensor"
 	 lanzaboote.nixosModules.lanzaboote
 	#mangowc.nixosModules.mango
-	autoaspm.nixosModules.default
+#	autoaspm.nixosModules.default
 	#noctalia.nixosModules.default
 	 #dms.nixosModules.dank-material-shell
 	 #dms.nixosModules.greeter
