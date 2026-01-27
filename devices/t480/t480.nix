@@ -45,7 +45,7 @@ imports = [
 	};
 
   services.power-profiles-daemon.enable = false;
- # services.autoaspm.enable = true;
+  services.autoaspm.enable = true;
   services.undervolt = {
     enable = true;
     #useTimer = true;
