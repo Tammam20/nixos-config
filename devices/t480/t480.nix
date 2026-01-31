@@ -33,10 +33,10 @@ imports = [
   services.fwupd.enable = true;
   services.hardware.bolt.enable = true;
 
- /* services."06cb-009a-fingerprint-sensor" = {                                 
+  services."06cb-009a-fingerprint-sensor" = {                                 
   enable = true;                                                            
   backend = "python-validity";                                              
-}; */  
+};   
   
         /*services."06cb-009a-fingerprint-sensor" = {
   	    enable = true;                                                            
@@ -89,12 +89,12 @@ imports = [
         CPU_MIN_PERF_ON_BAT = 0;
         CPU_MAX_PERF_ON_BAT = 30;
 
-        INTEL_GPU_MIN_FREQ_ON_AC = "350";
-        INTEL_GPU_MIN_FREQ_ON_BAT = "350";
-        INTEL_GPU_MAX_FREQ_ON_AC = "1050";
-        INTEL_GPU_MAX_FREQ_ON_BAT = "450";
-        INTEL_GPU_BOOST_FREQ_ON_AC = "1100";
-        INTEL_GPU_BOOST_FREQ_ON_BAT = "550";
+        INTEL_GPU_MIN_FREQ_ON_AC = 350;
+        INTEL_GPU_MIN_FREQ_ON_BAT = 350;
+        INTEL_GPU_MAX_FREQ_ON_AC = 050;
+        INTEL_GPU_MAX_FREQ_ON_BAT = 450;
+        INTEL_GPU_BOOST_FREQ_ON_AC = 1100;
+        INTEL_GPU_BOOST_FREQ_ON_BAT = 550;
         
         SOUND_POWER_SAVE_ON_AC = 1;
         SOUND_POWER_SAVE_ON_BAT = 1;
@@ -106,6 +106,23 @@ imports = [
      };
    };
     	networking.hostName = "t480";
+    security.pam.services.sudo.text = ''
+    # Account management.
+    account required pam_unix.so
+    
+    # Authentication management.
+    auth sufficient pam_unix.so   likeauth try_first_pass nullok
+    auth sufficient ${fprintd-clients}/lib/security/pam_fprintd.so
+    auth required pam_deny.so
+    
+    # Password management.
+    password sufficient pam_unix.so nullok sha512
+    
+    # Session management.
+    session required pam_env.so conffile=/etc/pam/environment readenv=0
+    session required pam_unix.so
+  '';
+
 
   # This value determines the NixOS release from which the default
   # settings for stateful data, like file locations and database versions
