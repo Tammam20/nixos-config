@@ -112,7 +112,7 @@ imports = [
     
     # Authentication management.
     auth sufficient pam_unix.so   likeauth try_first_pass nullok
-    auth sufficient ${fprintd-clients}/lib/security/pam_fprintd.so
+    auth sufficient pam_fprintd.so
     auth required pam_deny.so
     
     # Password management.
