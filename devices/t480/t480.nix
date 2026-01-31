@@ -22,16 +22,18 @@ imports = [
               pkiBundle = "/var/lib/sbctl";
               };
       # bootable system
+
   boot.loader.efi.canTouchEfiVariables = true;
-    fileSystems."/boot" = {
-    options =  [ "umask=0077" ];
-  };
+fileSystems."/".options = [
+  "discard=async"
+];
   boot.kernelParams = ["nowatchdog" "mitigations=off" /*"i915.enable_psr=0" "i915.enable_fbc=0"*/];
   boot.blacklistedKernelModules = [ "iTCO_wdt" "intel_oc_wdt" ];
   #boot.loader.systemd-boot.enable = true;
   boot.kernelPackages = pkgs.linuxPackages_latest;
   
-  # system stuff
+  # system stuff  
+  services.fstrim.enable = true;
   services.thermald.enable = true;
   services.fwupd.enable = true;
   services.hardware.bolt.enable = true;
