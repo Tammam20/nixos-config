@@ -106,7 +106,6 @@ imports = [
      };
    };
     	networking.hostName = "t480";
-security.pam.services.fprint.fprintAuth = true;
 
   # This value determines the NixOS release from which the default
   # settings for stateful data, like file locations and database versions
