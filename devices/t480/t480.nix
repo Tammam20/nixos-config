@@ -24,7 +24,7 @@ imports = [
       # bootable system
   boot.loader.efi.canTouchEfiVariables = true;
     fileSystems."/boot" = {
-    options =  [ "uid=0" "gid=0" "fmask=0077" "dmask=0077" ];
+    options =  [ "umask=0077" ];
   };
   boot.kernelParams = ["nowatchdog" "mitigations=off" /*"i915.enable_psr=0" "i915.enable_fbc=0"*/];
   boot.blacklistedKernelModules = [ "iTCO_wdt" "intel_oc_wdt" ];
