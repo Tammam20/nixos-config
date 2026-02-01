@@ -20,4 +20,5 @@
 #  package = pkgs.gnomeExtensions.gsconnect;
 #};
   #programs.steam.gamescopeSession.enable = true;
+services.usbmuxd.enable = true;
 }
