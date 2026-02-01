@@ -14,11 +14,11 @@
   dconf-editor 
   gnome-software
   gnome-tweaks
+  usbmuxd
   ];
   #  programs.kdeconnect = {
 #  enable = true;
 #  package = pkgs.gnomeExtensions.gsconnect;
 #};
   #programs.steam.gamescopeSession.enable = true;
-services.usbmuxd.enable = true;
 }
