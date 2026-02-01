@@ -15,6 +15,7 @@
   gnome-software
   gnome-tweaks
   usbmuxd
+  libimobiledevice
   ];
   #  programs.kdeconnect = {
 #  enable = true;
