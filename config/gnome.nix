@@ -17,8 +17,8 @@
   usbmuxd
   libimobiledevice
   filezilla
+  ifuse
   ];
-services.usbmuxd.enable = true;
   #  programs.kdeconnect = {
 #  enable = true;
 #  package = pkgs.gnomeExtensions.gsconnect;
