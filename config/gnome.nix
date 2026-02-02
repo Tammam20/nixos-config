@@ -16,6 +16,7 @@
   gnome-tweaks
   usbmuxd
   libimobiledevice
+  filezilla
   ];
 services.usbmuxd.enable = true;
   #  programs.kdeconnect = {
