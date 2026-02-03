@@ -2,6 +2,8 @@
 
 {
   services.displayManager.ly.enable = true;
+  security.soteria.enable = true;
+  programs.dconf.enable = true;
   programs.mango.enable = true;
 
   environment.systemPackages = with pkgs; [
@@ -21,22 +23,24 @@
     papirus-icon-theme
     brightnessctl
     wlogout
-    (pkgs. symlinkJoin {
+
+    (pkgs.symlinkJoin {
 	    name = "mango";
-	    buildInputs = [ pkgs.makewrapper ];
+	    buildInputs = [ pkgs.makeWrapper ];
 	    paths = [ pkgs.mango ];
 	    postBuild = ''
 	        wrapProgram $out/bin/mango
-	        --append-flags "--config ${../progconfig/mango/config.conf}" 
+	          --append-flags "-c ${../progconfig/mango/config.conf}" 
 	        '';
       })
-      (pkgs. symlinkJoin {
+
+      (pkgs.symlinkJoin {
 	    name = "waybar";
 	    buildInputs = [ pkgs.makewrapper ];
 	    paths = [ pkgs.waybar ];
 	    postBuild = ''
-	        wrapProgram $out/bin/mango
-	        --append-flags "--config ${../progconfig/config.conf}" 
+	        wrapProgram $out/bin/waybar
+	        --append-flags "-c ${../progconfig/waybar/config.jsonc} -s ${../progconfig/waybar/style.css}" 
 	        '';
       })
   ];
@@ -45,6 +49,17 @@
     nerd-fonts.jetbrains-mono
   ];
 
+    /*programs.dconf.profiles.user.databases = [
+    {
+      settings."org/gnome/desktop/interface" = {
+        gtk-theme = "Adwaita";
+        icon-theme = "";
+        font-name = "Noto Sans Medium 11";
+        document-font-name = "Noto Sans Medium 11";
+        monospace-font-name = "Noto Sans Mono Medium 11";
+      };
+    }
+  ];*/
 
 
 }
