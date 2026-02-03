@@ -1,6 +1,7 @@
 { pkgs, ... }:
 
 {
+  services.displayManager.ly.enable = true;
   programs.mango.enable = true;
 
   environment.systemPackages = with pkgs; [
@@ -18,12 +19,13 @@
     swayosd
     swaynotificationcenter
     wlsunset
+    papirus-icon-theme
     (pkgs. symlinkJoin {
 	name = "mango";
 	buildInputs = [ pkgs.makewrapper ];
 	paths = [ pkgs.mango ];
 	postBuild = ''
-	wrapProgram $out/bin/kitty
+	wrapProgram $out/bin/mango
 	--append-flags "--config ${../progconfig/config.conf}" 
 	'';
 })
