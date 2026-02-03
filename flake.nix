@@ -35,7 +35,8 @@
 	      nixos-06cb-009a-fingerprint-sensor.nixosModules."06cb-009a-fingerprint-sensor"
 	      lanzaboote.nixosModules.lanzaboote 
 	      mangowc.nixosModules.mango
-        impermanence.nixosModules.impermanence 
+        impermanence.nixosModules.impermanence
+        #./config/impermanence.nix
         ./config/cloudflare.nix
         ./config/cups.nix
         ./config/flatpak.nix
