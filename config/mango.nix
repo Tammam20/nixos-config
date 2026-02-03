@@ -5,7 +5,7 @@
   security.soteria.enable = true;
   programs.dconf.enable = true;
   programs.mango.enable = true;
-  programs.mango.package = (pkgs.mango.symlinkJoin {
+  programs.mango.package = (pkgs.mango.mango.symlinkJoin {
 	    name = "mango";
 	    buildInputs = [ pkgs.mango.makeWrapper ];
 	    paths = [ pkgs.mango.mango ];
