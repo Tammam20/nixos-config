@@ -25,6 +25,8 @@
         "Games"
         ".steam"
         ".vscode"
+        "validity-nix"
+        "nixos-config"
         { directory = ".gnupg"; mode = "0700"; }
         { directory = ".ssh"; mode = "0700"; }
         { directory = ".nixops"; mode = "0700"; }
