@@ -5,6 +5,15 @@
   security.soteria.enable = true;
   programs.dconf.enable = true;
   programs.mango.enable = true;
+  programs.mango.package = (pkgs.symlinkJoin {
+	    name = "mango";
+	    buildInputs = [ pkgs.makeWrapper ];
+	    paths = [ pkgs.mango ];
+	    postBuild = ''
+	        wrapProgram $out/bin/mango
+	          --append-flags "-c ${../progconfig/mango/config.conf}" 
+	        '';
+      });
 
   environment.systemPackages = with pkgs; [
     foot
@@ -24,15 +33,7 @@
     brightnessctl
     wlogout
 
-    (pkgs.symlinkJoin {
-	    name = "mango";
-	    buildInputs = [ pkgs.makeWrapper ];
-	    paths = [ pkgs.mango ];
-	    postBuild = ''
-	        wrapProgram $out/bin/mango
-	          --append-flags "-c ${../progconfig/mango/config.conf}" 
-	        '';
-      })
+    
 
       (pkgs.symlinkJoin {
 	    name = "waybar";
