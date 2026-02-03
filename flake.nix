@@ -32,15 +32,15 @@
     nixosConfigurations.t480 = nixpkgs.lib.nixosSystem {
       system = "x86_64-linux";
       modules = [
-	nixos-06cb-009a-fingerprint-sensor.nixosModules."06cb-009a-fingerprint-sensor"
-	lanzaboote.nixosModules.lanzaboote 
-	mangowc.nixosModules.mango
-	impermanence.nixosModules.impermanence 
+	      nixos-06cb-009a-fingerprint-sensor.nixosModules."06cb-009a-fingerprint-sensor"
+	      lanzaboote.nixosModules.lanzaboote 
+	      mangowc.nixosModules.mango
+        impermanence.nixosModules.impermanence 
         ./config/cloudflare.nix
         ./config/cups.nix
         ./config/flatpak.nix
-       # ./config/gnome.nix
-	./config/mango.nix
+       #./config/gnome.nix
+	      ./config/mango.nix
         ./config/locales.nix
         ./config/packages.nix
         ./config/systemd.nix

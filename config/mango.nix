@@ -12,7 +12,6 @@
     slurp
     swaybg
     networkmanagerapplet
-    waybar
     blueman
     sway-audio-idle-inhibit
     swayidle
@@ -20,15 +19,26 @@
     swaynotificationcenter
     wlsunset
     papirus-icon-theme
+    brightnessctl
+    wlogout
     (pkgs. symlinkJoin {
-	name = "mango";
-	buildInputs = [ pkgs.makewrapper ];
-	paths = [ pkgs.mango ];
-	postBuild = ''
-	wrapProgram $out/bin/mango
-	--append-flags "--config ${../progconfig/config.conf}" 
-	'';
-})
+	    name = "mango";
+	    buildInputs = [ pkgs.makewrapper ];
+	    paths = [ pkgs.mango ];
+	    postBuild = ''
+	        wrapProgram $out/bin/mango
+	        --append-flags "--config ${../progconfig/mango/config.conf}" 
+	        '';
+      })
+      (pkgs. symlinkJoin {
+	    name = "waybar";
+	    buildInputs = [ pkgs.makewrapper ];
+	    paths = [ pkgs.waybar ];
+	    postBuild = ''
+	        wrapProgram $out/bin/mango
+	        --append-flags "--config ${../progconfig/config.conf}" 
+	        '';
+      })
   ];
 
   fonts.packages = with pkgs; [
