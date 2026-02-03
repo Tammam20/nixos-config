@@ -15,43 +15,32 @@
     url = "github:tammam20/validity-nix";
     inputs.nixpkgs.follows = "nixpkgs";
    };
-  # mangowc = {
-   #   url = "github:DreamMaoMao/mangowc";
-   #   inputs.nixpkgs.follows = "nixpkgs";
-   # };
-    #autoaspm = {
-  #  url = "git+https://git.notthebe.ee/notthebee/AutoASPM";
-   #  inputs.nixpkgs.follows = "nixpkgs";
- # };
+   mango = {
+     url = "github:DreamMaoMao/mangowc";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
    
-/*    noctalia = {
-      url = "github:noctalia-dev/noctalia-shell";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };*/
-  
-    /*dms = {
-      url = "github:AvengeMedia/DankMaterialShell";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };*/
+    impermanence = {
+	url = "github:nix-community/impermanence";
+    	input.nixpkgs.follows = "nixpkgs";
   };
 
-  outputs = { nixpkgs,  lanzaboote, nixos-06cb-009a-fingerprint-sensor,/* mangowc,*/ /*autoaspm,*/ /*dms,*/ /*noctalia,*/ ... }:  {
+  };
+
+  outputs = { nixpkgs,  lanzaboote, nixos-06cb-009a-fingerprint-sensor, mangowc, impermanence,  ... }:  {
     # system stuff
     nixosConfigurations.t480 = nixpkgs.lib.nixosSystem {
       system = "x86_64-linux";
       modules = [
-	 nixos-06cb-009a-fingerprint-sensor.nixosModules."06cb-009a-fingerprint-sensor"
-	 lanzaboote.nixosModules.lanzaboote
-	#mangowc.nixosModules.mango
-#	autoaspm.nixosModules.default
-	#noctalia.nixosModules.default
-	 #dms.nixosModules.dank-material-shell
-	 #dms.nixosModules.greeter
+	nixos-06cb-009a-fingerprint-sensor.nixosModules."06cb-009a-fingerprint-sensor"
+	lanzaboote.nixosModules.lanzaboote 
+	mangowc.nixosModules.mango
+	impermanence.nixosModules.impermanence 
         ./config/cloudflare.nix
         ./config/cups.nix
         ./config/flatpak.nix
-        ./config/gnome.nix
-	#./config/mangowc.nix
+       # ./config/gnome.nix
+	./config/mango.nix
         ./config/locales.nix
         ./config/packages.nix
         ./config/systemd.nix
