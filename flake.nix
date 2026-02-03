@@ -36,7 +36,7 @@
       modules = [
 	      nixos-06cb-009a-fingerprint-sensor.nixosModules."06cb-009a-fingerprint-sensor"
 	      lanzaboote.nixosModules.lanzaboote 
-	      mangowc.nixosModules.mango
+	      mango.nixosModules.mango
         impermanence.nixosModules.impermanence
         #./config/impermanence.nix
         ./config/cloudflare.nix
