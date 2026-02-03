@@ -1,14 +1,14 @@
-{ pkgs, mango, ... }:
+{ pkgs, ... }:
 
 {
   services.displayManager.ly.enable = true;
   security.soteria.enable = true;
   programs.dconf.enable = true;
   programs.mango.enable = true;
-  programs.mango.package = (mango.symlinkJoin {
+  programs.mango.package = (pkgs.mango.symlinkJoin {
 	    name = "mango";
-	    buildInputs = [ mango.makeWrapper ];
-	    paths = [ mango.mango ];
+	    buildInputs = [ pkgs.mango.makeWrapper ];
+	    paths = [ pkgs.mango.mango ];
 	    postBuild = ''
 	        wrapProgram $out/bin/mango
 	          --append-flags "-c ${../progconfig/mango/config.conf}" 
