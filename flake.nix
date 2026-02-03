@@ -19,6 +19,8 @@
      url = "github:DreamMaoMao/mango";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+
+    flake-parts.url = "github:hercules-ci/flake-parts";
    
     impermanence = {
 	    url = "github:nix-community/impermanence";
@@ -27,7 +29,7 @@
 
   };
 
-  outputs = { nixpkgs,  lanzaboote, nixos-06cb-009a-fingerprint-sensor, mangowc, impermanence,  ... }:  {
+  outputs = { nixpkgs,  lanzaboote, nixos-06cb-009a-fingerprint-sensor, mango, impermanence,  ... }:  {
     # system stuff
     nixosConfigurations.t480 = nixpkgs.lib.nixosSystem {
       system = "x86_64-linux";
