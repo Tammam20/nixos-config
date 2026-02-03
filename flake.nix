@@ -21,8 +21,8 @@
     };
    
     impermanence = {
-	url = "github:nix-community/impermanence";
-    	input.nixpkgs.follows = "nixpkgs";
+	    url = "github:nix-community/impermanence";
+    	inputs.nixpkgs.follows = "nixpkgs";
   };
 
   };
