@@ -1,4 +1,4 @@
-{ pkgs, ... }:
+{ pkgs, inputs, ... }:
 
 {
   /*imports = [
@@ -11,27 +11,27 @@
   programs.mango.enable = true;
   #programs.mango.package = ;
 
-  environment.systemPackages = with pkgs; [
-    foot
-    wmenu
-    wl-clipboard
-    grim
-    slurp
-    swaybg
-    networkmanagerapplet
-    blueman
-    sway-audio-idle-inhibit
-    swayidle
-    swayosd
-    swaynotificationcenter
-    wlsunset
-    papirus-icon-theme
-    brightnessctl
-    wlogout
+  environment.systemPackages = [
+    pkgs.foot
+    pkgs.wmenu
+    pkgs.wl-clipboard
+    pkgs.grim
+    pkgs.slurp
+    pkgs.swaybg
+    pkgs.networkmanagerapplet
+    pkgs.blueman
+    pkgs.sway-audio-idle-inhibit
+    pkgs.swayidle
+    pkgs.swayosd
+    pkgs.swaynotificationcenter
+    pkgs.wlsunset
+    pkgs.papirus-icon-theme
+    pkgs.brightnessctl
+    pkgs.wlogout
     (pkgs.symlinkJoin {
 	    name = "mango";
 	    buildInputs = [ pkgs.makeWrapper ];
-	    paths = [ mango.packages.${pkgs.stdenv.hostPlatform.system}.mango ];
+	    paths = [ inputs.mango.packages.${pkgs.stdenv.hostPlatform.system}.mango ];
 	    postBuild = ''
 	        wrapProgram $out/bin/mango
 	          --append-flags "-c ${../progconfig/mango/config.conf}" 
