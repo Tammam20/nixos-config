@@ -9,15 +9,7 @@
   security.soteria.enable = true;
   programs.dconf.enable = true;
   programs.mango.enable = true;
-  programs.mango.package = (pkgs.symlinkJoin {
-	    name = "mango";
-	    buildInputs = [ pkgs.makeWrapper ];
-	    paths = [ inputs.mango.packages.${pkgs.stdenv.hostPlatform.system}.mango ];
-	    postBuild = ''
-	        wrapProgram $out/bin/mango
-	          --append-flags "-c ${../progconfig/mango/config.conf}" 
-	        '';
-      });
+  #programs.mango.package = ;
 
   environment.systemPackages = with pkgs; [
     foot
@@ -36,7 +28,15 @@
     papirus-icon-theme
     brightnessctl
     wlogout
-
+    (pkgs.symlinkJoin {
+	    name = "mango";
+	    buildInputs = [ pkgs.makeWrapper ];
+	    paths = [ inputs.mango.packages.${pkgs.stdenv.hostPlatform.system}.mango ];
+	    postBuild = ''
+	        wrapProgram $out/bin/mango
+	          --append-flags "-c ${../progconfig/mango/config.conf}" 
+	        '';
+      })
     
 
       (pkgs.symlinkJoin {
