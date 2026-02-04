@@ -1,10 +1,4 @@
-{ pkgs, inputs ? {}, ... }:
-
-let
-  mangoPkg = if builtins.hasAttr "mango" inputs
-    then inputs.mango.packages.${pkgs.stdenv.hostPlatform.system}.mango
-    else pkgs.mango;
-in
+{ pkgs, ... }:
 
 {
   /*imports = [
@@ -37,7 +31,7 @@ in
     (pkgs.symlinkJoin {
       name = "mango";
       buildInputs = [ pkgs.makeWrapper ];
-      paths = [ mangoPkg ];
+      paths = [ pkgs.mango ];
       postBuild = ''
         wrapProgram $out/bin/mango --append-flags "-c ${../progconfig/mango/config.conf}"
       '';
