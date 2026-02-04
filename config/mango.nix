@@ -75,7 +75,7 @@
 	    paths = [ pkgs.waybar ];
 	    postBuild = ''
 	        wrapProgram $out/bin/waybar
-	        --append-flags "-c ${../progconfig/waybar/config.jsonc} -s ${../progconfig/waybar/style.css}" 
+	        --append-flags "-c ${../progconfig/mango/waybar/config.jsonc} -s ${../progconfig/mango/waybar/style.css}" 
 	        '';
       })
   ];
