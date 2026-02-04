@@ -1,14 +1,18 @@
-{ pkgs, ... }:
+{ pkgs, inputs, ... }:
 
 {
+  imports = [
+    inputs.mango.nixosModules.mango
+  ];
+
   services.displayManager.ly.enable = true;
   security.soteria.enable = true;
   programs.dconf.enable = true;
   programs.mango.enable = true;
-  programs.mango.package = (pkgs.mango.mango.symlinkJoin {
+  programs.mango.package = (pkgs.symlinkJoin {
 	    name = "mango";
-	    buildInputs = [ pkgs.mango.makeWrapper ];
-	    paths = [ pkgs.mango.mango ];
+	    buildInputs = [ pkgs.makeWrapper ];
+	    paths = [ inputs.mango.packages.${pkgs.stdenv.hostPlatform.system}.mango ];
 	    postBuild = ''
 	        wrapProgram $out/bin/mango
 	          --append-flags "-c ${../progconfig/mango/config.conf}" 
