@@ -5,10 +5,10 @@
   security.soteria.enable = true;
   programs.dconf.enable = true;
   programs.mango.enable = true;
-  programs.mango.package = (pkgs.mango.mango.symlinkJoin {
-	    name = "mango";
-	    buildInputs = [ pkgs.mango.makeWrapper ];
-	    paths = [ pkgs.mango.mango ];
+  programs.mango.package = (pkgs.symlinkJoin {
+	    name = "mangowc";
+	    buildInputs = [ pkgs.mangowc.makeWrapper ];
+	    paths = [ pkgs.mangowc ];
 	    postBuild = ''
 	        wrapProgram $out/bin/mango
 	          --append-flags "-c ${../progconfig/mango/config.conf}" 
