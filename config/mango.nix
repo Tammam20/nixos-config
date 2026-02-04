@@ -29,25 +29,22 @@
     pkgs.brightnessctl
     pkgs.wlogout
     (pkgs.symlinkJoin {
-	    name = "mango";
-	    buildInputs = [ pkgs.makeWrapper ];
-	    paths = [ inputs.mango.packages.${pkgs.stdenv.hostPlatform.system}.mango ];
-	    postBuild = ''
-	        wrapProgram $out/bin/mango
-	          --append-flags "-c ${../progconfig/mango/config.conf}" 
-	        '';
-      })
-    
+      name = "mango";
+      buildInputs = [ pkgs.makeWrapper ];
+      paths = [ inputs.mango.packages.${pkgs.stdenv.hostPlatform.system}.mango ];
+      postBuild = ''
+        wrapProgram $out/bin/mango --append-flags "-c ${../progconfig/mango/config.conf}"
+      '';
+    })
 
-      (pkgs.symlinkJoin {
-	    name = "waybar";
-	    buildInputs = [ pkgs.makewrapper ];
-	    paths = [ pkgs.waybar ];
-	    postBuild = ''
-	        wrapProgram $out/bin/waybar
-	        --append-flags "-c ${../progconfig/waybar/config.jsonc} -s ${../progconfig/waybar/style.css}" 
-	        '';
-      })
+    (pkgs.symlinkJoin {
+      name = "waybar";
+      buildInputs = [ pkgs.makeWrapper ];
+      paths = [ pkgs.waybar ];
+      postBuild = ''
+        wrapProgram $out/bin/waybar --append-flags "-c ${../progconfig/waybar/config.jsonc} -s ${../progconfig/waybar/style.css}"
+      '';
+    })
   ];
 
   fonts.packages = with pkgs; [
