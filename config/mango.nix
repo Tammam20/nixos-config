@@ -1,9 +1,9 @@
 { pkgs, inputs, ... }:
 
 {
-  imports = [
+  /*imports = [
     inputs.mango.nixosModules.mango
-  ];
+  ];*/
 
   services.displayManager.ly.enable = true;
   security.soteria.enable = true;
