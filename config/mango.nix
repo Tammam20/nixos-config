@@ -4,16 +4,42 @@
   services.displayManager.ly.enable = true;
   security.soteria.enable = true;
   programs.dconf.enable = true;
-  programs.mango.enable = true;
-  programs.mango.package = (pkgs.symlinkJoin {
-	    name = "mangowc";
-	    buildInputs = [ pkgs.mangowc.makeWrapper ];
-	    paths = [ pkgs.mangowc ];
-	    postBuild = ''
-	        wrapProgram $out/bin/mango
-	          --append-flags "-c ${../progconfig/mango/config.conf}" 
-	        '';
-      });
+  xdg.portal = {
+      enable = true;
+
+      config = {
+        mango = {
+          default = [
+            "gtk"
+          ];
+          # except those
+          "org.freedesktop.impl.portal.Secret" = ["gnome-keyring"];
+          "org.freedesktop.impl.portal.ScreenCast" = ["wlr"];
+          "org.freedesktop.impl.portal.ScreenShot" = ["wlr"];
+
+          # wlr does not have this interface
+          "org.freedesktop.impl.portal.Inhibit" = [];
+        };
+      };
+      extraPortals = with pkgs; [
+        xdg-desktop-portal-wlr
+        xdg-desktop-portal-gtk
+      ];
+
+      wlr.enable =  true;
+
+      configPackages = [pkgs.mangowc];
+    };
+
+    security.polkit.enable =  true;
+
+    programs.xwayland.enable = true;
+
+    services = {
+      displayManager.sessionPackages = [pkgs.mangowc];
+
+      graphical-desktop.enable = true;
+    };
 
   environment.systemPackages = with pkgs; [
     foot
@@ -33,7 +59,15 @@
     brightnessctl
     wlogout
 
-    
+    (pkgs.symlinkJoin {
+	    name = "mangowc";
+	    buildInputs = [ pkgs.makeWrapper ];
+	    paths = [ pkgs.mangowc ];
+	    postBuild = ''
+	        wrapProgram $out/bin/mangowc
+	          --append-flags "-c ${../progconfig/mango/config.conf}" 
+	        '';
+      })
 
       (pkgs.symlinkJoin {
 	    name = "waybar";
