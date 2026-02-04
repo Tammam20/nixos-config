@@ -1,4 +1,4 @@
-{ pkgs, inputs, ... }:
+{ pkgs, ... }:
 
 {
   /*imports = [
@@ -31,7 +31,7 @@
     (pkgs.symlinkJoin {
 	    name = "mango";
 	    buildInputs = [ pkgs.makeWrapper ];
-	    paths = [ inputs.mango.packages.${pkgs.stdenv.hostPlatform.system}.mango ];
+	    paths = [ mango.packages.${pkgs.stdenv.hostPlatform.system}.mango ];
 	    postBuild = ''
 	        wrapProgram $out/bin/mango
 	          --append-flags "-c ${../progconfig/mango/config.conf}" 
