@@ -71,7 +71,7 @@
 
       (pkgs.symlinkJoin {
 	    name = "waybar";
-	    buildInputs = [ pkgs.makewrapper ];
+	    buildInputs = [ pkgs.makeWrapper ];
 	    paths = [ pkgs.waybar ];
 	    postBuild = ''
 	        wrapProgram $out/bin/waybar
