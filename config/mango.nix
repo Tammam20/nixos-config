@@ -61,7 +61,7 @@
 
     (pkgs.symlinkJoin {
 	    name = "mangowc";
-	    buildInputs = [ pkgs.makeWrapper ];
+	    buildInputs = [ makeWrapper ];
 	    paths = [ pkgs.mangowc ];
 	    postBuild = ''
 	        wrapProgram $out/bin/mangowc
@@ -71,7 +71,7 @@
 
       (pkgs.symlinkJoin {
 	    name = "waybar";
-	    buildInputs = [ pkgs.makeWrapper ];
+	    buildInputs = [ makeWrapper ];
 	    paths = [ pkgs.waybar ];
 	    postBuild = ''
 	        wrapProgram $out/bin/waybar
