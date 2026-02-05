@@ -64,7 +64,7 @@
 	    buildInputs = [ makeWrapper ];
 	    paths = [ pkgs.mangowc ];
 	    postBuild = ''
-	        wrapProgram $out/bin/mangowc
+	        wrapProgram $out/bin/mango
 	          --append-flags "-c ${../progconfig/mango/config.conf}" 
 	        '';
       })
