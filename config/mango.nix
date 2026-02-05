@@ -4,7 +4,7 @@
   services.xserver.enable = true;
   services.xserver.displayManager.lightdm.enable = true;
   services.xserver.displayManager.lightdm.greeters.gtk.enable = true;
-  services.xserver.displayManager.lightdm.greeters.gtk.theme.name = "Adwaita-Dark";
+  services.xserver.displayManager.lightdm.greeters.gtk.theme.name = "Adwaita-dark";
   security.soteria.enable = true;
   programs.dconf.enable = true;
   services.gnome.gnome-keyring.enable = true;
@@ -86,18 +86,20 @@
     nerd-fonts.jetbrains-mono
   ];
 
-    /*programs.dconf.profiles.user.databases = [
+    programs.dconf.profiles.user.databases = [
     {
       settings."org/gnome/desktop/interface" = {
-        gtk-theme = "Adwaita";
-        icon-theme = "";
-        font-name = "Noto Sans Medium 11";
-        document-font-name = "Noto Sans Medium 11";
-        monospace-font-name = "Noto Sans Mono Medium 11";
+        gtk-theme = "Adwaita-dark";
+	color-scheme = "prefer-dark";
+       # icon-theme = "";
       };
     }
-  ];*/
-
+  ];
+ qt = {
+    enable = true;
+    platformTheme = "gnome";
+    style = "adwaita-dark";
+  };
 
 }
 
