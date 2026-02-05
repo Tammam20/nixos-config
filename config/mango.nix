@@ -4,6 +4,9 @@
   services.displayManager.ly.enable = true;
   security.soteria.enable = true;
   programs.dconf.enable = true;
+  services.gnome.gnome-keyring.enable = true;
+  programs.seahorse.enable = true;
+  
   xdg.portal = {
       enable = true;
 
