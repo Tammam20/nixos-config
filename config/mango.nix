@@ -9,6 +9,8 @@
   programs.dconf.enable = true;
   services.gnome.gnome-keyring.enable = true;
   programs.seahorse.enable = true;
+  services.blueman.enable = true;
+  programs.nm-applet.enable = true;
   
   xdg.portal = {
       enable = true;
@@ -52,8 +54,6 @@
     grim
     slurp
     swaybg
-    networkmanagerapplet
-    blueman
     sway-audio-idle-inhibit
     swayidle
     swayosd
