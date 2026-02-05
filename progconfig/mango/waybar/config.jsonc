@@ -137,7 +137,7 @@
       "format-alt": "↓{bandwidthDownBytes} ↑{bandwidthUpBytes}"
     },
     "clock": {
-      "format": "{:%H:%M} ",
+      "format": "{:%l:%M} ",
       "format-alt": "{:%A, %b %d} ",
       "tooltip-format": "{:%Y}",
       "calendar": {
