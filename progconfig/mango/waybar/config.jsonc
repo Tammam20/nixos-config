@@ -19,6 +19,7 @@
         "pulseaudio",
         "cpu",
         "temperature",
+	"battery",
         "backlight",
         "clock",
         "custom/notification",
