@@ -26,7 +26,6 @@
     layout = "de,ara";
     variant = "nodeadkeys";
   };
- services.xserver.exportConfiguration = true; 
   # configure tty keymap
   console.useXkbConfig = true;
 }
