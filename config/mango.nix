@@ -64,8 +64,7 @@
 	    buildInputs = [ makeWrapper ];
 	    paths = [ pkgs.mangowc ];
 	    postBuild = ''
-	        wrapProgram $out/bin/mango
-	          --append-flags "-c ${../progconfig/mango/config.conf}" 
+	        wrapProgram $out/bin/mango --append-flags "-c ${../progconfig/mango/config.conf}" 
 	        '';
       })
 
@@ -74,8 +73,7 @@
 	    buildInputs = [ makeWrapper ];
 	    paths = [ pkgs.waybar ];
 	    postBuild = ''
-	        wrapProgram $out/bin/waybar
-	        --append-flags "-c ${../progconfig/mango/waybar/config.jsonc} -s ${../progconfig/mango/waybar/style.css}" 
+	        wrapProgram $out/bin/waybar --append-flags "-c ${../progconfig/mango/waybar/config.jsonc} -s ${../progconfig/mango/waybar/style.css}" 
 	        '';
       })
   ];
