@@ -17,8 +17,8 @@ tooltip {
   border-radius: 4px;
   border-width: 2px;
   border-style: solid;
-  border-color: #c9b890;
-  color: #ddca9e;
+  border-color: #3d5f99;
+  color: #3d5f99;
 }
 
 #language,
@@ -53,7 +53,7 @@ tooltip {
   border-radius: 4px;
   border-width: 2px;
   border-style: solid;
-  border-color: #c9b890;
+  border-color: #3d5f99;
   margin-left: 4px;
   padding-left: 10px;
   padding-right: 6px;
@@ -66,7 +66,7 @@ tooltip {
   background: none;
   box-shadow: inherit;
   text-shadow: inherit;
-  color: #ddca9e;
+  color: #3d5f99;
   padding: 1px;
   padding-left: 1px;
   padding-right: 1px;
@@ -81,7 +81,7 @@ tooltip {
 }
 
 #workspaces button.visible {
-  color: #ddca9e;
+  color: #3d5f99;
 }
 
 #workspaces button:hover {
@@ -89,7 +89,7 @@ tooltip {
 }
 
 #workspaces button.active {
-  background-color: #ddca9e;
+  background-color: #3d5f99;
   color: #282828;
   margin-top: 5px;
   margin-bottom: 5px;
@@ -114,7 +114,7 @@ tooltip {
   border-radius: 4px;
   border-width: 2px;
   border-style: solid;
-  border-color: #c9b890;
+  border-color: #3d5f99;
   margin-left: 4px;
   padding-left: 10px;
   padding-right: 6px;
@@ -149,11 +149,11 @@ tooltip {
 }
 
 #tags button.occupied {
-  color: #ddca9e;
+  color: #3d5f99;
 }
 
 #tags button.overview {
-  color: #ddca9e;
+  color: #3d5f99;
 }
 
 #tags button:hover {
@@ -161,7 +161,7 @@ tooltip {
 }
 
 #tags button.focused {
-  background-color: #ddca9e;
+  background-color: #3d5f99;
   color: #282828;
   margin-top: 5px;
   margin-bottom: 5px;
@@ -185,13 +185,13 @@ tooltip {
   border-radius: 4px;
   border-width: 2px;
   border-style: solid;
-  border-color: #c9b890;
+  border-color: #3d5f99;
   margin-right: 4px;
   margin-left: 4px;
   padding-right: 8px;
   padding-left: 9px;
   padding-top: 2px;
-  color: #ddca9e;
+  color: #181f77;
 }
 
 #network {
@@ -199,13 +199,13 @@ tooltip {
   border-radius: 4px;
   border-width: 2px;
   border-style: solid;
-  border-color: #c9b890;
+  border-color: #3d5f99;
   margin-right: 4px;
   margin-left: 0px;
   padding-right: 8px;
   padding-left: 9px;
   padding-top: 2px;
-  color: #ddca9e;
+  color: #181f77;
 }
 
 #workspaces {
@@ -213,7 +213,7 @@ tooltip {
   border-radius: 4px;
   border-width: 2px;
   border-style: solid;
-  border-color: #c9b890;
+  border-color: #3d5f99;
   margin-left: 4px;
   padding-right: 6px;
   padding-left: 4px;
@@ -221,10 +221,10 @@ tooltip {
 
 #language {
   background: rgba(40, 40, 40, 0.9);
-  color: #ddca9e;
+  color: #3d5f99;
   border-width: 2px;
   border-style: solid;
-  border-color: #c9b890;
+  border-color: #3d5f99;
   border-right: 0px;
   border-radius: 4px 0px 0px 4px;
   min-width: 24px;
@@ -232,41 +232,41 @@ tooltip {
 
 #keyboard-state {
   background: none;
-  color: #ddca9e;
+  color: #3d5f99;
   border: none;
   padding-top: 1px;
 }
 
 #custom-updates {
   background: rgba(40, 40, 40, 0.9);
-  color: #ddca9e;
+  color: #3d5f99;
   border-radius: 0px 4px 4px 0px;
   border-width: 2px;
   border-left: 0px;
   border-style: solid;
-  border-color: #c9b890;
+  border-color: #3d5f99;
 }
 
 #window {
   background: rgba(40, 40, 40, 0.9);
   border-width: 2px;
   border-style: solid;
-  border-color: #c9b890;
+  border-color: #3d5f99;
   border-radius: 4px;
   margin-left: 0px;
   margin-right: 10px;
-  color: #ddca9e;
+  color: #3d5f99;
 }
 
 #taskbar {
   background: rgba(40, 40, 40, 0.9);
   border-width: 2px;
   border-style: solid;
-  border-color: #c9b890;
+  border-color: #3d5f99;
   border-radius: 4px;
   margin-left: 10px;
   margin-right: 10px;
-  color: #ddca9e;
+  color: #3d5f99;
 }
 
 #taskbar.empty {
@@ -309,7 +309,7 @@ tooltip {
 }
 
 #taskbar button.active {
-  background-color: #ddca9e;
+  background-color: #3d5f99;
   color: #282828;
   margin-top: 5px;
   margin-bottom: 5px;
@@ -324,10 +324,10 @@ tooltip {
   background: rgba(40, 40, 40, 0.9);
   border-width: 2px;
   border-style: solid;
-  border-color: #c9b890;
+  border-color: #3d5f99;
   border-right: 0px;
   border-left: 0px;
-  color: #ddca9e;
+  color: #3d5f99;
 }
 
 #cava {
@@ -335,28 +335,28 @@ tooltip {
   border-radius: 4px 0px 0px 4px;
   border-width: 2px;
   border-style: solid;
-  border-color: #c9b890;
+  border-color: #3d5f99;
   margin-left: 4px;
-  color: #ddca9e;
+  color: #3d5f99;
 }
 
 #clock {
   background: rgba(40, 40, 40, 0.9);
-  color: #ddca9e;
+  color: #3d5f99;
   border-width: 2px;
   border-style: solid;
-  border-color: #c9b890;
+  border-color: #3d5f99;
   border-right: 2px;
   border-radius: 4px 0px 0px 4px;
 }
 
 #pulseaudio {
   background: rgba(40, 40, 40, 0.9);
-  color: #ddca9e;
+  color: #3d5f99;
   border-width: 2px;
   border-width: 2px;
   border-style: solid;
-  border-color: #c9b890;
+  border-color: #3d5f99;
   border-right: 0px;
   margin-left: 0px;
   border-radius: 4px 0px 0px 4px;
@@ -364,10 +364,10 @@ tooltip {
 
 #cpu {
   background: rgba(40, 40, 40, 0.9);
-  color: #ddca9e;
+  color: #3d5f99;
   border-width: 2px;
   border-style: solid;
-  border-color: #c9b890;
+  border-color: #3d5f99;
   border-right: 0px;
   border-left: 0px;
   border-radius: 0px;
@@ -375,10 +375,10 @@ tooltip {
 
 #temperature {
   background: rgba(40, 40, 40, 0.9);
-  color: #ddca9e;
+  color: #3d5f99;
   border-width: 2px;
   border-style: solid;
-  border-color: #c9b890;
+  border-color: #3d5f99;
   border-right: 0px;
   border-left: 0px;
   border-radius: 0px;
@@ -386,10 +386,10 @@ tooltip {
 
 #backlight {
   background: rgba(40, 40, 40, 0.9);
-  color: #ddca9e;
+  color: #3d5f99;
   border-width: 2px;
   border-style: solid;
-  border-color: #c9b890;
+  border-color: #3d5f99;
   border-radius: 0px 4px 4px 0px;
   border-left: 0px;
   margin-right: 4px;
@@ -397,10 +397,10 @@ tooltip {
 
 #battery {
   background: rgba(40, 40, 40, 0.9);
-  color: #ddca9e;
+  color: #3d5f99;
   border-width: 2px;
   border-style: solid;
-  border-color: #c9b890;
+  border-color: #3d5f99;
   border-radius: 0px;
   border-right: 0px;
   border-left: 0px;
@@ -408,11 +408,11 @@ tooltip {
 
 #custom-weather {
   background: rgba(40, 40, 40, 0.9);
-  color: #ddca9e;
+  color: #3d5f99;
   border-radius: 4px 0px 0px 4px;
   border-width: 2px;
   border-style: solid;
-  border-color: #c9b890;
+  border-color: #3d5f99;
   border-right: 0px;
   margin-left: 4px;
   padding-right: 7px;
@@ -421,10 +421,10 @@ tooltip {
 
 #custom-notification {
   background: rgba(40, 40, 40, 0.9);
-  color: #ddca9e;
+  color: #3d5f99;
   border-width: 2px;
   border-style: solid;
-  border-color: #c9b890;
+  border-color: #3d5f99;
   border-left: 0px;
   border-right: 0px;
   border-radius: 0px;
@@ -433,10 +433,10 @@ tooltip {
 
 #custom-power {
   background: rgba(40, 40, 40, 0.9);
-  color: #ddca9e;
+  color: #3d5f99;
   border-width: 2px;
   border-style: solid;
-  border-color: #c9b890;
+  border-color: #3d5f99;
   border-radius: 0px 4px 4px 0px;
   border-left: 0px;
   margin-left: 0px;
@@ -447,7 +447,7 @@ tooltip {
 menu {
   border-width: 2px;
   border-style: solid;
-  border-color: #c9b890;
+  border-color: #3d5f99;
   background: rgba(40, 40, 40, 0.9);
   border-radius: 10px;
 }
@@ -455,10 +455,10 @@ menu {
 menuitem:focus label,
 menuitem:hover label {
   color: #010101;
-  background: #c9b890;
+  background: #3d5f99;
 }
 
 menuitem:focus,
 menuitem:hover {
-  background: #c9b890;
+  background: #3d5f99;
 }
