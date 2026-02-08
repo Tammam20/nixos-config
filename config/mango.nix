@@ -5,6 +5,9 @@
   services.xserver.displayManager.lightdm.enable = true;
   services.xserver.displayManager.lightdm.greeters.gtk.enable = true;
   services.xserver.displayManager.lightdm.greeters.gtk.theme.name = "Adwaita-dark";
+ /* services.xserver.displayManager.lightdm.extraConfig = ''
+  
+  '';*/
   security.soteria.enable = true;
   programs.dconf.enable = true;
   services.gnome.gnome-keyring.enable = true;

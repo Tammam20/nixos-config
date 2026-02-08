@@ -24,8 +24,11 @@
   # Configure keymap in X11
   services.xserver.xkb = {
     layout = "de,ara";
-    variant = "nodeadkeys";
+    variant = "nodeadkeys,iq";
   };
+  services.kmscon.enable = true;
+  services.kmscon.hwRender = true;
+  services.kmscon.useXkbConfig = true;
   # configure tty keymap
   console.useXkbConfig = true;
 }
