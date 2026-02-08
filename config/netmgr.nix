@@ -7,8 +7,7 @@
 
   # Enable networking
   networking.networkmanager.enable = true;
-
-
+  networking.hostFiles = ["$(./hosts)"];
 
   # Open ports in the firewall.
   # networking.firewall.allowedTCPPorts = [ ... ];

@@ -5,9 +5,14 @@
   services.xserver.displayManager.lightdm.enable = true;
   services.xserver.displayManager.lightdm.greeters.gtk.enable = true;
   services.xserver.displayManager.lightdm.greeters.gtk.theme.name = "Adwaita-dark";
- /* services.xserver.displayManager.lightdm.extraConfig = ''
-  
-  '';*/
+  services.xserver.displayManager.lightdm.extraConfig = ''
+  Section "InputClass"
+    Identifier "keyboard"
+    MatchIsKeyboard "yes"
+    Option "XkbLayout" "de"
+    Option "XkbVariant" "nodeadkeys"
+  EndSection
+  '';
   security.soteria.enable = true;
   programs.dconf.enable = true;
   services.gnome.gnome-keyring.enable = true;
@@ -104,6 +109,14 @@
     platformTheme = "gnome";
     style = "adwaita-dark";
   };
+
+  programs.thunar.enable = true;
+  programs.thunar.plugins = [
+  pkgs.xfce.thunar-archive-plugin  
+  pkgs.xfce.thunar-media-tags-plugin
+  pkgs.xfce.thunar-vcs-plugin
+  pkgs.xfce.thunar-volman
+];
 
 }
 
