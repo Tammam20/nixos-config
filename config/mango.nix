@@ -13,6 +13,7 @@
     Option "XkbVariant" "nodeadkeys"
   EndSection
   '';
+  services.gvfs.enable = true;
   security.soteria.enable = true;
   programs.dconf.enable = true;
   services.gnome.gnome-keyring.enable = true;
