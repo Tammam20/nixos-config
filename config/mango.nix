@@ -12,7 +12,6 @@
   services.blueman.enable = true;
   hardware.bluetooth.enable = true;
   hardware.bluetooth.powerOnBoot = false;
-  programs.nm-applet.enable = true;
   
   xdg.portal = {
       enable = true;
@@ -63,6 +62,7 @@
     wlsunset
     brightnessctl
     wlogout
+    networkmanagerapplet
 
     (pkgs.symlinkJoin {
 	    name = "mangowc";
