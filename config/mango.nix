@@ -99,7 +99,7 @@
  qt = {
     enable = true;
     platformTheme = "gnome";
-    style = "Adwaita-dark";
+    style = "adwaita-dark";
   };
 
 }
