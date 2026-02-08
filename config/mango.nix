@@ -5,14 +5,14 @@
   services.xserver.displayManager.lightdm.enable = true;
   services.xserver.displayManager.lightdm.greeters.gtk.enable = true;
   services.xserver.displayManager.lightdm.greeters.gtk.theme.name = "Adwaita-dark";
-  services.xserver.displayManager.lightdm.extraConfig = ''
-  Section "InputClass"
-    Identifier "keyboard"
-    MatchIsKeyboard "yes"
-    Option "XkbLayout" "de"
-    Option "XkbVariant" "nodeadkeys"
-  EndSection
-  '';
+#  services.xserver.displayManager.lightdm.extraConfig = ''
+#  Section "InputClass"
+#    Identifier "keyboard"
+#    MatchIsKeyboard "yes"
+#    Option "XkbLayout" "de"
+#    Option "XkbVariant" "nodeadkeys"
+#  EndSection
+ # '';
   services.gvfs.enable = true;
   security.soteria.enable = true;
   programs.dconf.enable = true;
