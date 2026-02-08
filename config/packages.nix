@@ -42,7 +42,11 @@
   protonup-qt
   powertop
   s-tui
- # pkgsi686Linux.gperftools
+  usbmuxd
+  libimobiledevice
+  #filezilla
+  ifuse
+  #pkgsi686Linux.gperftools
   ];
 
   # Packages with options

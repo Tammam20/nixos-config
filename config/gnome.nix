@@ -14,10 +14,6 @@
   dconf-editor 
   gnome-software
   gnome-tweaks
-  usbmuxd
-  libimobiledevice
-  filezilla
-  ifuse
   ];
   #  programs.kdeconnect = {
 #  enable = true;
