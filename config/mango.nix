@@ -10,6 +10,8 @@
   services.gnome.gnome-keyring.enable = true;
   programs.seahorse.enable = true;
   services.blueman.enable = true;
+  hardware.bluetooth.enable = true;
+  hardware.bluetooth.powerOnBoot = false;
   programs.nm-applet.enable = true;
   
   xdg.portal = {
@@ -59,7 +61,6 @@
     swayosd
     swaynotificationcenter
     wlsunset
-    papirus-icon-theme
     brightnessctl
     wlogout
 
@@ -98,7 +99,7 @@
  qt = {
     enable = true;
     platformTheme = "gnome";
-    style = "adwaita-dark";
+    style = "Adwaita-dark";
   };
 
 }
