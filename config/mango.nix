@@ -112,10 +112,10 @@
 
   programs.thunar.enable = true;
   programs.thunar.plugins = [
-  pkgs.xfce.thunar-archive-plugin  
-  pkgs.xfce.thunar-media-tags-plugin
-  pkgs.xfce.thunar-vcs-plugin
-  pkgs.xfce.thunar-volman
+  pkgs.thunar-archive-plugin  
+  pkgs.thunar-media-tags-plugin
+  pkgs.thunar-vcs-plugin
+  pkgs.thunar-volman
 ];
 
 }
