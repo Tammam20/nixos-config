@@ -27,7 +27,7 @@
     variant = "nodeadkeys";
   };
   services.kmscon.enable = true;
-  services.kmscon.hwRender = true;
+ # services.kmscon.hwRender = true;
   services.kmscon.useXkbConfig = true;
   # configure tty keymap
   console.useXkbConfig = true;
