@@ -36,7 +36,7 @@
 	      lanzaboote.nixosModules.lanzaboote 
 	      mango.nixosModules.mango
         impermanence.nixosModules.impermanence
-        #./config/impermanence.nix
+        ./config/impermanence.nix
         ./config/cloudflare.nix
         ./config/cups.nix
         ./config/flatpak.nix
