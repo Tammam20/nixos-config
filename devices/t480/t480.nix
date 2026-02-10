@@ -115,8 +115,8 @@ imports = [
         SOUND_POWER_SAVE_ON_BAT = 1;
 
        #Optional helps save long term battery health
-       START_CHARGE_THRESH_BAT0 = 75; # 75 and bellow it starts to charge
-       STOP_CHARGE_THRESH_BAT0 = 80; # 80 and above it stops charging
+       START_CHARGE_THRESH_BAT1 = 75; # 75 and bellow it starts to charge
+       STOP_CHARGE_THRESH_BAT1 = 80; # 80 and above it stops charging
 
      };
    };
