@@ -28,7 +28,7 @@ imports = [
   boot.blacklistedKernelModules = [ "iTCO_wdt" "intel_oc_wdt" ];
   #boot.loader.systemd-boot.enable = true;
   boot.kernelPackages = pkgs.linuxPackages_latest;
-  
+    
   # system stuff  
   services.fstrim.enable = true;
   services.thermald.enable = true;
