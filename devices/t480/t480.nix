@@ -28,13 +28,25 @@ imports = [
   boot.blacklistedKernelModules = [ "iTCO_wdt" "intel_oc_wdt" ];
   #boot.loader.systemd-boot.enable = true;
   boot.kernelPackages = pkgs.linuxPackages_latest;
-  boot.kernelModules = [ "ntsync" ];    
+  boot.kernelModules = [ "ntsync" ];
+  /*boot.kernel.sysctl = {
+"vm.swappiness" = 100;
+"vm.vfs_cache_pressure" = 50;
+"vm.dirty_bytes" = 268435456;
+"vm.page-cluster" = 0;
+"vm.dirty_background_bytes" = 67108864;
+"vm.dirty_writeback_centisecs" = 1500;
+"kernel.nmi_watchdog" = 0;
+"kernel.unprivileged_userns_clone" = 1;
+"kernel.kptr_restrict" = 2;
+"net.core.netdev_max_backlog" = 4096;
+"fs.file-max" = 2097152;
+};*/ 
   # system stuff  
   services.fstrim.enable = true;
   services.thermald.enable = true;
   services.fwupd.enable = true;
   services.hardware.bolt.enable = true;
-
   services."06cb-009a-fingerprint-sensor" = {                                 
   enable = true;                                                            
   backend = "python-validity";                                              
@@ -108,8 +120,11 @@ imports = [
 
      };
    };
-        services.scx.enable = true;
-	services.scx.scheduler = "scx_bpfland";
+      services.scx.enable = true;
+	    services.scx.scheduler = "scx_lavd";
+      services.scx.extraArgs = [
+        "--autopower"
+      ];
     	networking.hostName = "t480";
 
   # This value determines the NixOS release from which the default
