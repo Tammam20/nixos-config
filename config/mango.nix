@@ -2,10 +2,10 @@
 
 {
   services.xserver.enable = true;
-  services.displayManager.lemurs.enable = true;
- # services.xserver.displayManager.lightdm.enable = true;
-#  services.xserver.displayManager.lightdm.greeters.gtk.enable = true;
- # services.xserver.displayManager.lightdm.greeters.gtk.theme.name = "Adwaita-dark";
+#  services.displayManager.lemurs.enable = true;
+  services.xserver.displayManager.lightdm.enable = true;
+  services.xserver.displayManager.lightdm.greeters.gtk.enable = true;
+  services.xserver.displayManager.lightdm.greeters.gtk.theme.name = "Adwaita-dark";
 #  services.xserver.displayManager.lightdm.extraConfig = ''
 #  Section "InputClass"
 #    Identifier "keyboard"
