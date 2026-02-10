@@ -4,6 +4,7 @@
   inputs = {
     # NixOS official package source, using the nixos-25.11 branch here
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
+    determinate.url = "https://flakehub.com/f/DeterminateSystems/determinate/*";
     
     lanzaboote = {
       url = "github:nix-community/lanzaboote/v1.0.0";      
@@ -20,28 +21,29 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
    
-    impermanence = {
+    /*impermanence = {
 	    url = "github:nix-community/impermanence";
     	inputs.nixpkgs.follows = "nixpkgs";
-  };
+  };*/
 
   };
 
-  outputs = { nixpkgs,  lanzaboote, nixos-06cb-009a-fingerprint-sensor, mango, impermanence, ... }:  {
+  outputs = { nixpkgs,  lanzaboote, nixos-06cb-009a-fingerprint-sensor, mango, determinate, /*impermanence,*/ ... }:  {
     # system stuff
     nixosConfigurations.t480 = nixpkgs.lib.nixosSystem {
       system = "x86_64-linux";
       modules = [
-	      nixos-06cb-009a-fingerprint-sensor.nixosModules."06cb-009a-fingerprint-sensor"
-	      lanzaboote.nixosModules.lanzaboote 
-	      mango.nixosModules.mango
-        impermanence.nixosModules.impermanence
+	nixos-06cb-009a-fingerprint-sensor.nixosModules."06cb-009a-fingerprint-sensor"
+	lanzaboote.nixosModules.lanzaboote 
+	mango.nixosModules.mango
+	determinate.nixosModules.default
+        #impermanence.nixosModules.impermanence
         #./config/impermanence.nix
         ./config/cloudflare.nix
         ./config/cups.nix
         ./config/flatpak.nix
        #./config/gnome.nix
-	      ./config/mango.nix
+	./config/mango.nix
         ./config/locales.nix
         ./config/packages.nix
         ./config/systemd.nix

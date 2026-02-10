@@ -108,6 +108,8 @@ imports = [
 
      };
    };
+        services.scx.enable = true;
+	services.scx.scheduler = "scx_bpfland";
     	networking.hostName = "t480";
 
   # This value determines the NixOS release from which the default
