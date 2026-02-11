@@ -2,10 +2,18 @@
 
 {
   services.xserver.enable = true;
+  programs.uwsm.enable = true;
+  programs.uwsm.waylandCompositors = { 
+  mango = {
+  prettyName = "Mango";
+  comment = "Mango compositor managed by UWSM";
+  binPath = "/run/current-system/sw/bin/mango";
+};
+};
 #  services.displayManager.lemurs.enable = true;
-  services.xserver.displayManager.lightdm.enable = true;
-  services.xserver.displayManager.lightdm.greeters.gtk.enable = true;
-  services.xserver.displayManager.lightdm.greeters.gtk.theme.name = "Adwaita-dark";
+  #services.xserver.displayManager.lightdm.enable = true;
+  #services.xserver.displayManager.lightdm.greeters.gtk.enable = true;
+  #services.xserver.displayManager.lightdm.greeters.gtk.theme.name = "Adwaita-dark";
 #  services.xserver.displayManager.lightdm.extraConfig = ''
 #  Section "InputClass"
 #    Identifier "keyboard"
