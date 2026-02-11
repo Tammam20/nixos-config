@@ -33,6 +33,7 @@
     "kitty.desktop"
   ];
 };
+programs.xfconf.enable = true;
   xdg.portal = {
       enable = true;
 
