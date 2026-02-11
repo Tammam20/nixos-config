@@ -78,14 +78,14 @@ programs.xfconf.enable = true;
     networkmanagerapplet
     playerctl
     papirus-icon-theme
-    catppuccin-sddm.override {
+    (pkgs.catppuccin-sddm.override {
     flavor = "mocha";
     accent = "mauve";
     font  = "Noto Sans";
     fontSize = "9";
     #background = "${./wallpaper.png}";
     #loginBackground = true;
-  }
+  })
 
     (pkgs.symlinkJoin {
 	    name = "mangowc";
