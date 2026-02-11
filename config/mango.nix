@@ -2,11 +2,10 @@
 
 {
   services.xserver.enable = true;
-  programs.regreet.enable = true;
-  programs.regreet.theme.name = "Adwaita-dark";
-  programs.regreet.iconTheme.name = "Papirus-Dark";
-  programs.regreet.iconTheme.package = pkgs.papirus-icon-theme;
-
+  services.displayManager.sddm.enable = true;
+  services.displayManager.sddm.theme = "catppuccin-mocha-mauve";
+  services.displayManager.sddm.wayland.enable = true;
+  #services.displayManager.sddm.wayland.compositor = "";
   services.gvfs.enable = true;
   security.soteria.enable = true;
   programs.dconf.enable = true;
@@ -79,6 +78,14 @@ programs.xfconf.enable = true;
     networkmanagerapplet
     playerctl
     papirus-icon-theme
+    pkgs.catppuccin-sddm.override {
+    flavor = "mocha";
+    accent = "mauve";
+    font  = "Noto Sans";
+    fontSize = "9";
+    #background = "${./wallpaper.png}";
+    #loginBackground = true;
+  }
 
     (pkgs.symlinkJoin {
 	    name = "mangowc";
