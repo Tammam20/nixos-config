@@ -78,7 +78,7 @@ programs.xfconf.enable = true;
     networkmanagerapplet
     playerctl
     papirus-icon-theme
-    pkgs.catppuccin-sddm.override {
+    catppuccin-sddm.override {
     flavor = "mocha";
     accent = "mauve";
     font  = "Noto Sans";
