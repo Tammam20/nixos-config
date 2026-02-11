@@ -3,8 +3,17 @@
 {
   services.xserver.enable = true;
   #services.displayManager.sddm.wayland.compositor = "";
-  services.xserver.displayManager.lightdm.enable = false;
+#  services.xserver.displayManager.lightdm.enable = false;
   services.gvfs.enable = true;
+  programs.uwsm.enable = true;
+  programs.uwsm.waylandCompositors = {
+  mango = {
+  prettyName = "mango";
+  comment = "mango compositor managed by UWSM";
+  binPath = "/run/current-system/sw/bin/mango";
+};
+
+};
   security.soteria.enable = true;
 #  security.polkit.package = pkgs.kdePackages.polkit-qt-1;
   programs.dconf.enable = true;
