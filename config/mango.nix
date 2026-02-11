@@ -3,6 +3,7 @@
 {
   services.xserver.enable = true;
   #services.displayManager.sddm.wayland.compositor = "";
+  services.xserver.displayManager.lightdm.enable = false;
   services.gvfs.enable = true;
   security.soteria.enable = true;
   programs.dconf.enable = true;
