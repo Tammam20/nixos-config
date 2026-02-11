@@ -76,7 +76,7 @@ programs.xfconf.enable = true;
     networkmanagerapplet
     playerctl
     papirus-icon-theme
-
+    gnome-themes-extra
     (pkgs.symlinkJoin {
 	    name = "mangowc";
 	    buildInputs = [ makeWrapper ];
