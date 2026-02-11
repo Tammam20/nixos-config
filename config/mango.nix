@@ -24,6 +24,15 @@
   hardware.bluetooth.powerOnBoot = false;
   services.tumbler.enable = true;
   xdg.terminal-exec.enable = true;  
+  xdg.terminal-exec.settings = {
+  /*GNOME = [
+    "com.raggesilver.BlackBox.desktop"
+    "org.gnome.Terminal.desktop"
+  ];*/
+  default = [
+    "kitty.desktop"
+  ];
+};
   xdg.portal = {
       enable = true;
 
