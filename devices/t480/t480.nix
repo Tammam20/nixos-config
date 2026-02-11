@@ -29,6 +29,7 @@ imports = [
   #boot.loader.systemd-boot.enable = true;
   boot.kernelPackages = pkgs.linuxPackages_latest;
   boot.kernelModules = [ "ntsync" ];
+  zramSwap.enable = true;
   /*boot.kernel.sysctl = {
 "vm.swappiness" = 100;
 "vm.vfs_cache_pressure" = 50;
