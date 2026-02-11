@@ -2,9 +2,6 @@
 
 {
   services.xserver.enable = true;
-  services.displayManager.sddm.enable = true;
-  services.displayManager.sddm.theme = "catppuccin-mocha-mauve";
-  services.displayManager.sddm.wayland.enable = true;
   #services.displayManager.sddm.wayland.compositor = "";
   services.gvfs.enable = true;
   security.soteria.enable = true;
@@ -78,14 +75,6 @@ programs.xfconf.enable = true;
     networkmanagerapplet
     playerctl
     papirus-icon-theme
-    (pkgs.catppuccin-sddm.override {
-    flavor = "mocha";
-    accent = "mauve";
-    font  = "Noto Sans";
-    fontSize = "9";
-    #background = "${./wallpaper.png}";
-    #loginBackground = true;
-  })
 
     (pkgs.symlinkJoin {
 	    name = "mangowc";
