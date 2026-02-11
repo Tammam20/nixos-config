@@ -2,27 +2,11 @@
 
 {
   services.xserver.enable = true;
-  services.displayManager.cosmic-greeter.enable = true;
-  /*programs.uwsm.enable = true;
-  programs.uwsm.waylandCompositors = { 
-  mango = {
-  prettyName = "Mango";
-  comment = "Mango compositor managed by UWSM";
-  binPath = "/run/current-system/sw/bin/mango";
-};
-};*/
-#  services.displayManager.lemurs.enable = true;
- # services.xserver.displayManager.lightdm.enable = true;
- # services.xserver.displayManager.lightdm.greeters.gtk.enable = true;
- # services.xserver.displayManager.lightdm.greeters.gtk.theme.name = "Adwaita-dark";
-#  services.xserver.displayManager.lightdm.extraConfig = ''
-#  Section "InputClass"
-#    Identifier "keyboard"
-#    MatchIsKeyboard "yes"
-#    Option "XkbLayout" "de"
-#    Option "XkbVariant" "nodeadkeys"
-#  EndSection
- # '';
+  programs.regreet.enable = true;
+  programs.regreet.theme.name = "Adwaita-dark";
+  programs.regreet.iconTheme.name = "Papirus-Dark";
+  programs.regreet.iconTheme.package = pkgs.papirus-icon-theme;
+
   services.gvfs.enable = true;
   security.soteria.enable = true;
   programs.dconf.enable = true;
@@ -94,6 +78,7 @@ programs.xfconf.enable = true;
     wlogout
     networkmanagerapplet
     playerctl
+    papirus-icon-theme
 
     (pkgs.symlinkJoin {
 	    name = "mangowc";
@@ -122,8 +107,8 @@ programs.xfconf.enable = true;
     {
       settings."org/gnome/desktop/interface" = {
         gtk-theme = "Adwaita-dark";
-	color-scheme = "prefer-dark";
-       # icon-theme = "";
+	      color-scheme = "prefer-dark";
+        icon-theme = "Papirus-Dark";
       };
     }
   ];
