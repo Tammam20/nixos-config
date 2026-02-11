@@ -20,7 +20,7 @@
 	name = "Tammam20"; };
 };
   };
-
+  services.getty.autologinUser = "tammam";
   # Enable Home-Manager for user tammam
   /*home-manager.users.tammam = { pkgs, ... }: {
 
