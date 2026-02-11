@@ -22,7 +22,8 @@
   services.blueman.enable = true;
   hardware.bluetooth.enable = true;
   hardware.bluetooth.powerOnBoot = false;
-  
+  services.tumbler.enable = true;
+  xdg.terminal-exec.enable = true;  
   xdg.portal = {
       enable = true;
 
