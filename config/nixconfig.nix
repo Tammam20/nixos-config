@@ -1,8 +1,5 @@
 { ... }:
 {
-  # Optimising the Nix store
-  nix.settings.auto-optimise-store = true;
-
  # nix = {
  # gc = {
  #   automatic = true;
@@ -12,6 +9,7 @@
 #};
   # Enable nix-command and flakes
   nix.settings = {
+  auto-optimise-store = true;
   eval-cores = 0;
   experimental-features = ["nix-command" "flakes" "parallel-eval"];
 };
