@@ -2,6 +2,7 @@
 
 {
   services.xserver.enable = true;
+  services.displayManager.cosmic-greeter.enable = true;
   /*programs.uwsm.enable = true;
   programs.uwsm.waylandCompositors = { 
   mango = {
@@ -11,9 +12,9 @@
 };
 };*/
 #  services.displayManager.lemurs.enable = true;
-  services.xserver.displayManager.lightdm.enable = true;
-  services.xserver.displayManager.lightdm.greeters.gtk.enable = true;
-  services.xserver.displayManager.lightdm.greeters.gtk.theme.name = "Adwaita-dark";
+ # services.xserver.displayManager.lightdm.enable = true;
+ # services.xserver.displayManager.lightdm.greeters.gtk.enable = true;
+ # services.xserver.displayManager.lightdm.greeters.gtk.theme.name = "Adwaita-dark";
 #  services.xserver.displayManager.lightdm.extraConfig = ''
 #  Section "InputClass"
 #    Identifier "keyboard"
