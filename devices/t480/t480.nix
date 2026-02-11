@@ -122,9 +122,9 @@ imports = [
      };
    };
       services.scx.enable = true;
-	    services.scx.scheduler = "scx_bpfland";
-#      services.scx.extraArgs = [
-        "--autopower"
+      services.scx.scheduler = "scx_bpfland";
+#     services.scx.extraArgs = [
+#        "--autopower"
  #     ];
     	networking.hostName = "t480";
 
