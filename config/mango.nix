@@ -11,7 +11,7 @@
 };
 };
 #  services.displayManager.lemurs.enable = true;
-  #services.xserver.displayManager.lightdm.enable = true;
+  services.xserver.displayManager.lightdm.enable = false;
   #services.xserver.displayManager.lightdm.greeters.gtk.enable = true;
   #services.xserver.displayManager.lightdm.greeters.gtk.theme.name = "Adwaita-dark";
 #  services.xserver.displayManager.lightdm.extraConfig = ''
