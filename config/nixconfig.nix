@@ -10,9 +10,9 @@
  #   options = "--delete-older-than 2d";
  # };
 #};
-  nix.extraOptions = ''
-  eval-cores = 0
-'';
   # Enable nix-command and flakes
-  nix.settings.experimental-features = ["nix-command" "flakes" "parallel-eval"];
+  nix.settings = {
+  eval-cores = 0;
+  experimental-features = ["nix-command" "flakes" "parallel-eval"];
+};
 }
