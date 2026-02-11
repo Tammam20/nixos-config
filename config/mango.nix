@@ -5,8 +5,8 @@
   #services.displayManager.sddm.wayland.compositor = "";
   services.xserver.displayManager.lightdm.enable = false;
   services.gvfs.enable = true;
-#  security.soteria.enable = true;
-  security.polkit.package = pkgs.kdePackages.polkit-qt-1;
+  security.soteria.enable = true;
+#  security.polkit.package = pkgs.kdePackages.polkit-qt-1;
   programs.dconf.enable = true;
   services.gnome.gnome-keyring.enable = true;
   programs.seahorse.enable = true;
