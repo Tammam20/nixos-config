@@ -122,10 +122,10 @@ imports = [
      };
    };
       services.scx.enable = true;
-	    services.scx.scheduler = "scx_lavd";
-      services.scx.extraArgs = [
+	    services.scx.scheduler = "scx_bpfland";
+#      services.scx.extraArgs = [
         "--autopower"
-      ];
+ #     ];
     	networking.hostName = "t480";
 
   # This value determines the NixOS release from which the default
