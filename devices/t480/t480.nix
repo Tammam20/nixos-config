@@ -48,29 +48,12 @@ imports = [
   services.thermald.enable = true;
   services.fwupd.enable = true;
   services.hardware.bolt.enable = true;
-  services.python-validity.enable = true;
- # services."06cb-009a-fingerprint-sensor" = {                                 
- # enable = true;                                                            
- # backend = "python-validity";                                              
-#};   
-
-security.pam.services.sudo.text = ''
-  # Account management.
-  account required pam_unix.so
-  
-  # Authentication management.
-  auth sufficient pam_unix.so   likeauth try_first_pass nullok
-  auth sufficient ${fprintd-clients}/lib/security/pam_fprintd.so
-  auth required pam_deny.so
-  
-  # Password management.
-  password sufficient pam_unix.so nullok sha512
-  
-  # Session management.
-  session required pam_env.so conffile=/etc/pam/environment readenv=0
-  session required pam_unix.so
-'';  
-        /*services."06cb-009a-fingerprint-sensor" = {
+  services."06cb-009a-fingerprint-sensor" = {                                 
+  enable = true;                                                            
+  backend = "python-validity";                                              
+};   
+security.pam.services.sudo.fprintAuth = true;
+      /*services."06cb-009a-fingerprint-sensor" = {
   	    enable = true;                                                            
   	    backend = "libfprint-tod";
 	    calib-data-file = ./calib-data.bin;
