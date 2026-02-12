@@ -53,6 +53,8 @@ imports = [
   backend = "python-validity";                                              
 };   
 security.pam.services.login.fprintAuth = true;
+security.pam.services.sudo.fprintAuth = true;
+security.pam.services.auth.fprintAuth = true;
       /*services."06cb-009a-fingerprint-sensor" = {
   	    enable = true;                                                            
   	    backend = "libfprint-tod";
