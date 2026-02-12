@@ -1,4 +1,4 @@
-{ ... }:
+{ pkgs, ... }:
 
 {
   # Define a user account. Don't forget to set a password with ‘passwd’.
@@ -7,14 +7,19 @@
     description = "Tammam Faris";
     extraGroups = [ "networkmanager" "wheel" "libvirtd" "input" ];
     
+    packages = with pkgs; [
+      home-manager
+    ];
   };
+
 
   programs.git = {
   enable = true;
   config = {
   user = {
 	email = "whymewhyalwaysme@protonmail.com";
-	name = "Tammam20"; };
+	name = "Tammam20"; 
+  };
 };
   };
   home-manager.useGlobalPkgs = true;
