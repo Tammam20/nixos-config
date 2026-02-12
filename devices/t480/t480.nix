@@ -59,7 +59,7 @@ security.pam.services.sudo.text = ''
   
   # Authentication management.
   auth sufficient pam_unix.so   likeauth try_first_pass nullok
-  auth sufficient ${localPackages.fprintd-clients}/lib/security/pam_fprintd.so
+  auth sufficient ${fprintd-clients}/lib/security/pam_fprintd.so
   auth required pam_deny.so
   
   # Password management.
