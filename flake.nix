@@ -50,7 +50,6 @@
         ./config/flatpak.nix
        #./config/gnome.nix
 	      ./config/mango.nix
-        ./config/home.nix
         ./config/locales.nix
         ./config/packages.nix
         ./config/systemd.nix
