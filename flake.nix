@@ -18,7 +18,7 @@
      };
 
     nixos-06cb-009a-fingerprint-sensor = {
-    url = "github:tammam20/validity-nix";
+    url = "github:iedame/nixos-06cb-009a-fingerprint-sensor?ref=25.11";
     inputs.nixpkgs.follows = "nixpkgs";
    };
    mango = {

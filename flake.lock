@@ -285,16 +285,17 @@
         ]
       },
       "locked": {
-        "lastModified": 1770919588,
-        "narHash": "sha256-bbB1sSNW+z+YL42xGCumwZvskja4IuX2gI1ptW0VpC0=",
-        "owner": "tammam20",
-        "repo": "validity-nix",
-        "rev": "fef62066330a15e1eeea8087cd3aa08bb160d2a5",
+        "lastModified": 1754945827,
+        "narHash": "sha256-89z87Si1iIq/C1MX3EaAtsXrQD5AelO3MGGbQWnTD1A=",
+        "owner": "iedame",
+        "repo": "nixos-06cb-009a-fingerprint-sensor",
+        "rev": "ab574369cac3d8e72b0c96840ed014f98d8ceb7f",
         "type": "github"
       },
       "original": {
-        "owner": "tammam20",
-        "repo": "validity-nix",
+        "owner": "iedame",
+        "ref": "25.11",
+        "repo": "nixos-06cb-009a-fingerprint-sensor",
         "type": "github"
       }
     },
