@@ -48,10 +48,11 @@ imports = [
   services.thermald.enable = true;
   services.fwupd.enable = true;
   services.hardware.bolt.enable = true;
-  services."06cb-009a-fingerprint-sensor" = {                                 
-  enable = true;                                                            
-  backend = "python-validity";                                              
-};   
+  services.python-validity.enable = true;
+ # services."06cb-009a-fingerprint-sensor" = {                                 
+ # enable = true;                                                            
+ # backend = "python-validity";                                              
+#};   
 
 security.pam.services.sudo.text = ''
   # Account management.
