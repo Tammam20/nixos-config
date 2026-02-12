@@ -77,7 +77,7 @@ programs.xfconf.enable = true;
     swaybg
     sway-audio-idle-inhibit
     swayidle
-    swayosd
+#    swayosd
     swaynotificationcenter
     wlsunset
     brightnessctl
