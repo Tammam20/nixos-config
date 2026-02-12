@@ -19,7 +19,7 @@
   };
   home-manager.useGlobalPkgs = true;
   home-manager.useUserPackages = true;
-  home-manager.users.tammam = ./home.nix;
+  home-manager.users.tammam = import ./home.nix;
   services.getty.autologinUser = "tammam";
   programs.dconf.enable = true;
   # Enable Home-Manager for user tammam
