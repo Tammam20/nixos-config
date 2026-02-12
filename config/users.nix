@@ -19,42 +19,29 @@
   };
   home-manager.useGlobalPkgs = true;
   home-manager.useUserPackages = true;
-  home-manager.users.tammam = import ./home.nix;
   services.getty.autologinUser = "tammam";
   programs.dconf.enable = true;
   # Enable Home-Manager for user tammam
-  /*home-manager.users.tammam = { pkgs, ... }: {
+  home-manager.users.tammam = { pkgs, ... }: {
 
-  # The state version is required and should stay at the version you
-  # originally installed.
-  home.stateVersion = "24.05";
+   # Home Manager needs a bit of information about you and the
+  # paths it should manage.
+  home.username = "tammam";
+  home.homeDirectory = "/home/tammam";
 
-  # Use Dark Theme for GTK apps
-    gtk = {
-    enable = true;
-    iconTheme = {
-    name = "Papirus";
-    package = pkgs.papirus-icon-theme;
-    };
+  # This value determines the Home Manager release that your
+  # configuration is compatible with. This helps avoid breakage
+  # when a new Home Manager release introduces backwards
+  # incompatible changes.
+  #
+  # You can update Home Manager without changing this value. See
+  # the Home Manager release notes for a list of state version
+  # changes in each release.
+  home.stateVersion = "25.11";
 
-    theme = {
-     name = "Breeze-Dark";
-      package = pkgs.libsForQt5.breeze-gtk;
-    };
-  };
+  # Let Home Manager install and manage itself.
+  programs.home-manager.enable = true;
+  services.swayosd.enable = true;
 
-  home.pointerCursor = {
-  name = "Adwaita";
-  package = pkgs.gnome.adwaita-icon-theme;
-  size = 24;
-  x11 = {
-  enable = true;
-  defaultCursor = "Adwaita";
-   };
-  };
-
- };*/
-
-  # Fix Home-Manager error
- /* programs.dconf.enable = true; */
+ };
 }
