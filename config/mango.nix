@@ -83,7 +83,7 @@ programs.xfconf.enable = true;
     playerctl
     papirus-icon-theme
     gnome-themes-extra
-    lxqt-policykit-agent
+    lxqt.lxqt-policykit
     (pkgs.symlinkJoin {
 	    name = "mangowc";
 	    buildInputs = [ makeWrapper ];
