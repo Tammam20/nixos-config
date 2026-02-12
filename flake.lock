@@ -285,11 +285,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1770915123,
-        "narHash": "sha256-hBEAcXqjhVK950HOwejQWQHziHRWO2lfrmuF0g5+cY4=",
+        "lastModified": 1770919588,
+        "narHash": "sha256-bbB1sSNW+z+YL42xGCumwZvskja4IuX2gI1ptW0VpC0=",
         "owner": "tammam20",
         "repo": "validity-nix",
-        "rev": "65a4e8a255d70bdb9fd887b542a4c33774990bdf",
+        "rev": "fef62066330a15e1eeea8087cd3aa08bb160d2a5",
         "type": "github"
       },
       "original": {
