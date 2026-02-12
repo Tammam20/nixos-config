@@ -7,9 +7,6 @@
     description = "Tammam Faris";
     extraGroups = [ "networkmanager" "wheel" "libvirtd" "input" ];
     
-#    packages = with pkgs; [
-#      home-manager
-#    ];
   };
 
   programs.git = {
@@ -20,7 +17,11 @@
 	name = "Tammam20"; };
 };
   };
+  home-manager.useGlobalPkgs = true;
+  home-manager.useUserPackages = true;
+  home-manager.users.tammam = ./home.nix;
   services.getty.autologinUser = "tammam";
+  programs.dconf.enable = true;
   # Enable Home-Manager for user tammam
   /*home-manager.users.tammam = { pkgs, ... }: {
 

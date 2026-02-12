@@ -4,8 +4,13 @@
   inputs = {
     # NixOS official package source, using the nixos-25.11 branch here
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
+
     determinate.url = "https://flakehub.com/f/DeterminateSystems/determinate/*";
     
+    home-manager = {
+    url = "github:nix-community/home-manager";
+    inputs.nixpkgs.follows = "nixpkgs";
+    };
     lanzaboote = {
       url = "github:nix-community/lanzaboote/v1.0.0";      
       # Optional but recommended to limit the size of your system closure.
@@ -28,22 +33,24 @@
 
   };
 
-  outputs = { nixpkgs,  lanzaboote, nixos-06cb-009a-fingerprint-sensor, mango, determinate, /*impermanence,*/ ... }:  {
+  outputs = { nixpkgs,  lanzaboote, nixos-06cb-009a-fingerprint-sensor, mango, determinate, home-manager, /*impermanence,*/ ... }:  {
     # system stuff
     nixosConfigurations.t480 = nixpkgs.lib.nixosSystem {
       system = "x86_64-linux";
       modules = [
-	nixos-06cb-009a-fingerprint-sensor.nixosModules."06cb-009a-fingerprint-sensor"
-	lanzaboote.nixosModules.lanzaboote 
-	mango.nixosModules.mango
-	determinate.nixosModules.default
+	      nixos-06cb-009a-fingerprint-sensor.nixosModules."06cb-009a-fingerprint-sensor"
+	      lanzaboote.nixosModules.lanzaboote 
+	      mango.nixosModules.mango
+	      determinate.nixosModules.default
+        home-manager.nixosModules.home-manager
         #impermanence.nixosModules.impermanence
         #./config/impermanence.nix
         ./config/cloudflare.nix
         ./config/cups.nix
         ./config/flatpak.nix
        #./config/gnome.nix
-	./config/mango.nix
+	      ./config/mango.nix
+        ./config/home.nix
         ./config/locales.nix
         ./config/packages.nix
         ./config/systemd.nix
