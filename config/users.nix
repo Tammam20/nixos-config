@@ -28,6 +28,6 @@
   programs.dconf.enable = true;
   # Enable Home-Manager for user tammam
   home-manager.users.tammam = ./home.nix;
-  #home-manager.backupFileExtension = "backup";
+  home-manager.backupFileExtension = "backup";
     
 }
