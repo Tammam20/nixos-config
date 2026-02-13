@@ -10,4 +10,5 @@ systemd.network.wait-online.enable = false;
 systemd.oomd = {
     enable = false;
   };
+services.journald.extraConfig = "SystemMaxUse=100M";
 }

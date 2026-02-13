@@ -1,11 +1,12 @@
-{ pkgs,... }:
+{ pkgs, ... }:
+
 {
-    #services.xserver.enable = true;
+  #services.xserver.enable = true;
   #services.displayManager.sddm.wayland.compositor = "";
   services.xserver.displayManager.lightdm.enable = false;
   services.gvfs.enable = true;
   programs.uwsm.enable = true;
-  programs.mango.enable = true;
+
   programs.uwsm.waylandCompositors = {
   mango = {
   prettyName = "mango";
@@ -19,8 +20,53 @@
   hardware.bluetooth.enable = true;
   hardware.bluetooth.powerOnBoot = false;
   services.tumbler.enable = true;
+  #xdg.terminal-exec.enable = true;  
+  /*xdg.terminal-exec.settings = {
+  GNOME = [
+    "com.raggesilver.BlackBox.desktop"
+    "org.gnome.Terminal.desktop"
+  ];
+  default = [
+    "kitty.desktop"
+  ];
+}; */
 programs.xfconf.enable = true;
-environment.systemPackages = with pkgs; [
+  xdg.portal = {
+      enable = true;
+
+      config = {
+        mango = {
+          default = [
+            "gtk"
+          ];
+          # except those
+          "org.freedesktop.impl.portal.Secret" = ["gnome-keyring"];
+          "org.freedesktop.impl.portal.ScreenCast" = ["wlr"];
+          "org.freedesktop.impl.portal.ScreenShot" = ["wlr"];
+
+          # wlr does not have this interface
+          "org.freedesktop.impl.portal.Inhibit" = [];
+        };
+      };
+      extraPortals = with pkgs; [
+        xdg-desktop-portal-wlr
+        xdg-desktop-portal-gtk
+      ];
+
+      wlr.enable =  true;
+
+      configPackages = [pkgs.mangowc];
+    };
+
+    programs.xwayland.enable = true;
+
+    services = {
+      displayManager.sessionPackages = [pkgs.mangowc];
+
+      graphical-desktop.enable = true;
+    };
+
+  environment.systemPackages = with pkgs; [
     foot
     wmenu
     wl-clipboard
@@ -38,6 +84,15 @@ environment.systemPackages = with pkgs; [
     papirus-icon-theme
     gnome-themes-extra
     lxqt.lxqt-policykit
+    (pkgs.symlinkJoin {
+	    name = "mangowc";
+	    buildInputs = [ makeWrapper ];
+	    paths = [ pkgs.mangowc ];
+	    postBuild = ''
+	        wrapProgram $out/bin/mango --append-flags "-c ${../progconfig/mango/config.conf}" 
+	        '';
+      })
+
       (pkgs.symlinkJoin {
 	    name = "waybar";
 	    buildInputs = [ makeWrapper ];
@@ -76,3 +131,4 @@ environment.systemPackages = with pkgs; [
 ];
 
 }
+
