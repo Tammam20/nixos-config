@@ -51,7 +51,8 @@ imports = [
   services."06cb-009a-fingerprint-sensor" = {                                 
   enable = true;                                                            
   backend = "python-validity";                                              
-};   
+};
+powerManagement.resumeCommands = "systemctl restart python3-validity.service";
 security.pam.services = {
 sudo.fprintAuth = true;
 login.fprintAuth = true;
