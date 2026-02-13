@@ -41,7 +41,6 @@
 	      nixos-06cb-009a-fingerprint-sensor.nixosModules."06cb-009a-fingerprint-sensor"
 	      lanzaboote.nixosModules.lanzaboote 
 	      mango.nixosModules.mango
-        mango.hmModules.mango
 	      determinate.nixosModules.default
         home-manager.nixosModules.home-manager
         #impermanence.nixosModules.impermanence
