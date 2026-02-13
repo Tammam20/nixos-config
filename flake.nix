@@ -45,11 +45,9 @@
 	      determinate.nixosModules.default
         home-manager.nixosModules.home-manager
         #impermanence.nixosModules.impermanence
-        #./config/impermanence.nix
         ./config/cloudflare.nix
         ./config/cups.nix
         ./config/flatpak.nix
-       #./config/gnome.nix
 	      ./config/mango.nix
         ./config/locales.nix
         ./config/packages.nix
