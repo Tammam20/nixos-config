@@ -17,8 +17,8 @@
         "tray",
         "network",
         "pulseaudio",
-        "cpu",
-        "temperature",
+  //      "cpu",
+//        "temperature",
 	"battery",
         "backlight",
         "clock",
@@ -84,10 +84,10 @@
             "unlocked": ""
         }
     },
-    "cpu": {
-      "interval": 2,
-      "format": " {load}%"
-    },
+   // "cpu": {
+     // "interval": 2,
+     // "format": " {load}%"
+    //},
     //"temperature": {
      // "thermal-zone": 2,
       //"hwmon-path": "/sys/class/hwmon/hwmon1/temp1_input",

@@ -126,9 +126,9 @@ polkit-1.fprintAuth = true;
      };
    };
       services.scx.enable = true;
-      services.scx.scheduler = "scx_bpfland";
+      services.scx.scheduler = "scx_lavd";
 #     services.scx.extraArgs = [
-#        "--autopower"
+ #       "--autopower"
  #     ];
     	networking.hostName = "t480";
 
