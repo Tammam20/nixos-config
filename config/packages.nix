@@ -46,6 +46,10 @@
   libimobiledevice
   #filezilla
   ifuse
+  peazip
+  nh
+  nvd
+  nix-output-monitor
   #pkgsi686Linux.gperftools
   ];
 
@@ -73,6 +77,7 @@
 #  package = pkgs.gnomeExtensions.gsconnect;
 #};
  programs.git.enable = true;
+
 # programs.ladybird.enable = true;
 # programs.nix-ld.enable = true; 
 

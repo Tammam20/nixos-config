@@ -38,6 +38,7 @@ environment.systemPackages = with pkgs; [
     papirus-icon-theme
     gnome-themes-extra
     lxqt.lxqt-policykit
+    wlr-which-key
       (pkgs.symlinkJoin {
 	    name = "waybar";
 	    buildInputs = [ makeWrapper ];
