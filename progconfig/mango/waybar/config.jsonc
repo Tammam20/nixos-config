@@ -107,7 +107,7 @@
     },
     "backlight": {
       "interval": 2,
-      "device": "amdgpu_bl0",
+      //"device": "amdgpu_bl0",
       "format": "{icon} {percent}%",
       "format-icons": ["󰖔", "󰖨"],
       "on-scroll-up": "brightnessctl set +1%",
@@ -159,10 +159,10 @@
         "format": "{icon} {volume}%",
         "tooltip": false,
         "format-muted": " Muted",
-        "on-click": "pamixer -t",
-        "on-scroll-up": "pamixer -i 2",
-        "on-scroll-down": "pamixer -d 2",
-        "scroll-step": 5,
+        //"on-click": "pamixer -t",
+        //"on-scroll-up": "pamixer -i 2",
+        //"on-scroll-down": "pamixer -d 2",
+       // "scroll-step": 5,
         "format-icons": {
             "headphone": "",
             "hands-free": "",
@@ -183,10 +183,10 @@
         "format-source": " {volume}%",
         "tooltip": false,
         "format-source-muted": " Muted",
-        "on-click": "pamixer --default-source -t",
-        "on-scroll-up": "pamixer --default-source -i 2",
-        "on-scroll-down": "pamixer --default-source -d 2",
-        "scroll-step": 5
+        //"on-click": "pamixer --default-source -t",
+        //"on-scroll-up": "pamixer --default-source -i 2",
+        //"on-scroll-down": "pamixer --default-source -d 2",
+        //"scroll-step": 5
     },
 
      "battery": {
