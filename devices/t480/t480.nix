@@ -65,8 +65,8 @@ polkit-1.fprintAuth = true;
 	};*/
 
   services.power-profiles-daemon.enable = false;
-  services.autoaspm.enable = true;
-  networking.networkmanager.wifi.powersave = false;
+ # services.autoaspm.enable = true;
+ # networking.networkmanager.wifi.powersave = false;
   services.undervolt = {
     enable = true;
     #useTimer = true;
@@ -106,8 +106,8 @@ polkit-1.fprintAuth = true;
         #PCIE_ASPM_ON_AC = "powersave";
         #PCIE_ASPM_ON_BAT = "powersave";
         
-	WIFI_PWR_ON_AC = "off";
-	WIFI_PWR_ON_BAT = "off";
+	#WIFI_PWR_ON_AC = "off";
+	#WIFI_PWR_ON_BAT = "off";
 
         CPU_MIN_PERF_ON_AC = 0;
         CPU_MAX_PERF_ON_AC = 100;

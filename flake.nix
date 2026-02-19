@@ -25,10 +25,10 @@
      url = "github:DreamMaoMao/mangowc";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-   autoaspm = {
+ /*  autoaspm = {
     url = "git+https://git.notthebe.ee/notthebee/AutoASPM";
      inputs.nixpkgs.follows = "nixpkgs";
-  };   
+  };*/   
     /*impermanence = {
 	    url = "github:nix-community/impermanence";
     	inputs.nixpkgs.follows = "nixpkgs";
@@ -36,7 +36,7 @@
 
   };
 
-  outputs = { nixpkgs,  lanzaboote, nixos-06cb-009a-fingerprint-sensor, mango, determinate, home-manager, autoaspm, /*impermanence,*/ ... }:  {
+  outputs = { nixpkgs,  lanzaboote, nixos-06cb-009a-fingerprint-sensor, mango, determinate, home-manager, /*autoaspm,*/ /*impermanence,*/ ... }:  {
     # system stuff
     nixosConfigurations.t480 = nixpkgs.lib.nixosSystem {
       system = "x86_64-linux";
@@ -46,7 +46,7 @@
 	      mango.nixosModules.mango
 	      determinate.nixosModules.default
         home-manager.nixosModules.home-manager
-	autoaspm.nixosModules.default
+	#autoaspm.nixosModules.default
         #impermanence.nixosModules.impermanence
         ./config/cloudflare.nix
         ./config/cups.nix
