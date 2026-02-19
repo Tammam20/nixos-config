@@ -48,10 +48,10 @@
         home-manager.nixosModules.home-manager
 	#autoaspm.nixosModules.default
         #impermanence.nixosModules.impermanence
-        ./config/cloudflare.nix
+        #./config/cloudflare.nix
         ./config/cups.nix
         ./config/flatpak.nix
-	      ./config/mango.nix
+	./config/mango.nix
         ./config/locales.nix
         ./config/packages.nix
         ./config/systemd.nix
