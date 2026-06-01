@@ -5,7 +5,7 @@
     # NixOS official package source, using the nixos-25.11 branch here
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
 
-    determinate.url = "https://flakehub.com/f/DeterminateSystems/determinate/nix-src/3.21.0.tar.gz";
+    determinate.url = "https://flakehub.com/f/DeterminateSystems/nix-src/3.21.0.tar.gz";
     
     home-manager = {
     url = "github:nix-community/home-manager";
