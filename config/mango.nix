@@ -39,14 +39,15 @@ environment.systemPackages = with pkgs; [
     gnome-themes-extra
     lxqt.lxqt-policykit
     wlr-which-key
-      (pkgs.symlinkJoin {
+    waybar
+    /*  (pkgs.symlinkJoin {
 	    name = "waybar";
 	    buildInputs = [ makeWrapper ];
 	    paths = [ pkgs.waybar ];
 	    postBuild = ''
 	        wrapProgram $out/bin/waybar --append-flags "-c ${../progconfig/mango/waybar/config.jsonc} -s ${../progconfig/mango/waybar/style.css}" 
 	        '';
-      })
+      })*/
   ];
 
   fonts.packages = with pkgs; [

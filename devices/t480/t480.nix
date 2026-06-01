@@ -67,7 +67,7 @@ polkit-1.fprintAuth = true;
   services.power-profiles-daemon.enable = false;
  # services.autoaspm.enable = true;
  # networking.networkmanager.wifi.powersave = false;
-  services.undervolt = {
+/*  services.undervolt = {
     enable = true;
     #useTimer = true;
     coreOffset = -75;
@@ -78,7 +78,7 @@ polkit-1.fprintAuth = true;
     #p1.window = 2;
     #p2.limit = 45;
     #p2.window = 0.001;
-  };
+  };*/
   services.tlp = {
       enable = true;
       settings = {
