@@ -8,9 +8,10 @@
  # };
 #};
   # Enable nix-command and flakes
+  nix.package = determinate.packages.${pkgs.system}.default;
   nix.settings = {
   auto-optimise-store = true;
-#  eval-cores = 0;
- # experimental-features = ["nix-command" "flakes" "parallel-eval"];
+  eval-cores = 0;
+  experimental-features = [ "parallel-eval"];
 };
 }
