@@ -14,8 +14,8 @@
 };
  determinate = {
     enable = false;
-   /* determinateNixd = {
+    determinateNixd = {
       garbageCollector.strategy = "disabled";
-  };*/
+  };
   };
 }
