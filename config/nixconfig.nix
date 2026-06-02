@@ -11,8 +11,6 @@
 #  nix.package = determinate.packages.${pkgs.system}.default;
   nix.settings = {
   auto-optimise-store = true;
- # eval-cores = 0;
- # experimental-features = [ "parallel-eval"];
 };
  determinate = {
     enable = false;
