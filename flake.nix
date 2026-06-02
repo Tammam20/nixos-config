@@ -5,10 +5,10 @@
     # NixOS official package source, using the nixos-25.11 branch here
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
 
-    determinate = {
-	    url = "https://flakehub.com/f/DeterminateSystems/nix-src/3.21.0.tar.gz";
+#    determinate = {
+#	    url = "https://flakehub.com/f/DeterminateSystems/nix-src/3.21.0.tar.gz";
 #    	inputs.nixpkgs.follows = "nixpkgs";
-    };
+ #   };
     
     flake-parts.url = "github:hercules-ci/flake-parts";
 
