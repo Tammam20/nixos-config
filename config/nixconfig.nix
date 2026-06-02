@@ -8,12 +8,12 @@
  # };
 #};
   # Enable nix-command and flakes
-#  nix.package = determinate.packages.${pkgs.system}.default;
+  nix.package = determinate.packages.${pkgs.system}.default;
   nix.settings = {
   auto-optimise-store = true;
 };
- determinate = {
-    enable = true;
-    garbageCollector.strategy = "disabled";
-  };
+# determinate = {
+  #  enable = true;
+ #   garbageCollector.strategy = "disabled";
+ # };
 }
