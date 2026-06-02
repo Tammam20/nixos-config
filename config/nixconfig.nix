@@ -8,7 +8,7 @@
  # };
 #};
   # Enable nix-command and flakes
-  nix.package = pkgs.${pkgs..default;
+#  nix.package = pkgs.${pkgs..default;
   nix.settings = {
   auto-optimise-store = true;
 };
