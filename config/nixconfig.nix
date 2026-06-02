@@ -13,9 +13,7 @@
   auto-optimise-store = true;
 };
  determinate = {
-    enable = false;
-    determinateNixd = {
-      garbageCollector.strategy = "disabled";
-  };
+    enable = true;
+    garbageCollector.strategy = "disabled";
   };
 }
