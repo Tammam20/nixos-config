@@ -16,5 +16,5 @@
 # determinate = {
  #   enable = false;
  #   garbageCollector.strategy = "disabled";
-  };
+#  };
 }
