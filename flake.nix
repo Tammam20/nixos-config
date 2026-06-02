@@ -6,7 +6,7 @@
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
 
     determinate = {
-	    url = "https://flakehub.com/f/DeterminateSystems/determinate/nix-src/3.21.0.tar.gz";
+	    url = "https://flakehub.com/f/DeterminateSystems/nix-src/3.21.0.tar.gz";
 #    	inputs.nixpkgs.follows = "nixpkgs";
     };
     
