@@ -14,7 +14,7 @@
   eval-cores = 0;
   experimental-features = [ "parallel-eval"];
 };
- determinateNix = {
+ determinate = {
     enable = false;
    /* determinateNixd = {
       garbageCollector.strategy = "disabled";
