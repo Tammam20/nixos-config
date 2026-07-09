@@ -1,31 +1,16 @@
-{
-  inputs,
-  self,
-  ...
-}: {
-  flake.nixosConfigurations.t480 = inputs.nixpkgs.lib.nixosSystem {
-    modules = [
-      self.nixosModules.t480
-    ];
-  };
-
-  flake.nixosModules.t480 = {
-    pkgs,
-    config,
-    lib,
-    ...
-  }: {
-    imports = [
-      self.nixosModules.t480hard
-      self.nixosModules.users
-      self.nixosModules.virt
-      self.nixosModules.mango
-      self.nixosModules.nixconfig
-      self.nixosModules.systemd
-      self.nixosModules.pipewire
-      self.nixosModules.flatpak
-      self.nixosModules.locales
-      self.nixosModules.cups
+{ inputs, pkgs, lib, ... }: {
+  flake.modules.nixos.t480 = {
+    imports = with inputs.self.modules.nixos; [
+      t480hard
+      users
+      virt
+      mango
+      nixconfig
+      systemd
+      pipewire
+      flatpak
+      locales
+      cups
     ];
 
     # For debugging and troubleshooting Secure Boot.
@@ -107,30 +92,23 @@ polkit-1.fprintAuth = true;
       settings = {
         CPU_SCALING_GOVERNOR_ON_AC = "powersave";
         CPU_SCALING_GOVERNOR_ON_BAT = "powersave";
-        
         MEM_SLEEP_ON_AC = "deep";
         MEM_SLEEP_ON_BAT = "deep";
-        
         CPU_DRIVER_OPMODE_ON_AC = "active";
         CPU_DRIVER_OPMODE_ON_BAT = "active";
-        
         CPU_ENERGY_PERF_POLICY_ON_AC = "balance_performance";
         CPU_ENERGY_PERF_POLICY_ON_BAT = "power";
-
         CPU_BOOST_ON_AC = 1;
         CPU_BOOST_ON_BAT = 0;
-        
         RUNTIME_PM_ON_AC = "auto";
         RUNTIME_PM_ON_BAT = "auto";
-
         CPU_HWP_DYN_BOOST_ON_AC = 1;
         CPU_HWP_DYN_BOOST_ON_BAT = 0;
         
         #PCIE_ASPM_ON_AC = "powersave";
         #PCIE_ASPM_ON_BAT = "powersave";
-        
-	#WIFI_PWR_ON_AC = "off";
-	#WIFI_PWR_ON_BAT = "off";
+	      #WIFI_PWR_ON_AC = "off";
+	      #WIFI_PWR_ON_BAT = "off";
 
         CPU_MIN_PERF_ON_AC = 0;
         CPU_MAX_PERF_ON_AC = 100;
@@ -143,25 +121,21 @@ polkit-1.fprintAuth = true;
         INTEL_GPU_MAX_FREQ_ON_BAT = 450;
         INTEL_GPU_BOOST_FREQ_ON_AC = 1100;
         INTEL_GPU_BOOST_FREQ_ON_BAT = 550;
-        
         SOUND_POWER_SAVE_ON_AC = 1;
         SOUND_POWER_SAVE_ON_BAT = 1;
-
-       #Optional helps save long term battery health
-       START_CHARGE_THRESH_BAT1 = 75; # 75 and bellow it starts to charge
-       STOP_CHARGE_THRESH_BAT1 = 80; # 80 and above it stops charging
+        START_CHARGE_THRESH_BAT1 = 75; 
+        STOP_CHARGE_THRESH_BAT1 = 80;
+        #START_CHARGE_THRESH_BAT0 = 75; 
+        #STOP_CHARGE_THRESH_BAT0 = 80; 
 
      };
    };
-      services.scx.enable = true;
-      services.scx.scheduler = "scx_lavd";
+      #services.scx.enable = true;
+      #services.scx.scheduler = "scx_lavd";
 #     services.scx.extraArgs = [
  #       "--autopower"
  #     ];
-    	networking.hostName = "t480";
-   
-    
-
+    	networking.hostName = "t480";   
     # This value determines the NixOS release from which the default
   # settings for stateful data, like file locations and database versions
   # on your system were taken. It‘s perfectly fine and recommended to leave
