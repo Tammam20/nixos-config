@@ -38,11 +38,8 @@
      # generated at installation time. So we force it to false
      # for now.
      #boot.kernelParams = ["intel_iommu=on" "iommu=pt"];
-     boot.loader.systemd-boot.enable = lib.mkForce false;
-     boot.lanzaboote = {
-       enable = true;
-       pkiBundle = "/var/lib/sbctl";
-       };
+    boot.loader.limine.enable = true;
+     
       # bootable system
 
   boot.loader.efi.canTouchEfiVariables = true;
