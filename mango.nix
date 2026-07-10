@@ -1,13 +1,13 @@
-{ flake.nixosModules.mango = { inputs, config, pkgs, ...}: {
- imports = [
+{ flake.nixosModules.sway = { inputs, config, pkgs, ...}: {
+ /*imports = [
     inputs.mangowm.nixosModules.mango
-  ];
+  ];*/
     #services.xserver.enable = true;
   #services.displayManager.sddm.wayland.compositor = "";
   services.xserver.displayManager.lightdm.enable = false;
   services.gvfs.enable = true;
   programs.uwsm.enable = true;
-  programs.mango.enable = true;
+  programs.sway.enable = true;
   /*programs.uwsm.waylandCompositors = {
   mango = {
   prettyName = "mango";
@@ -40,7 +40,7 @@ environment.systemPackages = with pkgs; [
     papirus-icon-theme
     gnome-themes-extra
     lxqt.lxqt-policykit
-    wlr-which-key
+    #wlr-which-key
     waybar
     /*  (pkgs.symlinkJoin {
 	    name = "waybar";

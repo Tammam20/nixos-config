@@ -19,7 +19,7 @@
       self.nixosModules.t480hard
       self.nixosModules.users
       self.nixosModules.virt
-      self.nixosModules.mango
+      self.nixosModules.sway
       self.nixosModules.nixconfig
       self.nixosModules.systemd
       self.nixosModules.pipewire

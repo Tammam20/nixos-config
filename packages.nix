@@ -12,39 +12,39 @@
 
   # List packages installed in system profile.
   environment.systemPackages = with pkgs; [
-  telegram-desktop
-  chromium
-  python3
-  fish
-  appimage-run
+  #telegram-desktop
+  #chromium
+  #python3
+  #fish
+  #appimage-run
   pciutils
   usbutils
   lshw
   fastfetch
-  libreoffice
+  #libreoffice
   vim
   gh
   chezmoi
   wget
-  distrobox
+  #distrobox
   vscode
   nixfmt
   nil
   lm_sensors
   cmatrix
-  tldr
+  #tldr
   waydroid-helper
-  kitty
   lutris
   qbittorrent
   protonup-qt
   powertop
   s-tui
-  usbmuxd
-  libimobiledevice
+  #usbmuxd
+  #libimobiledevice
   #filezilla
-  ifuse
-  peazip
+  #ifuse
+  #peazip
+  file-roller
   nh
   nvd
   nix-output-monitor
@@ -52,8 +52,8 @@
   ];
 
   # Packages with options
-  programs.chromium.enable = true;
-  programs.thunderbird.enable = true;
+  #programs.chromium.enable = true;
+  #programs.thunderbird.enable = true;
   programs.firefox.enable = true;
   programs.steam.enable = true;
  # services.qbittorrent.enable = true;
