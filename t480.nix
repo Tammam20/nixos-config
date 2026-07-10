@@ -27,6 +27,8 @@
       self.nixosModules.locales
       self.nixosModules.cups
       self.nixosModules.packages
+      inputs.nixos-06cb-009a-fingerprint-sensor.nixosModules."06cb-009a-fingerprint-sensor"
+      inputs.lanzaboote.nixosModules.lanzaboote
     ];
 
     # For debugging and troubleshooting Secure Boot.

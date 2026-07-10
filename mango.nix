@@ -4,7 +4,7 @@
   services.xserver.displayManager.lightdm.enable = false;
   services.gvfs.enable = true;
   programs.uwsm.enable = true;
-  programs.mangowc.enable = true;
+  programs.mango.enable = true;
   /*programs.uwsm.waylandCompositors = {
   mango = {
   prettyName = "mango";

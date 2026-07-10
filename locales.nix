@@ -23,9 +23,9 @@
     layout = "de,ara";
     variant = "nodeadkeys";
   };
-  services.kmscon.enable = true;
-  services.kmscon.hwRender = true;
-  services.kmscon.useXkbConfig = true;
+#  services.kmscon.enable = true;
+ # services.kmscon.hwRender = true;
+  #services.kmscon.useXkbConfig = true;
   # configure tty keymap
   console.useXkbConfig = true;
 };
