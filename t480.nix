@@ -1,16 +1,31 @@
-{ inputs, pkgs, lib, ... }: {
-  flake.modules.nixos.t480 = {
-    imports = with inputs.self.modules.nixos; [
-      t480hard
-      users
-      virt
-      mango
-      nixconfig
-      systemd
-      pipewire
-      flatpak
-      locales
-      cups
+{
+  inputs,
+  self,
+  ...
+}: {
+  flake.nixosConfigurations.t480 = inputs.nixpkgs.lib.nixosSystem {
+    modules = [
+      self.nixosModules.t480
+    ];
+  };
+
+  flake.nixosModules.t480 = {
+    pkgs,
+    config,
+    lib,
+    ...
+  }: {
+    imports = [
+      self.nixosModules.t480hard
+      self.nixosModules.users
+      self.nixosModules.virt
+      self.nixosModules.mango
+      self.nixosModules.nixconfig
+      self.nixosModules.systemd
+      self.nixosModules.pipewire
+      self.nixosModules.flatpak
+      self.nixosModules.locales
+      self.nixosModules.cups
     ];
 
     # For debugging and troubleshooting Secure Boot.
