@@ -4,14 +4,14 @@
   services.xserver.displayManager.lightdm.enable = false;
   services.gvfs.enable = true;
   programs.uwsm.enable = true;
-  programs.mango.enable = true;
-  programs.uwsm.waylandCompositors = {
+  programs.mangowc.enable = true;
+  /*programs.uwsm.waylandCompositors = {
   mango = {
   prettyName = "mango";
   comment = "mango compositor managed by UWSM";
   binPath = "/run/current-system/sw/bin/mango";
 };
-};
+};*/
   services.gnome.gnome-keyring.enable = true;
   programs.seahorse.enable = true;
   services.blueman.enable = true;

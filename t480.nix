@@ -26,6 +26,7 @@
       self.nixosModules.flatpak
       self.nixosModules.locales
       self.nixosModules.cups
+      self.nixosModules.packages
     ];
 
     # For debugging and troubleshooting Secure Boot.
