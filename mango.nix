@@ -1,4 +1,7 @@
-{ flake.nixosModules.mango = {config, pkgs, ...}: {
+{ flake.nixosModules.mango = { inputs, config, pkgs, ...}: {
+ imports = [
+    inputs.mangowm.nixosModules.mango
+  ];
     #services.xserver.enable = true;
   #services.displayManager.sddm.wayland.compositor = "";
   services.xserver.displayManager.lightdm.enable = false;
