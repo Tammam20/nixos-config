@@ -20,6 +20,7 @@
   services.blueman.enable = true;
   hardware.bluetooth.enable = true;
   hardware.bluetooth.powerOnBoot = false;
+  programs.nm-applet.enable = true;
   services.tumbler.enable = true;
 programs.xfconf.enable = true;
 environment.systemPackages = with pkgs; [
@@ -35,7 +36,6 @@ environment.systemPackages = with pkgs; [
     wlsunset
     brightnessctl
     wlogout
-    networkmanagerapplet
     playerctl
     papirus-icon-theme
     gnome-themes-extra
