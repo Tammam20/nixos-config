@@ -22,8 +22,9 @@
   hardware.bluetooth.powerOnBoot = false;
   programs.nm-applet.enable = true;
   services.tumbler.enable = true;
-programs.xfconf.enable = true;
-environment.systemPackages = with pkgs; [
+  programs.xfconf.enable = true;
+
+  environment.systemPackages = with pkgs; [
     foot
     wmenu
     wl-clipboard
@@ -40,6 +41,7 @@ environment.systemPackages = with pkgs; [
     papirus-icon-theme
     gnome-themes-extra
     lxqt.lxqt-policykit
+    wl-clip-persist
     #wlr-which-key
     waybar
     /*  (pkgs.symlinkJoin {
@@ -51,11 +53,6 @@ environment.systemPackages = with pkgs; [
 	        '';
       })*/
   ];
-
-  fonts.packages = with pkgs; [
-    nerd-fonts.jetbrains-mono
-  ];
-
     programs.dconf.profiles.user.databases = [
     {
       settings."org/gnome/desktop/interface" = {
