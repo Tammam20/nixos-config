@@ -29,17 +29,8 @@
       self.nixosModules.packages
       self.nixosModules.netmgr
       inputs.nixos-06cb-009a-fingerprint-sensor.nixosModules."06cb-009a-fingerprint-sensor"
-      inputs.lanzaboote.nixosModules.lanzaboote
     ];
-
-    # For debugging and troubleshooting Secure Boot.
-     environment.systemPackages = [
-       pkgs.sbctl 
-     ];
-     # Lanzaboote currently replaces the systemd-boot module.
-     # This setting is usually set to true in configuration.nix
-     # generated at installation time. So we force it to false
-     # for now.
+    
      #boot.kernelParams = ["intel_iommu=on" "iommu=pt"];
     boot.loader.limine.enable = true;
      

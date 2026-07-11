@@ -1,20 +1,7 @@
 { flake.nixosModules.sway = { inputs, config, pkgs, ...}: {
- /*imports = [
-    inputs.mangowm.nixosModules.mango
-  ];*/
-    #services.xserver.enable = true;
-  #services.displayManager.sddm.wayland.compositor = "";
   services.xserver.displayManager.lightdm.enable = false;
   services.gvfs.enable = true;
-#  programs.uwsm.enable = true;
   programs.sway.enable = true;
-  /*programs.uwsm.waylandCompositors = {
-  mango = {
-  prettyName = "mango";
-  comment = "mango compositor managed by UWSM";
-  binPath = "/run/current-system/sw/bin/mango";
-};
-};*/
   services.gnome.gnome-keyring.enable = true;
   programs.seahorse.enable = true;
   services.blueman.enable = true;
@@ -34,24 +21,13 @@
     sway-audio-idle-inhibit
     swayidle
     swaynotificationcenter
-    wlsunset
     brightnessctl
-    wlogout
     playerctl
     papirus-icon-theme
     gnome-themes-extra
     lxqt.lxqt-policykit
     wl-clip-persist
-    #wlr-which-key
     waybar
-    /*  (pkgs.symlinkJoin {
-	    name = "waybar";
-	    buildInputs = [ makeWrapper ];
-	    paths = [ pkgs.waybar ];
-	    postBuild = ''
-	        wrapProgram $out/bin/waybar --append-flags "-c ${../progconfig/mango/waybar/config.jsonc} -s ${../progconfig/mango/waybar/style.css}" 
-	        '';
-      })*/
   ];
     programs.dconf.profiles.user.databases = [
     {
