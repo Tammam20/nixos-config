@@ -28,6 +28,7 @@
     lxqt.lxqt-policykit
     wl-clip-persist
     waybar
+    wev
   ];
     programs.dconf.profiles.user.databases = [
     {
