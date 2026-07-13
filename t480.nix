@@ -79,7 +79,7 @@ polkit-1.fprintAuth = true;
 	    calib-data-file = ./calib-data.bin;
 	};*/
 
-  services.power-profiles-daemon.enable = false;
+#  services.power-profiles-daemon.enable = false;
  # services.autoaspm.enable = true;
  # networking.networkmanager.wifi.powersave = false;
 /*  services.undervolt = {
@@ -94,9 +94,11 @@ polkit-1.fprintAuth = true;
     #p2.limit = 45;
     #p2.window = 0.001;
   };*/
-  services.tlp = {
+/*  services.tlp = {
+     pd.enable = true;
       enable = true;
       settings = {
+        
         CPU_SCALING_GOVERNOR_ON_AC = "powersave";
         CPU_SCALING_GOVERNOR_ON_BAT = "powersave";
         MEM_SLEEP_ON_AC = "deep";
@@ -136,7 +138,7 @@ polkit-1.fprintAuth = true;
         #STOP_CHARGE_THRESH_BAT0 = 80; 
 
      };
-   };
+   };*/
       #services.scx.enable = true;
       #services.scx.scheduler = "scx_lavd";
 #     services.scx.extraArgs = [
