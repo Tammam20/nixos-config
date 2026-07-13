@@ -31,7 +31,7 @@
   nixfmt
   nil
   lm_sensors
-  cmatrix
+#  cmatrix
   #tldr
   waydroid-helper
   lutris

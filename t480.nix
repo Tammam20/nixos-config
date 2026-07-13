@@ -79,7 +79,7 @@ polkit-1.fprintAuth = true;
 	    calib-data-file = ./calib-data.bin;
 	};*/
 
-#  services.power-profiles-daemon.enable = false;
+  services.power-profiles-daemon.enable = true;
  # services.autoaspm.enable = true;
  # networking.networkmanager.wifi.powersave = false;
 /*  services.undervolt = {

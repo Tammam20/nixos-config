@@ -10,7 +10,7 @@
   programs.nm-applet.enable = true;
   services.tumbler.enable = true;
   programs.xfconf.enable = true;
-
+  services.upower.enable = true;
   environment.systemPackages = with pkgs; [
     foot
     wmenu
