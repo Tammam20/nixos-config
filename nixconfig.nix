@@ -13,7 +13,8 @@
   nix.package = inputs'.determinate.packages.default;
   nix.settings = {
   eval-cores = 0;
-  experimental-features = [ "parallel-eval" ];
+  lazy-trees = true;
+  experimental-features = [ "lazy-trees" "nix-command" "flakes" "parallel-eval" ];
   auto-optimise-store = true;
 };
 # determinate = {
