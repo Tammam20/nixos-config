@@ -1,11 +1,12 @@
  {
   inputs,
+  pkgs,
   self,
   ...
 }:
 { flake = {
         # Reusable Home Manager module.
-        homeModules.hm= { pkgs, ... }: {
+        homeModules.hm= { pkgs, input, ... }: {
           
           home-manager.useGlobalPkgs = true;
           home-manager.useUserPackages = true;
