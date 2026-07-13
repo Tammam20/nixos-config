@@ -8,9 +8,7 @@
     extraGroups = [ "networkmanager" "wheel" "libvirtd" "input" ];
     
   };
-  
-  };
-  services.getty.autologinUser = "tammam";
+   services.getty.autologinUser = "tammam";
   programs.dconf.enable = true;
     programs.git = {
   enable = true;
@@ -21,4 +19,7 @@
   };
     };
   };
+  
+  };
+ 
 }
