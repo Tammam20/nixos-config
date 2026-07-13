@@ -7,6 +7,9 @@
  # };
 #};
   # Enable nix-command and flakes
+  imports = [
+    inputs.determinate.nixosModules.default
+  ];
   nix.package = inputs.determinate.packages.${pkgs.system}.default;
   nix.settings = {
   experimental-features = [ "nix-command" "flakes" ];
