@@ -16,12 +16,12 @@
     ...
   }: {
     imports = [
-      ./nixconfig.nix
+#      ./nixconfig.nix
       self.nixosModules.t480hard
       self.nixosModules.users
       self.nixosModules.virt
       self.nixosModules.sway
-#      self.nixosModules.nixconfig
+      self.nixosModules.nixconfig
       self.nixosModules.systemd
       self.nixosModules.pipewire
       self.nixosModules.flatpak
