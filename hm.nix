@@ -18,7 +18,7 @@
         # Concrete Home Manager configuration.
         homeConfigurations.tammam = inputs.home-manager.lib.homeManagerConfiguration {
           modules = [
-            inputs.self.homeModules.bash
+            inputs.self.homeModules.hm
             {
                home.username = "tammam";
                 home.homeDirectory = "/home/tammam";
