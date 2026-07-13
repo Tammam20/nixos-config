@@ -9,10 +9,10 @@
 
     #determinate.url = "https://flakehub.com/f/DeterminateSystems/nix-src/3.21.5.tar.gz";
 
-    /*home-manager = {
+    home-manager = {
     url = "github:nix-community/home-manager";
     inputs.nixpkgs.follows = "nixpkgs";
-    };*/
+    };
     nixos-06cb-009a-fingerprint-sensor = {
     url = "github:iedame/nixos-06cb-009a-fingerprint-sensor?ref=25.11";
     inputs.nixpkgs.follows = "nixpkgs";
