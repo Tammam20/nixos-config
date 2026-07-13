@@ -10,7 +10,7 @@
 /*  imports = [
     inputs.determinate.nixosModules
   ];*/
-  nix.package = inputs'.determinate.packages.default;
+  nix.package = inputs'.determinate.packages.${pkgs.system}.default;
   nix.settings = {
   eval-cores = 0;
   lazy-trees = true;
