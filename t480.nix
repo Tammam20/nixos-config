@@ -17,6 +17,7 @@
   }: {
     imports = [
 #      ./nixconfig.nix
+      inputs.home-manager.flakeModules.home-manager
       self.nixosModules.t480hard
       self.nixosModules.users
       self.nixosModules.virt

@@ -1,6 +1,6 @@
 { 
   flake.nixosModules.users = { inputs, config, pkgs, ...}: {
-    imports = [ inputs.home-manager.flakeModules.home-manager ];
+#    imports = [ inputs.home-manager.flakeModules.home-manager ];
       # Define a user account. Don't forget to set a password with ‘passwd’.
   users.users.tammam = {
     isNormalUser = true;
