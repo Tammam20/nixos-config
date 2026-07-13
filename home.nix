@@ -1,8 +1,9 @@
-{ /*pkgs, config,*/ ... }: {
+ {
 
    # Home Manager needs a bit of information about you and the
   # paths it should manage.
-  home.username = "tammam";
+ flake.homeConfigurations.tammam = home-manager.lib.homeManagerConfiguration {
+ home.username = "tammam";
   home.homeDirectory = "/home/tammam";
 
   # This value determines the Home Manager release that your
@@ -18,4 +19,5 @@
   # Let Home Manager install and manage itself.
   programs.home-manager.enable = true;
   manual.manpages.enable = false;
+};
  }

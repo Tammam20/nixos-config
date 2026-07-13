@@ -7,14 +7,15 @@
     description = "Tammam Faris";
     extraGroups = [ "networkmanager" "wheel" "libvirtd" "input" ];
     
-  };
-   packages = with pkgs; [
+ packages = with pkgs; [
       home-manager
     ];
   };
-
-
-  programs.git = {
+  
+  };
+  services.getty.autologinUser = "tammam";
+  programs.dconf.enable = true;
+    programs.git = {
   enable = true;
   config = {
   user = {
@@ -23,11 +24,4 @@
   };
     };
   };
-  home-manager.useGlobalPkgs = true;
-  home-manager.useUserPackages = true;
-  services.getty.autologinUser = "tammam";
-  programs.dconf.enable = true;
-  # Enable Home-Manager for user tammam
-  home-manager.users.tammam = ./home.nix;
-  #home-manager.backupFileExtension = "backup";
 }

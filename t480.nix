@@ -30,6 +30,7 @@
       self.nixosModules.cups
       self.nixosModules.packages
       self.nixosModules.netmgr
+      self.homeModules.hm
       inputs.nixos-06cb-009a-fingerprint-sensor.nixosModules."06cb-009a-fingerprint-sensor"
     ];
     
