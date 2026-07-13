@@ -1,4 +1,5 @@
-{ perSystem = { inputs', pkgs, ... }: {
+ { self, inputs, pkgs, ... }: {
+  perSystem = { inputs', pkgs, ... }: {
  # nix = {
  # gc = {
  #   automatic = true;
@@ -16,10 +17,11 @@
   lazy-trees = true;
   experimental-features = [ "lazy-trees" "nix-command" "flakes" "parallel-eval" ];
   auto-optimise-store = true;
-};
+  };
 # determinate = {
  #   enable = false;
  #   garbageCollector.strategy = "disabled";
 #  };
 };
 }
+
