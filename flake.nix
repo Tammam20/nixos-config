@@ -7,6 +7,8 @@
     
     flake-parts.url = "github:hercules-ci/flake-parts";
 
+    determinate.url = "https://flakehub.com/f/DeterminateSystems/nix-src/3.21.5.tar.gz";
+
     /*home-manager = {
     url = "github:nix-community/home-manager";
     inputs.nixpkgs.follows = "nixpkgs";

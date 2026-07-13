@@ -1,4 +1,4 @@
-{ flake.nixosModules.nixconfig = { ... }: {
+{ flake.nixosModules.nixconfig = { inputs, pkgs, ... }: {
  # nix = {
  # gc = {
  #   automatic = true;
@@ -7,7 +7,7 @@
  # };
 #};
   # Enable nix-command and flakes
-#  nix.package = inputs.determinate.packages.${pkgs.system}.default;
+  nix.package = inputs.determinate.packages.${pkgs.system}.default;
   nix.settings = {
   experimental-features = [ "nix-command" "flakes" ];
   auto-optimise-store = true;
