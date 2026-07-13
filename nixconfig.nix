@@ -7,7 +7,7 @@
  # };
 #};
   # Enable nix-command and flakes
-  imports = [
+  modules = [
     inputs.determinate.nixosModules.default
   ];
   nix.package = inputs.determinate.packages.${pkgs.system}.default;
