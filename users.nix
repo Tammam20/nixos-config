@@ -7,9 +7,6 @@
     description = "Tammam Faris";
     extraGroups = [ "networkmanager" "wheel" "libvirtd" "input" ];
     
- packages = with pkgs; [
-      home-manager
-    ];
   };
   
   };
