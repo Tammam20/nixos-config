@@ -12,7 +12,8 @@
   ];*/
   nix.package = inputs'.determinate.packages.default;
   nix.settings = {
-  experimental-features = [ "nix-command" "flakes" ];
+  eval-cores = 0;
+  experimental-features = [ "parallel-eval" ];
   auto-optimise-store = true;
 };
 # determinate = {
