@@ -16,6 +16,7 @@
     ...
   }: {
     imports = [
+      ./nixconfig.nix
       self.nixosModules.t480hard
       self.nixosModules.users
       self.nixosModules.virt
