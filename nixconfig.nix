@@ -7,10 +7,10 @@
  # };
 #};
   # Enable nix-command and flakes
-  imports = [
+/*  imports = [
     inputs.determinate.nixosModules
-  ];
-  nix.package = inputs.determinate.packages.${pkgs.system}.default;
+  ];*/
+  nix.package = inputs'.determinate.packages.default;
   nix.settings = {
   experimental-features = [ "nix-command" "flakes" ];
   auto-optimise-store = true;
