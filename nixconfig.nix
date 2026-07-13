@@ -1,4 +1,4 @@
-{ flake.nixosModules.nixconfig = { inputs, pkgs, ... }: {
+{ flake.nixosModules.nixconfig = { inputs', pkgs, ... }: {
  # nix = {
  # gc = {
  #   automatic = true;
