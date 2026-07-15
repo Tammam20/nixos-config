@@ -4,9 +4,9 @@
   programs.sway.enable = true;
   services.gnome.gnome-keyring.enable = true;
   programs.seahorse.enable = true;
-  services.blueman.enable = true;
-  hardware.bluetooth.enable = true;
-  hardware.bluetooth.powerOnBoot = false;
+ # services.blueman.enable = true;
+#  hardware.bluetooth.enable = true;
+ # hardware.bluetooth.powerOnBoot = false;
   programs.nm-applet.enable = true;
   services.tumbler.enable = true;
   programs.xfconf.enable = true;
