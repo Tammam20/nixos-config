@@ -13,6 +13,7 @@
   services.upower.enable = true;
   environment.systemPackages = with pkgs; [
     foot
+    cliphist
     wmenu
     wl-clipboard
     grim
