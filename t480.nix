@@ -17,7 +17,7 @@
   }: {
     imports = [
 #      ./nixconfig.nix
-      inputs.home-manager.flakeModules.home-manager
+      #inputs.home-manager.flakeModules.home-manager
       self.nixosModules.t480hard
       self.nixosModules.users
       self.nixosModules.virt
@@ -30,7 +30,6 @@
       self.nixosModules.cups
       self.nixosModules.packages
       self.nixosModules.netmgr
-      self.homeModules.hm
       inputs.nixos-06cb-009a-fingerprint-sensor.nixosModules."06cb-009a-fingerprint-sensor"
     ];
     
