@@ -47,6 +47,7 @@
   file-roller
   nh
   nvd
+  vulkaninfo  
   nix-output-monitor
   #pkgsi686Linux.gperftools
   ];
