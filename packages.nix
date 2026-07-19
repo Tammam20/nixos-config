@@ -19,7 +19,8 @@
   #appimage-run
   pciutils
   usbutils
-  findutils
+  coreutils
+  clang
   mpv
   ripgrep
   fd
