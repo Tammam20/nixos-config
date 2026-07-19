@@ -45,12 +45,14 @@
   protonup-qt
   powertop
   s-tui
+  multimarkdown
   #usbmuxd
   #libimobiledevice
   #filezilla
   #ifuse
   #peazip
   file-roller
+  shellcheck
   #nh
   #nvd
   #vulkan-tools

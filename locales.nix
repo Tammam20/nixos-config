@@ -10,6 +10,8 @@ fonts.fontconfig.defaultFonts.monospace = ["JetBrainsMono Nerd Font Mono"];
 fonts.fontDir.enable = true;
   fonts.packages = with pkgs; [
     nerd-fonts.jetbrains-mono
+    nerd-fonts.symbols-only
+    symbola
   ];
   fonts.enableDefaultPackages = true;
 
