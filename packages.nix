@@ -22,15 +22,16 @@
   lshw
   fastfetch
   #libreoffice
-  vim
+ # vim
   gh
   chezmoi
   wget
   #distrobox
-  vscode
+#  vscode
   nixfmt
   nil
   lm_sensors
+  emacs
 #  cmatrix
   #tldr
   waydroid-helper
@@ -45,10 +46,10 @@
   #ifuse
   #peazip
   file-roller
-  nh
-  nvd
-  vulkan-tools
-  nix-output-monitor
+  #nh
+  #nvd
+  #vulkan-tools
+ # nix-output-monitor
   #pkgsi686Linux.gperftools
   ];
 
