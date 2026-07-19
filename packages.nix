@@ -19,6 +19,10 @@
   #appimage-run
   pciutils
   usbutils
+  findutils
+  mpv
+  ripgrep
+  fd
   lshw
   fastfetch
   #libreoffice
