@@ -16,6 +16,7 @@
     cliphist
     wmenu
     wl-clipboard
+    wf-recorder
     grim
     slurp
     swaybg
